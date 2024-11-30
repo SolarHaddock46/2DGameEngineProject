@@ -11,12 +11,6 @@
                     "info": "Walking and jumping adventurer."
                 },
                 {
-                    "file": "WallJumpScene",
-                    "scene": "WallJumpScene",
-                    "name": "Wall Jump",
-                    "info": "Adventurer clinging to walls and jumping on walls."
-                },
-                {
                     "file": "CrouchAndLookUpwardsScene",
                     "scene": "CrouchAndLookUpwardsScene",
                     "name": "Crouch and Look Upwards",
@@ -27,18 +21,6 @@
                     "scene": "DashScene",
                     "name": "Dashing",
                     "info": "Adventurer dashing."
-                },
-                {
-                    "file": "ParaglideScene",
-                    "scene": "ParaglideScene",
-                    "name": "Paragliding",
-                    "info": "Adventurer paragliding."
-                },
-                {
-                    "file": "JetpackScene",
-                    "scene": "JetpackScene",
-                    "name": "Jetpacking",
-                    "info": "Adventurer using a jetpack."
                 },
                 {
                     "file": "ProjectileShootingScene",
@@ -93,12 +75,6 @@
                     "scene": "OscillatingPlatformsScene",
                     "name": "Oscillating Platforms",
                     "info": "Platform moving with an oscillating curve."
-                },
-                {
-                    "file": "FallingPlatformsScene",
-                    "scene": "FallingPlatformsScene",
-                    "name": "Falling Platforms",
-                    "info": "Platform that falls after contact."
                 },
                 {
                     "file": "BouncingPlatformsScene",
@@ -223,24 +199,6 @@
             ]
         },
         {
-            "name": "Camera",
-            "info": "Where everything makes sense.",
-            "levels": [
-                {
-                    "file": "CameraShakeScene",
-                    "scene": "CameraShakeScene",
-                    "name": "Camera Shake",
-                    "info": "Shaking the camera."
-                },
-                {
-                    "file": "ParallaxBackgroundScene",
-                    "scene": "ParallaxBackgroundScene",
-                    "name": "Parallax Background",
-                    "info": "Making your levels rich."
-                }
-            ]
-        },
-        {
             "name": "Level Logic",
             "info": "Checkpoints and finish lines.",
             "levels": [
@@ -255,31 +213,6 @@
                     "scene": "RestartAtCheckpointScene",
                     "name": "Entities and checkpoints",
                     "info": "Relating entities to checkpoints."
-                }
-            ]
-        },
-        {
-            "name": "Local Multiplayer",
-            "info": "Multiple players in the same scene.",
-            "levels": [
-                {
-                    "file": "LocalMultiplayerScene",
-                    "scene": "LocalMultiplayerScene",
-                    "name": "Local Multiplayer",
-                    "info": "Two playables in the same scene!"
-                }
-            ]
-        },
-        {
-            "name": "Level Loading",
-            "info": ".sks file loading",
-            "levels": [
-                {
-                    "file": "SKSLoadingScene",
-                    "scene": "SKSLoadingScene",
-                    "name": "SKS Loading",
-                    "info": "Loading your .sks level files.",
-                    "isSKS": true
                 }
             ]
         }
