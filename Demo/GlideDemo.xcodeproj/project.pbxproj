@@ -290,18 +290,6 @@
 		4E73A74124701E0F006DF31D /* runcycle.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4E73A74024701E0F006DF31D /* runcycle.aif */; };
 		4E73A74224701E0F006DF31D /* runcycle.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4E73A74024701E0F006DF31D /* runcycle.aif */; };
 		4E73A74324701E0F006DF31D /* runcycle.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4E73A74024701E0F006DF31D /* runcycle.aif */; };
-		4E87C6C42207546100F56FE7 /* LaddersScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6BC2207546100F56FE7 /* LaddersScene.json */; };
-		4E87C6C52207546100F56FE7 /* LaddersScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6BC2207546100F56FE7 /* LaddersScene.json */; };
-		4E87C6C62207546100F56FE7 /* LaddersScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6BC2207546100F56FE7 /* LaddersScene.json */; };
-		4E87C6C72207546100F56FE7 /* LaddersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6C32207546100F56FE7 /* LaddersScene.swift */; };
-		4E87C6C82207546100F56FE7 /* LaddersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6C32207546100F56FE7 /* LaddersScene.swift */; };
-		4E87C6C92207546100F56FE7 /* LaddersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6C32207546100F56FE7 /* LaddersScene.swift */; };
-		4E87C6CC2207578800F56FE7 /* SwingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6CA2207578800F56FE7 /* SwingsScene.swift */; };
-		4E87C6CD2207578800F56FE7 /* SwingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6CA2207578800F56FE7 /* SwingsScene.swift */; };
-		4E87C6CE2207578800F56FE7 /* SwingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6CA2207578800F56FE7 /* SwingsScene.swift */; };
-		4E87C6CF2207578800F56FE7 /* SwingsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6CB2207578800F56FE7 /* SwingsScene.json */; };
-		4E87C6D02207578800F56FE7 /* SwingsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6CB2207578800F56FE7 /* SwingsScene.json */; };
-		4E87C6D12207578800F56FE7 /* SwingsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6CB2207578800F56FE7 /* SwingsScene.json */; };
 		4E87C6D42207771F00F56FE7 /* CheckpointsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */; };
 		4E87C6D52207771F00F56FE7 /* CheckpointsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */; };
 		4E87C6D62207771F00F56FE7 /* CheckpointsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */; };
@@ -636,10 +624,6 @@
 		4E66E91721FCF6A10048E058 /* PauseMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenuViewController.swift; sourceTree = "<group>"; };
 		4E6A1262225DDCDA00DDB847 /* SelfShootOnObserveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfShootOnObserveScene.swift; sourceTree = "<group>"; };
 		4E73A74024701E0F006DF31D /* runcycle.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = runcycle.aif; sourceTree = "<group>"; };
-		4E87C6BC2207546100F56FE7 /* LaddersScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaddersScene.json; sourceTree = "<group>"; };
-		4E87C6C32207546100F56FE7 /* LaddersScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaddersScene.swift; sourceTree = "<group>"; };
-		4E87C6CA2207578800F56FE7 /* SwingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingsScene.swift; sourceTree = "<group>"; };
-		4E87C6CB2207578800F56FE7 /* SwingsScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SwingsScene.json; sourceTree = "<group>"; };
 		4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckpointsScene.swift; sourceTree = "<group>"; };
 		4E87C6D32207771F00F56FE7 /* CheckpointsScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CheckpointsScene.json; sourceTree = "<group>"; };
 		4E8EF8A7222417DB009077C9 /* AttackingPlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackingPlayerComponent.swift; sourceTree = "<group>"; };
@@ -829,10 +813,6 @@
 				4E4C87BE2206D54600C672CC /* OscillatingPlatformsScene.json */,
 				4E4C87B02206440300C672CC /* BouncingPlatformsScene.swift */,
 				4E4C87BA2206456A00C672CC /* BouncingPlatformsScene.json */,
-				4E87C6C32207546100F56FE7 /* LaddersScene.swift */,
-				4E87C6BC2207546100F56FE7 /* LaddersScene.json */,
-				4E87C6CA2207578800F56FE7 /* SwingsScene.swift */,
-				4E87C6CB2207578800F56FE7 /* SwingsScene.json */,
 				4E3A709F223083580060AF20 /* LightsScene.swift */,
 				4E3A70A92230837A0060AF20 /* LightsScene.json */,
 			);
@@ -1352,7 +1332,6 @@
 				4EE378EB227B0D9A00579231 /* slope_11_8.png in Resources */,
 				4E22D33A220891320069BF95 /* ProjectileShootingScene.json in Resources */,
 				4E1C0A9C220B84C900198B62 /* CameraFocusAreasScene.json in Resources */,
-				4E87C6C42207546100F56FE7 /* LaddersScene.json in Resources */,
 				4E3A4A9A21F0D3AF006C5916 /* Levels.json in Resources */,
 				4EB7A3F9247171EA0002CEA9 /* landing.aif in Resources */,
 				4E1F08AA220449F000255203 /* SlopesScene.json in Resources */,
@@ -1366,7 +1345,6 @@
 				4EB7A3FC247171EA0002CEA9 /* jumping.aif in Resources */,
 				4EBF2885226B211500AE954B /* SharedAssets.xcassets in Resources */,
 				4EB7A4AC2472F78E0002CEA9 /* shoot.wav in Resources */,
-				4E87C6CF2207578800F56FE7 /* SwingsScene.json in Resources */,
 				4EBF289C226B72D900AE954B /* BouncingScene.json in Resources */,
 				4EE378FA227B0D9A00579231 /* slope_15_8.png in Resources */,
 				4E1F08B22204524A00255203 /* MovingPlatformsScene.json in Resources */,
@@ -1419,7 +1397,6 @@
 				4EE3790B227B0D9A00579231 /* ground.png in Resources */,
 				4EE3791A227B0D9A00579231 /* slope_4_7.png in Resources */,
 				4E1C0A64220B19AC00198B62 /* ProjectileWeaponsScene.json in Resources */,
-				4E87C6D12207578800F56FE7 /* SwingsScene.json in Resources */,
 				4EB7A3FB247171EA0002CEA9 /* landing.aif in Resources */,
 				4E4C87C22206D54600C672CC /* OscillatingPlatformsScene.json in Resources */,
 				4EE378F6227B0D9A00579231 /* jump_wall_right.png in Resources */,
@@ -1431,7 +1408,6 @@
 				4E981B2522145ADA00443910 /* SelfFollowWaypointsScene.json in Resources */,
 				4E73A74324701E0F006DF31D /* runcycle.aif in Resources */,
 				4EA1AFC62209B19300A71FDF /* ItemChestsScene.json in Resources */,
-				4E87C6C62207546100F56FE7 /* LaddersScene.json in Resources */,
 				4EBF28BA226DCA8400AE954B /* SelfShootOnObserveScene.json in Resources */,
 				4E4C87BD2206456A00C672CC /* BouncingPlatformsScene.json in Resources */,
 				4EE378F0227B0D9A00579231 /* slope_8_11.png in Resources */,
@@ -1476,7 +1452,6 @@
 				4EA1AFD62209D14200A71FDF /* SpeechBubblesScene.json in Resources */,
 				4EE0CFB221FF5152001B1CE7 /* Decoration_RuinsTileSet.json in Resources */,
 				4EB7A4A92472F76F0002CEA9 /* explosion.wav in Resources */,
-				4E87C6C52207546100F56FE7 /* LaddersScene.json in Resources */,
 				4EE378FB227B0D9A00579231 /* slope_15_8.png in Resources */,
 				4E47BEA622724309009ED639 /* BumpingOnTopScene.json in Resources */,
 				4E3A70AB2230837A0060AF20 /* LightsScene.json in Resources */,
@@ -1502,7 +1477,6 @@
 				4EE37913227B0D9A00579231 /* slope_0_7.png in Resources */,
 				4EBF28B9226DCA8400AE954B /* SelfShootOnObserveScene.json in Resources */,
 				4E73A74224701E0F006DF31D /* runcycle.aif in Resources */,
-				4E87C6D02207578800F56FE7 /* SwingsScene.json in Resources */,
 				4E1C0A67220B1FF600198B62 /* MeleeWeaponsScene.json in Resources */,
 				4EE378EF227B0D9A00579231 /* slope_8_11.png in Resources */,
 				4EE3791C227B0D9A00579231 /* slope_0_3.png in Resources */,
@@ -1609,7 +1583,6 @@
 				4E981B1922145A3A00443910 /* SelfFollowWaypointsScene.swift in Sources */,
 				4E08A7232270EAD000BFBA98 /* TorchEntity.swift in Sources */,
 				4E47BEBA227460F4009ED639 /* FoxEntity.swift in Sources */,
-				4E87C6C72207546100F56FE7 /* LaddersScene.swift in Sources */,
 				4E55A50921EDF64A0091378B /* BaseLevelScene.swift in Sources */,
 				4E1F08732203A33D00255203 /* ProjectileShootingScene.swift in Sources */,
 				4E002C4C226F248100DE2357 /* TriggerZoneComponent.swift in Sources */,
@@ -1621,7 +1594,6 @@
 				4E353954223D236C00A5EB15 /* Color+DemoColors.swift in Sources */,
 				4E1F08AE2204523100255203 /* MovingPlatformsScene.swift in Sources */,
 				4E002C63226F983900DE2357 /* ChestItemComponent.swift in Sources */,
-				4E87C6CC2207578800F56FE7 /* SwingsScene.swift in Sources */,
 				4E002C3C226F11E700DE2357 /* UpdateHealthBarComponent.swift in Sources */,
 				4E1C0A6F220B263A00198B62 /* EntityObservingScene.swift in Sources */,
 				4EF598762241A1DB0028EF17 /* TalkableNPCComponent.swift in Sources */,
@@ -1757,7 +1729,6 @@
 				4E47BEBC227460F4009ED639 /* FoxEntity.swift in Sources */,
 				4EC9915B2278B5F500516600 /* DemoTileSet.swift in Sources */,
 				4E1F08812203A39600255203 /* BlinkingScene.swift in Sources */,
-				4E87C6CE2207578800F56FE7 /* SwingsScene.swift in Sources */,
 				4E47BED422749619009ED639 /* MagicianEntity.swift in Sources */,
 				4E87C6D62207771F00F56FE7 /* CheckpointsScene.swift in Sources */,
 				4E35395A223D2BF600A5EB15 /* BackButtonContentView.swift in Sources */,
@@ -1765,7 +1736,6 @@
 				4E47BEC022746698009ED639 /* ImpEntity.swift in Sources */,
 				4ECB19AA222FC47B00C0C38C /* BulletEntity.swift in Sources */,
 				4E1F08982204458D00255203 /* OneWayGroundsScene.swift in Sources */,
-				4E87C6C92207546100F56FE7 /* LaddersScene.swift in Sources */,
 				4EF598782241A1DB0028EF17 /* TalkableNPCComponent.swift in Sources */,
 				4EBF288D226B56ED00AE954B /* HealthBarEntity.swift in Sources */,
 				4E47BEAF22730868009ED639 /* BumpAttackerComponent.swift in Sources */,
@@ -1808,7 +1778,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E47BEB7227455AE009ED639 /* EagleEntity.swift in Sources */,
-				4E87C6CD2207578800F56FE7 /* SwingsScene.swift in Sources */,
 				4E3A4A5221F0A0DA006C5916 /* CheckmarkSelectedView.swift in Sources */,
 				4EA1AFB22209868E00A71FDF /* ItemChestComponent.swift in Sources */,
 				4E47BEE32275A25B009ED639 /* BirdEntity.swift in Sources */,
@@ -1845,7 +1814,6 @@
 				4E47BEC822747B07009ED639 /* WitchEntity.swift in Sources */,
 				4E47BEDF2275155D009ED639 /* UpdatableHealthBarComponent.swift in Sources */,
 				4EC50D0F217DE4F5005D66FC /* AppDelegate.swift in Sources */,
-				4E87C6C82207546100F56FE7 /* LaddersScene.swift in Sources */,
 				4E353945223D224300A5EB15 /* Label+StyledLabels.swift in Sources */,
 				4E8EF8B32224A7CA009077C9 /* CrouchingPlayerComponent.swift in Sources */,
 				4E002C64226F983900DE2357 /* ChestItemComponent.swift in Sources */,

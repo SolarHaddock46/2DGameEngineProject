@@ -83,18 +83,6 @@
                     "info": "Platform that makes the player jump after contact."
                 },
                 {
-                    "file": "LaddersScene",
-                    "scene": "LaddersScene",
-                    "name": "Ladders",
-                    "info": "Ladders as a shortcut upwards."
-                },
-                {
-                    "file": "SwingsScene",
-                    "scene": "SwingsScene",
-                    "name": "Swings",
-                    "info": "Fun to ride!"
-                },
-                {
                     "file": "LightsScene",
                     "scene": "LightsScene",
                     "name": "Lights",
