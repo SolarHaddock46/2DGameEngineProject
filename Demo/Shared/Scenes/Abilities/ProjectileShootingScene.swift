@@ -31,19 +31,11 @@ class ProjectileShootingScene: BaseLevelScene {
     override func setupScene() {
         super.setupScene()
         
-        #if os(iOS)
         let touchButtonComponent = additionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)
         touchButtonComponent?.input = .profiles([(name: "Player1_Shoot", isNegative: false)])
         touchButtonComponent?.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_shoot")
         touchButtonComponent?.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_shoot_hl")
         shouldDisplayAdditionalTouchButton = true
-        #elseif os(tvOS)
-        Input.shared.removeInputProfilesNamed("Player1_Shoot")
-        let player1ShootProfile = InputProfile(name: "Player1_Shoot") { profile in
-            profile.positiveKeys = [.e, .mouseLeft, .controller1ButtonX, .controller1ButtonY]
-        }
-        Input.shared.addInputProfile(player1ShootProfile)
-        #endif
         
         mapContact(between: DemoCategoryMask.projectile, and: GlideCategoryMask.colliderTile)
         mapContact(between: DemoCategoryMask.projectile, and: GlideCategoryMask.snappable)
@@ -84,31 +76,9 @@ class ProjectileShootingScene: BaseLevelScene {
     }()
     
     func setupTips() {
-        #if os(OSX)
-        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
-                                          text: "Use the keyboard (e) or left mouse button or connect a game controller (Y) to shoot projectiles. Refer to other sections for weapons.",
-                                          frameWidth: 220.0)
-        addEntity(tipEntity)
-        #elseif os(iOS)
         let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
                                           text: "Use the touch button or connect a game controller (Y) to shoot projectiles. Refer to other sections for weapons.",
                                           frameWidth: 220.0)
         addEntity(tipEntity)
-        #elseif os(tvOS)
-        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 14).point(with: tileSize),
-                                          text: "Use (play) on remote or connect a game controller (Y) to shoot projectiles. Refer to other sections for weapons.",
-                                          frameWidth: 400.0)
-        addEntity(tipEntity)
-        #endif
-    }
-    
-    deinit {
-        #if os(tvOS)
-        Input.shared.removeInputProfilesNamed("Player1_Shoot")
-        let player1ShootProfile = InputProfile(name: "Player1_Shoot") { profile in
-            profile.positiveKeys = [.e, .mouseLeft, .controller1ButtonY]
-        }
-        Input.shared.addInputProfile(player1ShootProfile)
-        #endif
     }
 }

@@ -31,10 +31,8 @@ class DashScene: BaseLevelScene {
     override func setupScene() {
         super.setupScene()
         
-        #if os(iOS)
         additionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)?.input = .profiles([(name: "Player1_Dash", isNegative: false)])
         shouldDisplayAdditionalTouchButton = true
-        #endif
         
         addEntity(playerEntity)
         
@@ -51,21 +49,9 @@ class DashScene: BaseLevelScene {
     }()
     
     func setupTips() {
-        #if os(OSX)
-        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
-                                          text: "Use the keyboard (f) or a game controller (right shoulder) to dash. Will look much better with a dashing character texture animation.",
-                                          frameWidth: 220.0)
-        addEntity(tipEntity)
-        #elseif os(iOS)
         let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 13).point(with: tileSize),
                                           text: "Use the touch button or game controller (right shoulder) to dash. Will look much better with a dashing character texture animation.",
                                           frameWidth: 220.0)
         addEntity(tipEntity)
-        #elseif os(tvOS)
-        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 15).point(with: tileSize),
-                                          text: "Connect a game controller (right shoulder) to dash. Will look much better with a dashing character texture animation.",
-                                          frameWidth: 400.0)
-        addEntity(tipEntity)
-        #endif
     }
 }

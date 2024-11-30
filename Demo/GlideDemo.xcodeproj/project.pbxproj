@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		331915952CF63D160090A789 /* YAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 331915942CF63D160090A789 /* YAEngine */; };
+		3370507C2CFB54C8005C50FD /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 3370507B2CFB54C8005C50FD /* HealthComponentScene.json */; };
+		3370507D2CFB54C8005C50FD /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 3370507B2CFB54C8005C50FD /* HealthComponentScene.json */; };
+		3370507E2CFB54C8005C50FD /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 3370507B2CFB54C8005C50FD /* HealthComponentScene.json */; };
 		4E002C28226EF7E800DE2357 /* CollectiblesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C27226EF7E800DE2357 /* CollectiblesScene.swift */; };
 		4E002C29226EF7E800DE2357 /* CollectiblesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C27226EF7E800DE2357 /* CollectiblesScene.swift */; };
 		4E002C2A226EF7E800DE2357 /* CollectiblesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C27226EF7E800DE2357 /* CollectiblesScene.swift */; };
@@ -134,9 +137,6 @@
 		4E22D33A220891320069BF95 /* ProjectileShootingScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D339220891320069BF95 /* ProjectileShootingScene.json */; };
 		4E22D33B220891320069BF95 /* ProjectileShootingScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D339220891320069BF95 /* ProjectileShootingScene.json */; };
 		4E22D33C220891320069BF95 /* ProjectileShootingScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D339220891320069BF95 /* ProjectileShootingScene.json */; };
-		4E22D33E2208B1400069BF95 /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D33D2208B1400069BF95 /* HealthComponentScene.json */; };
-		4E22D33F2208B1400069BF95 /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D33D2208B1400069BF95 /* HealthComponentScene.json */; };
-		4E22D3402208B1400069BF95 /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D33D2208B1400069BF95 /* HealthComponentScene.json */; };
 		4E22D3422208B4100069BF95 /* BlinkingScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D3412208B4100069BF95 /* BlinkingScene.json */; };
 		4E22D3432208B4100069BF95 /* BlinkingScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D3412208B4100069BF95 /* BlinkingScene.json */; };
 		4E22D3442208B4100069BF95 /* BlinkingScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D3412208B4100069BF95 /* BlinkingScene.json */; };
@@ -526,6 +526,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3370507B2CFB54C8005C50FD /* HealthComponentScene.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HealthComponentScene.json; sourceTree = "<group>"; };
 		4E002C27226EF7E800DE2357 /* CollectiblesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectiblesScene.swift; sourceTree = "<group>"; };
 		4E002C2E226EFE4500DE2357 /* CollectiblesScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CollectiblesScene.json; sourceTree = "<group>"; };
 		4E002C37226F11C100DE2357 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
@@ -569,7 +570,6 @@
 		4E1F08B12204524A00255203 /* MovingPlatformsScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MovingPlatformsScene.json; sourceTree = "<group>"; };
 		4E22D322220849290069BF95 /* DemoCategoryMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCategoryMask.swift; sourceTree = "<group>"; };
 		4E22D339220891320069BF95 /* ProjectileShootingScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProjectileShootingScene.json; sourceTree = "<group>"; };
-		4E22D33D2208B1400069BF95 /* HealthComponentScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HealthComponentScene.json; sourceTree = "<group>"; };
 		4E22D3412208B4100069BF95 /* BlinkingScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BlinkingScene.json; sourceTree = "<group>"; };
 		4E2A24AE22021F1B00D8605B /* CrouchAndLookUpwardsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrouchAndLookUpwardsScene.swift; sourceTree = "<group>"; };
 		4E2A24B222021FD000D8605B /* CrouchAndLookUpwardsScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CrouchAndLookUpwardsScene.json; sourceTree = "<group>"; };
@@ -876,6 +876,7 @@
 		4E66E91021FCEC7D0048E058 /* Abilities */ = {
 			isa = PBXGroup;
 			children = (
+				3370507B2CFB54C8005C50FD /* HealthComponentScene.json */,
 				4E03567621F9D10300837712 /* SimpleAdventurerScene.swift */,
 				4EE0CF9921FE6B14001B1CE7 /* SimpleAdventurerScene.json */,
 				4E2A24AE22021F1B00D8605B /* CrouchAndLookUpwardsScene.swift */,
@@ -889,7 +890,6 @@
 				4EBF2897226B72C300AE954B /* BouncingScene.swift */,
 				4EBF289B226B72D900AE954B /* BouncingScene.json */,
 				4E1F087A2203A38500255203 /* HealthComponentScene.swift */,
-				4E22D33D2208B1400069BF95 /* HealthComponentScene.json */,
 			);
 			path = Abilities;
 			sourceTree = "<group>";
@@ -1311,6 +1311,7 @@
 				4EA1AFC42209B19300A71FDF /* ItemChestsScene.json in Resources */,
 				4EBF28B8226DCA8400AE954B /* SelfShootOnObserveScene.json in Resources */,
 				4EE3790F227B0D9A00579231 /* slope_3_0.png in Resources */,
+				3370507D2CFB54C8005C50FD /* HealthComponentScene.json in Resources */,
 				4EE378EE227B0D9A00579231 /* slope_8_11.png in Resources */,
 				4EE3791E227B0D9A00579231 /* slope_15_0.png in Resources */,
 				4EE37912227B0D9A00579231 /* slope_0_7.png in Resources */,
@@ -1356,7 +1357,6 @@
 				4EE0CFAE21FF5152001B1CE7 /* GlideColliderTileSet.json in Resources */,
 				4EE378F7227B0D9A00579231 /* slope_15_12.png in Resources */,
 				4E3538EB223D1AF200A5EB15 /* Awake.ttf in Resources */,
-				4E22D33E2208B1400069BF95 /* HealthComponentScene.json in Resources */,
 				4E3A70AA2230837A0060AF20 /* LightsScene.json in Resources */,
 				4EE3791B227B0D9A00579231 /* slope_0_3.png in Resources */,
 				4E73A74124701E0F006DF31D /* runcycle.aif in Resources */,
@@ -1401,6 +1401,7 @@
 				4E4C87C22206D54600C672CC /* OscillatingPlatformsScene.json in Resources */,
 				4EE378F6227B0D9A00579231 /* jump_wall_right.png in Resources */,
 				4EE37920227B0D9A00579231 /* slope_15_0.png in Resources */,
+				3370507E2CFB54C8005C50FD /* HealthComponentScene.json in Resources */,
 				4E22D3442208B4100069BF95 /* BlinkingScene.json in Resources */,
 				4E3538F0223D1AF200A5EB15 /* m5x7.ttf in Resources */,
 				4E87C6D92207771F00F56FE7 /* CheckpointsScene.json in Resources */,
@@ -1420,7 +1421,6 @@
 				4EE3790E227B0D9A00579231 /* slope_7_4.png in Resources */,
 				4EE378FF227B0D9A00579231 /* jump_wall_left.png in Resources */,
 				4E353926223D1AF200A5EB15 /* MatchupPro.ttf in Resources */,
-				4E22D3402208B1400069BF95 /* HealthComponentScene.json in Resources */,
 				4E22D33C220891320069BF95 /* ProjectileShootingScene.json in Resources */,
 				4EBF289E226B72D900AE954B /* BouncingScene.json in Resources */,
 				4E1C0A7E220B2B9500198B62 /* SelfPatrollingScene.json in Resources */,
@@ -1461,7 +1461,6 @@
 				4E22D3432208B4100069BF95 /* BlinkingScene.json in Resources */,
 				4EBF28C5226E1A1400AE954B /* SelfSpawnEntitiesScene.json in Resources */,
 				4E1F08B32204524A00255203 /* MovingPlatformsScene.json in Resources */,
-				4E22D33F2208B1400069BF95 /* HealthComponentScene.json in Resources */,
 				4EE3790A227B0D9A00579231 /* ground.png in Resources */,
 				4EE37919227B0D9A00579231 /* slope_4_7.png in Resources */,
 				4E353925223D1AF200A5EB15 /* MatchupPro.ttf in Resources */,
@@ -1469,6 +1468,7 @@
 				4E1F089B220445D500255203 /* OneWayGroundsScene.json in Resources */,
 				4EE378F5227B0D9A00579231 /* jump_wall_right.png in Resources */,
 				4EE3791F227B0D9A00579231 /* slope_15_0.png in Resources */,
+				3370507C2CFB54C8005C50FD /* HealthComponentScene.json in Resources */,
 				4E353907223D1AF200A5EB15 /* ExpressionPro.ttf in Resources */,
 				4E1C0A7D220B2B9500198B62 /* SelfPatrollingScene.json in Resources */,
 				4E981B2422145ADA00443910 /* SelfFollowWaypointsScene.json in Resources */,
