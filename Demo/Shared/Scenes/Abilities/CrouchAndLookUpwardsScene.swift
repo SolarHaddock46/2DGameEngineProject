@@ -31,11 +31,16 @@ class CrouchAndLookUpwardsScene: BaseLevelScene {
     override func setupScene() {
         super.setupScene()
         
+        #if os(iOS)
         additionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)?.input = .profiles([(name: "Player1_Vertical", isNegative: false)])
         shouldDisplayAdditionalTouchButton = true
         
         secondAdditionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)?.input = .profiles([(name: "Player1_Vertical", isNegative: true)])
         shouldDisplaySecondAdditionalTouchButton = true
+        #endif
+        
+        #if os(OSX)
+        #endif
         
         addEntity(playerEntity)
         
@@ -58,12 +63,27 @@ class CrouchAndLookUpwardsScene: BaseLevelScene {
     }()
     
     func setupTips() {
+        #if os(OSX)
+        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
+                                          text: "Use the vertical direction keys (w - s) to look upwards and crouch.",
+                                          frameWidth: 220.0)
+        addEntity(tipEntity)
+        #elseif os(iOS)
         let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
                                           text: "Use the vertical direction touch buttons or game controller keys to look upwards and crouch.",
                                           frameWidth: 220.0)
         addEntity(tipEntity)
+        #elseif os(tvOS)
+        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 14).point(with: tileSize),
+                                          text: "Use vertical swiping on the remote or game controller vertical direction keys to look upwards and crouch.",
+                                          frameWidth: 400.0)
+        addEntity(tipEntity)
+        #endif
         
         var tip2Width: CGFloat = 220.0
+        #if os(tvOS)
+        tip2Width = 300.0
+        #endif
         let tip2Entity = GameplayTipEntity(initialNodePosition: TiledPoint(20, 15).point(with: tileSize),
                                            text: "Crouch over this platform to pass through it downwards.",
                                            frameWidth: tip2Width)

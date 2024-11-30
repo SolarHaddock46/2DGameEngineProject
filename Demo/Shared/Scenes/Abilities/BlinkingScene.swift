@@ -56,6 +56,10 @@ class BlinkingScene: BaseLevelScene {
     func setupTips() {
         var tipWidth: CGFloat = 220.0
         var location = TiledPoint(5, 12)
+        #if os(tvOS)
+        tipWidth = 350.0
+        location = TiledPoint(5, 13)
+        #endif
         let tipEntity = GameplayTipEntity(initialNodePosition: location.point(with: tileSize),
                                           text: "Beware of the spike... or just go touch it to see how our adventurer blinks.",
                                           frameWidth: tipWidth)

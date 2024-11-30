@@ -69,6 +69,7 @@ class BaseLevelScene: GlideScene {
         
         addEntity(parallaxBackgroundEntity)
         
+        #if os(iOS)
         configureControls()
         
         inputMethodObservation = NotificationCenter.default.addObserver(forName: .InputMethodDidChange, object: nil, queue: nil) { [weak self] _ in
@@ -84,12 +85,16 @@ class BaseLevelScene: GlideScene {
             self?.isInConversation = false
             self?.configureControls()
         }
+        #endif
     }
     
     override func layoutOnScreenItems() {
+        #if os(iOS)
         layoutTouchControls()
+        #endif
     }
     
+    #if os(iOS)
     lazy var moveLeftTouchButtonEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Move Left"

@@ -38,6 +38,12 @@ class SimpleAdventurerScene: BaseLevelScene {
     }
     
     func setupTips() {
+        #if os(OSX)
+        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
+                                          text: "Use the keyboard (a - d - space bar) or connect a game controller to walk and jump (A).",
+                                          frameWidth: 220.0)
+        addEntity(tipEntity)
+        #elseif os(iOS)
         var tipWidth: CGFloat = 200.0
         if UIDevice.current.userInterfaceIdiom == .pad {
             tipWidth = 220.0
@@ -47,5 +53,11 @@ class SimpleAdventurerScene: BaseLevelScene {
                                           text: "Use the touch buttons or connect a game controller to walk and jump (A).",
                                           frameWidth: tipWidth)
         addEntity(tipEntity)
+        #elseif os(tvOS)
+        let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 14).point(with: tileSize),
+                                          text: "Use the remote or connect a game controller to walk and jump (A).",
+                                          frameWidth: 300.0)
+        addEntity(tipEntity)
+        #endif
     }
 }

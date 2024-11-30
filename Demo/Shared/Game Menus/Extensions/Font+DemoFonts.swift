@@ -25,7 +25,9 @@
 
 import YAEngine
 import CoreGraphics
+#if os(iOS)
 import UIKit
+#endif
 
 extension Font {
     static func headerTextFont(ofSize: CGFloat) -> Font {
@@ -58,17 +60,29 @@ extension Font {
 }
 
 var menuHeaderFontSize: CGFloat {
+    #if os(OSX)
+    return 52.0
+    #elseif os(iOS)
     if UIDevice.current.userInterfaceIdiom == .pad {
         return 48.0
     }
     return 24.0
+    #elseif os(tvOS)
+    return 64.0
+    #endif
 }
 
 var levelTitleFontSize: CGFloat {
+    #if os(OSX)
+    return 32.0
+    #elseif os(iOS)
     if UIDevice.current.userInterfaceIdiom == .pad {
         return 32.0
     }
     return 16.0
+    #elseif os(tvOS)
+    return 64.0
+    #endif
 }
 
 var actionButtonFontSize: CGFloat {

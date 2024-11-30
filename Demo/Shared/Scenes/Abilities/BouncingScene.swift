@@ -57,6 +57,9 @@ class BouncingScene: BaseLevelScene {
     
     func setupTips() {
         var tipWidth: CGFloat = 220.0
+        #if os(tvOS)
+        tipWidth = 300.0
+        #endif
         let tipEntity = GameplayTipEntity(initialNodePosition: TiledPoint(5, 12).point(with: tileSize),
                                           text: "...with blinking comes bouncing.",
                                           frameWidth: tipWidth)
