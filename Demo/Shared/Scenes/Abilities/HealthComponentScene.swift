@@ -41,8 +41,19 @@ class HealthComponentScene: BaseLevelScene {
         mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.hazard)
 
         addEntity(playerEntity)
-        let spikeEntity = SpikeEntity(initialNodePosition: TiledPoint(15, 10).point(with: tileSize), positionOffset: CGPoint(x: 16, y: 16))
-        addEntity(spikeEntity)
+
+        // Add an array of spike entities
+        let spikePositions: [TiledPoint] = [
+            TiledPoint(15, 10),
+            TiledPoint(17, 10),
+            TiledPoint(19, 10),
+            // Add more positions as needed
+        ]
+
+        for position in spikePositions {
+            let spikeEntity = SpikeEntity(initialNodePosition: position.point(with: tileSize), positionOffset: CGPoint(x: 16, y: 16))
+            addEntity(spikeEntity)
+        }
 
         addEntity(healthBarEntity)
 
