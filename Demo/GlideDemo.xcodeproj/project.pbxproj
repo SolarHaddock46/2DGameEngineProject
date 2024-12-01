@@ -311,8 +311,6 @@
 		4E981B2322145ADA00443910 /* SelfFollowWaypointsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E981B2222145ADA00443910 /* SelfFollowWaypointsScene.json */; };
 		4E981B2422145ADA00443910 /* SelfFollowWaypointsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E981B2222145ADA00443910 /* SelfFollowWaypointsScene.json */; };
 		4E981B2522145ADA00443910 /* SelfFollowWaypointsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E981B2222145ADA00443910 /* SelfFollowWaypointsScene.json */; };
-		4E982A1121F5E5DB00759A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E982A1021F5E5DB00759A00 /* AppDelegate.swift */; };
-		4E982A1621F5E5DB00759A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E982A1421F5E5DB00759A00 /* Main.storyboard */; };
 		4E9ED34C21FB103B00D59A68 /* SingleLevelSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9ED34B21FB103B00D59A68 /* SingleLevelSectionViewController.swift */; };
 		4E9ED34D21FB103B00D59A68 /* SingleLevelSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9ED34B21FB103B00D59A68 /* SingleLevelSectionViewController.swift */; };
 		4E9ED34E21FB103B00D59A68 /* SingleLevelSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9ED34B21FB103B00D59A68 /* SingleLevelSectionViewController.swift */; };
@@ -388,9 +386,7 @@
 		4EC45BBF223E74F700CA94F5 /* CAAnimation+BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC45BBE223E74F700CA94F5 /* CAAnimation+BackgroundColorAnimation.swift */; };
 		4EC45BC0223E83D600CA94F5 /* CAAnimation+BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC45BBE223E74F700CA94F5 /* CAAnimation+BackgroundColorAnimation.swift */; };
 		4EC45BC1223E83D600CA94F5 /* CAAnimation+BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC45BBE223E74F700CA94F5 /* CAAnimation+BackgroundColorAnimation.swift */; };
-		4EC50D0F217DE4F5005D66FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC50D0E217DE4F5005D66FC /* AppDelegate.swift */; };
 		4EC50D11217DE4F5005D66FC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC50D10217DE4F5005D66FC /* GameViewController.swift */; };
-		4EC50D16217DE4F6005D66FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC50D14217DE4F6005D66FC /* Main.storyboard */; };
 		4EC50D36217DE71A005D66FC /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC50D34217DE710005D66FC /* BaseLevelScene.swift */; };
 		4EC8E35021C1AC1B00D43F45 /* GrenadeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8E34F21C1AC1B00D43F45 /* GrenadeEntity.swift */; };
 		4EC8E35121C1AC2800D43F45 /* GrenadeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8E34F21C1AC1B00D43F45 /* GrenadeEntity.swift */; };
@@ -636,9 +632,6 @@
 		4E981B1822145A3A00443910 /* SelfFollowWaypointsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfFollowWaypointsScene.swift; sourceTree = "<group>"; };
 		4E981B2222145ADA00443910 /* SelfFollowWaypointsScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SelfFollowWaypointsScene.json; sourceTree = "<group>"; };
 		4E982A0E21F5E5DB00759A00 /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glide Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E982A1021F5E5DB00759A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E982A1521F5E5DB00759A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E982A1921F5E5DC00759A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9ED34B21FB103B00D59A68 /* SingleLevelSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLevelSectionViewController.swift; sourceTree = "<group>"; };
 		4E9ED35B21FB18C400D59A68 /* SingleLevelSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLevelSectionViewModel.swift; sourceTree = "<group>"; };
 		4E9ED36021FB1BCD00D59A68 /* LevelSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSectionView.swift; sourceTree = "<group>"; };
@@ -664,11 +657,7 @@
 		4EBF28C7226E3DF100AE954B /* GameplayTipEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTipEntity.swift; sourceTree = "<group>"; };
 		4EC45BBE223E74F700CA94F5 /* CAAnimation+BackgroundColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimation+BackgroundColorAnimation.swift"; sourceTree = "<group>"; };
 		4EC50D0C217DE4F5005D66FC /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glide Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EC50D0E217DE4F5005D66FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC50D10217DE4F5005D66FC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		4EC50D15217DE4F6005D66FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4EC50D17217DE4F6005D66FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EC50D18217DE4F6005D66FC /* GlideDemo_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlideDemo_macOS.entitlements; sourceTree = "<group>"; };
 		4EC50D34217DE710005D66FC /* BaseLevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevelScene.swift; sourceTree = "<group>"; };
 		4EC8E34F21C1AC1B00D43F45 /* GrenadeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrenadeEntity.swift; sourceTree = "<group>"; };
 		4EC8E46622567B6200218CFD /* TouchButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchButtonComponent.swift; sourceTree = "<group>"; };
@@ -899,8 +888,6 @@
 			children = (
 				4EC50D33217DE703005D66FC /* Shared */,
 				4E908C4F217DE46800D8B29D /* GlideDemo_iOS */,
-				4EC50D0D217DE4F5005D66FC /* GlideDemo_macOS */,
-				4E982A0F21F5E5DB00759A00 /* GlideDemo_tvOS */,
 				4E908C4E217DE46800D8B29D /* Products */,
 				4EF1DCB722F603AA009B7B12 /* Frameworks */,
 			);
@@ -925,16 +912,6 @@
 				4E908C5C217DE46900D8B29D /* Info.plist */,
 			);
 			path = GlideDemo_iOS;
-			sourceTree = "<group>";
-		};
-		4E982A0F21F5E5DB00759A00 /* GlideDemo_tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				4E982A1021F5E5DB00759A00 /* AppDelegate.swift */,
-				4E982A1421F5E5DB00759A00 /* Main.storyboard */,
-				4E982A1921F5E5DC00759A00 /* Info.plist */,
-			);
-			path = GlideDemo_tvOS;
 			sourceTree = "<group>";
 		};
 		4E9ED35521FB142700D59A68 /* Game Menus */ = {
@@ -1041,17 +1018,6 @@
 				4E105412225BC04A0059CFEE /* RestartAtCheckpointScene.json */,
 			);
 			path = "Level Logic";
-			sourceTree = "<group>";
-		};
-		4EC50D0D217DE4F5005D66FC /* GlideDemo_macOS */ = {
-			isa = PBXGroup;
-			children = (
-				4EC50D0E217DE4F5005D66FC /* AppDelegate.swift */,
-				4EC50D14217DE4F6005D66FC /* Main.storyboard */,
-				4EC50D17217DE4F6005D66FC /* Info.plist */,
-				4EC50D18217DE4F6005D66FC /* GlideDemo_macOS.entitlements */,
-			);
-			path = GlideDemo_macOS;
 			sourceTree = "<group>";
 		};
 		4EC50D33217DE703005D66FC /* Shared */ = {
@@ -1429,7 +1395,6 @@
 				4E1C0A68220B1FF600198B62 /* MeleeWeaponsScene.json in Resources */,
 				4EE37911227B0D9A00579231 /* slope_3_0.png in Resources */,
 				4E3538F9223D1AF200A5EB15 /* EquipmentPro.ttf in Resources */,
-				4E982A1621F5E5DB00759A00 /* Main.storyboard in Resources */,
 				4EE0CF9C21FE6B15001B1CE7 /* SimpleAdventurerScene.json in Resources */,
 				4E2A24B522021FD000D8605B /* CrouchAndLookUpwardsScene.json in Resources */,
 				4EB7A3FE247171EA0002CEA9 /* jumping.aif in Resources */,
@@ -1473,7 +1438,6 @@
 				4E1C0A7D220B2B9500198B62 /* SelfPatrollingScene.json in Resources */,
 				4E981B2422145ADA00443910 /* SelfFollowWaypointsScene.json in Resources */,
 				4E1C0A63220B19AC00198B62 /* ProjectileWeaponsScene.json in Resources */,
-				4EC50D16217DE4F6005D66FC /* Main.storyboard in Resources */,
 				4EE37913227B0D9A00579231 /* slope_0_7.png in Resources */,
 				4EBF28B9226DCA8400AE954B /* SelfShootOnObserveScene.json in Resources */,
 				4E73A74224701E0F006DF31D /* runcycle.aif in Resources */,
@@ -1687,7 +1651,6 @@
 				4E03567A21F9D15200837712 /* BaseLevelScene.swift in Sources */,
 				4E47BE942271B608009ED639 /* ParaglidingPlayerComponent.swift in Sources */,
 				4E47BEF52276175C009ED639 /* GemEntity.swift in Sources */,
-				4E982A1121F5E5DB00759A00 /* AppDelegate.swift in Sources */,
 				4EA1AFBD220997D700A71FDF /* HazardComponent.swift in Sources */,
 				4ECB19B4222FC4B300C0C38C /* SelectionButtonContentView.swift in Sources */,
 				4E9ED36321FB1BCD00D59A68 /* LevelSectionView.swift in Sources */,
@@ -1813,7 +1776,6 @@
 				4EBF2895226B64AE00AE954B /* SpikeEntity.swift in Sources */,
 				4E47BEC822747B07009ED639 /* WitchEntity.swift in Sources */,
 				4E47BEDF2275155D009ED639 /* UpdatableHealthBarComponent.swift in Sources */,
-				4EC50D0F217DE4F5005D66FC /* AppDelegate.swift in Sources */,
 				4E353945223D224300A5EB15 /* Label+StyledLabels.swift in Sources */,
 				4E8EF8B32224A7CA009077C9 /* CrouchingPlayerComponent.swift in Sources */,
 				4E002C64226F983900DE2357 /* ChestItemComponent.swift in Sources */,
@@ -1896,22 +1858,6 @@
 				4E908C5A217DE46900D8B29D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		4E982A1421F5E5DB00759A00 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E982A1521F5E5DB00759A00 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4EC50D14217DE4F6005D66FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EC50D15217DE4F6005D66FC /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
