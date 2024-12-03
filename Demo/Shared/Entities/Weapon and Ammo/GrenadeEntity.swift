@@ -104,7 +104,7 @@ class GrenadeComponent: GKComponent, GlideComponent {
     var bouncingVelocity: CGVector?
     var postContactVelocity: CGVector?
     var didPlayDieAnimation: Bool = false
-    let explosionAnimationEntity = DemoEntityFactory.explosionAnimationEntity(at: .zero)
+    let explosionAnimationEntity = AnimationEntityFactory.explosionAnimationEntity(at: .zero)
     
     override func update(deltaTime seconds: TimeInterval) {
         if let bouncingVelocity = bouncingVelocity {

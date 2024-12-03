@@ -84,7 +84,7 @@ class BulletEntity: ProjectileTemplateEntity {
 class BulletComponent: GKComponent, GlideComponent {
     
     var didPlayDieAnimation: Bool = false
-    let explosionAnimationEntity = DemoEntityFactory.explosionAnimationEntity(at: .zero)
+    let explosionAnimationEntity = AnimationEntityFactory.explosionAnimationEntity(at: .zero)
     
     func willUpdate(deltaTime seconds: TimeInterval) {
         entity?.component(ofType: KinematicsBodyComponent.self)?.gravityInEffect = 0

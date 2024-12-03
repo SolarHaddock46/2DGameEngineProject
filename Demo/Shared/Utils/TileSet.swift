@@ -1,5 +1,5 @@
 //
-//  BumpAttackerComponent.swift
+//  DemoTileSet.swift
 //  glide Demo
 //
 //  Copyright (c) 2019 cocoatoucher user on github.com (https://github.com/cocoatoucher/)
@@ -23,22 +23,30 @@
 //  SOFTWARE.
 //
 
-import YAEngine
-import GameplayKit
+import SpriteKit
 
-class BumpAttackerComponent: GKComponent, GlideComponent {
+class TileSet {
+    static func horizontalPlatformsTileSet() -> SKTileSet {
+        var tileGroups: [SKTileGroup] = []
+        tileGroups.append(TileSet.tileGroup(with: "plat_left"))
+        tileGroups.append(TileSet.tileGroup(with: "plat_middle"))
+        tileGroups.append(TileSet.tileGroup(with: "plat_right"))
+        return SKTileSet(tileGroups: tileGroups)
+    }
     
-    func handleNewContact(_ contact: Contact) {
-        if let otherCollider = contact.otherObject.colliderComponent {
-            
-            if otherCollider.categoryMask.rawValue == DemoCategoryMask.npc.rawValue {
-                
-                if contact.contactSides.contains(.bottom) && contact.otherContactSides?.contains(.top) == true {
-                    
-                    entity?.component(ofType: BouncerComponent.self)?.bounce(withImpactSides: [.bottom])
-                    contact.otherObject.colliderComponent?.entity?.component(ofType: HealthComponent.self)?.applyDamage(1.0)
-                }
-            }
-        }
+    static func verticalPlatformsTileSet() -> SKTileSet {
+        var tileGroups: [SKTileGroup] = []
+        tileGroups.append(TileSet.tileGroup(with: "plat_top"))
+        tileGroups.append(TileSet.tileGroup(with: "plat_middle_vertical"))
+        tileGroups.append(TileSet.tileGroup(with: "plat_bottom"))
+        return SKTileSet(tileGroups: tileGroups)
+    }
+    
+    static func tileGroup(with textureName: String) -> SKTileGroup {
+        let texture = SKTexture(imageNamed: textureName)
+        texture.filteringMode = .nearest
+        let tileDefinition = SKTileDefinition(texture: texture)
+        let tileGroup = SKTileGroup(tileDefinition: tileDefinition)
+        return tileGroup
     }
 }

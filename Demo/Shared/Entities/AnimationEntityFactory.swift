@@ -28,40 +28,10 @@ import SpriteKit
 
 /// This is an alternative approach to implementing separate `GlideEntity` subclasses
 /// for different entities.
-class DemoEntityFactory {
-    
-    static func crateEntity(size: CGSize, bottomLeftPosition: TiledPoint, tileSize: CGSize) -> GlideEntity {
-        let offset = CGPoint(x: (size / 2).width, y: (size / 2).height)
-        let entity = GlideEntity(initialNodePosition: bottomLeftPosition.point(with: tileSize),
-                                 positionOffset: offset)
-        
-        let collider = ColliderComponent(categoryMask: DemoCategoryMask.crate,
-                                         size: size,
-                                         offset: .zero,
-                                         leftHitPointsOffsets: (5, 5),
-                                         rightHitPointsOffsets: (5, 5),
-                                         topHitPointsOffsets: (5, 5),
-                                         bottomHitPointsOffsets: (5, 5))
-        entity.addComponent(collider)
-        
-        let spriteNodeComponent = SpriteNodeComponent(nodeSize: size)
-        spriteNodeComponent.zPositionContainer = DemoZPositionContainer.environment
-        spriteNodeComponent.spriteNode.texture = SKTexture(nearestFilteredImageName: "crate")
-        entity.addComponent(spriteNodeComponent)
-        
-        let health = HealthComponent(maximumHealth: 1)
-        entity.addComponent(health)
-        
-        let snappable = SnappableComponent(providesOneWayCollision: false)
-        entity.addComponent(snappable)
-        
-        let crate = CrateComponent()
-        entity.addComponent(crate)
-        return entity
-    }
+class AnimationEntityFactory {
     
     static func explosionAnimationEntity(at position: CGPoint) -> GlideEntity {
-        let entity = DemoEntityFactory.animationEntity(position: position, textureFormat: "explosion_%d", numberOfFrame: 59, offset: CGPoint(x: 0, y: 10))
+        let entity = AnimationEntityFactory.animationEntity(position: position, textureFormat: "explosion_%d", numberOfFrame: 59, offset: CGPoint(x: 0, y: 10))
         
         let audioPlayerComponent = AudioPlayerComponent()
         entity.addComponent(audioPlayerComponent)
@@ -78,7 +48,7 @@ class DemoEntityFactory {
     }
     
     static func magicAnimationEntity(at position: CGPoint) -> GlideEntity {
-        return DemoEntityFactory.animationEntity(position: position, textureFormat: "burst_effect_%d", numberOfFrame: 49, offset: CGPoint(x: 0, y: 0))
+        return AnimationEntityFactory.animationEntity(position: position, textureFormat: "burst_effect_%d", numberOfFrame: 49, offset: CGPoint(x: 0, y: 0))
     }
     
     private static func animationEntity(position: CGPoint, textureFormat: String, numberOfFrame: Int, offset: CGPoint) -> GlideEntity {

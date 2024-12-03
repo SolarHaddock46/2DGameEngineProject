@@ -29,7 +29,7 @@ import YAEngine
 class CollectibleComponent: GKComponent, GlideComponent, RemovalControllingComponent {
     
     var isCollected: Bool = false
-    let magicAnimationEntity = DemoEntityFactory.magicAnimationEntity(at: .zero)
+    let magicAnimationEntity = AnimationEntityFactory.magicAnimationEntity(at: .zero)
     
     func handleNewContact(_ contact: Contact) {
         guard isCollected == false else {
