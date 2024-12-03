@@ -47,6 +47,15 @@ class HealthComponentScene: BaseLevelScene {
             TiledPoint(15, 10),
             TiledPoint(17, 10),
             TiledPoint(19, 10),
+            TiledPoint(36, 10),
+            TiledPoint(39, 10),
+            TiledPoint(55, 10),
+            TiledPoint(119, 10),
+            TiledPoint(152, 17),
+            TiledPoint(162, 17),
+            TiledPoint(175, 10),
+            TiledPoint(275, 10),
+            TiledPoint(339, 10)
             // Add more positions as needed
         ]
 
