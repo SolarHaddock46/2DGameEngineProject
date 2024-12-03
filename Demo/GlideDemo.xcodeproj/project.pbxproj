@@ -213,9 +213,9 @@
 		4EB7A4AC2472F78E0002CEA9 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7A4AB2472F78E0002CEA9 /* shoot.wav */; };
 		4EB7A4AD2472F78E0002CEA9 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7A4AB2472F78E0002CEA9 /* shoot.wav */; };
 		4EB7A4AE2472F78E0002CEA9 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7A4AB2472F78E0002CEA9 /* shoot.wav */; };
-		4EBF2885226B211500AE954B /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBF2884226B211500AE954B /* SharedAssets.xcassets */; };
-		4EBF2886226B211500AE954B /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBF2884226B211500AE954B /* SharedAssets.xcassets */; };
-		4EBF2887226B211500AE954B /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBF2884226B211500AE954B /* SharedAssets.xcassets */; };
+		4EBF2885226B211500AE954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBF2884226B211500AE954B /* Assets.xcassets */; };
+		4EBF2886226B211500AE954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBF2884226B211500AE954B /* Assets.xcassets */; };
+		4EBF2887226B211500AE954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBF2884226B211500AE954B /* Assets.xcassets */; };
 		4EBF288B226B56ED00AE954B /* HealthBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF288A226B56ED00AE954B /* HealthBarEntity.swift */; };
 		4EBF288C226B56ED00AE954B /* HealthBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF288A226B56ED00AE954B /* HealthBarEntity.swift */; };
 		4EBF288D226B56ED00AE954B /* HealthBarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF288A226B56ED00AE954B /* HealthBarEntity.swift */; };
@@ -372,7 +372,7 @@
 		4EB7A3F8247171EA0002CEA9 /* jumping.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = jumping.aif; sourceTree = "<group>"; };
 		4EB7A4A72472F76F0002CEA9 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		4EB7A4AB2472F78E0002CEA9 /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
-		4EBF2884226B211500AE954B /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
+		4EBF2884226B211500AE954B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EBF288A226B56ED00AE954B /* HealthBarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarEntity.swift; sourceTree = "<group>"; };
 		4EBF2893226B64AE00AE954B /* SpikeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpikeEntity.swift; sourceTree = "<group>"; };
 		4EBF289F226B7D5000AE954B /* DemoZPositionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoZPositionContainer.swift; sourceTree = "<group>"; };
@@ -643,7 +643,7 @@
 				4EC9915C2278BE3900516600 /* Utils */,
 				4E353881223D1ADD00A5EB15 /* Fonts */,
 				4EFDCB35246C94880092CF5B /* Sounds */,
-				4EBF2884226B211500AE954B /* SharedAssets.xcassets */,
+				4EBF2884226B211500AE954B /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -852,7 +852,7 @@
 				4E908C56217DE46800D8B29D /* Main.storyboard in Resources */,
 				4E87C6D72207771F00F56FE7 /* CheckpointsScene.json in Resources */,
 				4EB7A3FC247171EA0002CEA9 /* jumping.aif in Resources */,
-				4EBF2885226B211500AE954B /* SharedAssets.xcassets in Resources */,
+				4EBF2885226B211500AE954B /* Assets.xcassets in Resources */,
 				4EB7A4AC2472F78E0002CEA9 /* shoot.wav in Resources */,
 				4EB7A4A82472F76F0002CEA9 /* explosion.wav in Resources */,
 				4E3538EB223D1AF200A5EB15 /* Awake.ttf in Resources */,
@@ -892,7 +892,7 @@
 				4E3538ED223D1AF200A5EB15 /* Awake.ttf in Resources */,
 				4EB7A4AA2472F76F0002CEA9 /* explosion.wav in Resources */,
 				4E353908223D1AF200A5EB15 /* ExpressionPro.ttf in Resources */,
-				4EBF2887226B211500AE954B /* SharedAssets.xcassets in Resources */,
+				4EBF2887226B211500AE954B /* Assets.xcassets in Resources */,
 				3302F40D2CFF6E7B007DF7A2 /* slope_7_0.png in Resources */,
 				3302F40E2CFF6E7B007DF7A2 /* slope_3_0.png in Resources */,
 				3302F40F2CFF6E7B007DF7A2 /* slope_4_7.png in Resources */,
@@ -960,7 +960,7 @@
 				4E87C6D82207771F00F56FE7 /* CheckpointsScene.json in Resources */,
 				4EB7A4AD2472F78E0002CEA9 /* shoot.wav in Resources */,
 				4E3538EF223D1AF200A5EB15 /* m5x7.ttf in Resources */,
-				4EBF2886226B211500AE954B /* SharedAssets.xcassets in Resources */,
+				4EBF2886226B211500AE954B /* Assets.xcassets in Resources */,
 				4E3538F8223D1AF200A5EB15 /* EquipmentPro.ttf in Resources */,
 				4EB7A3FD247171EA0002CEA9 /* jumping.aif in Resources */,
 			);

@@ -75,6 +75,7 @@ class BaseLevelScene: GlideScene {
         inputMethodObservation = NotificationCenter.default.addObserver(forName: .InputMethodDidChange, object: nil, queue: nil) { [weak self] _ in
             self?.configureControls()
         }
+        
         #endif
     }
     
