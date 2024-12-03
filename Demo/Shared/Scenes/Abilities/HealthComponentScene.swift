@@ -9,6 +9,7 @@ class HealthComponentScene: BaseLevelScene {
         mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.hazard)
         mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.npc)
         mapContact(between: DemoCategoryMask.npc, and: DemoCategoryMask.projectile)
+        mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.collectible)
         
         #if os(iOS)
         let touchButtonComponent = additionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)
@@ -29,14 +30,12 @@ class HealthComponentScene: BaseLevelScene {
         // Add an array of spike entities
         let spikePositions: [TiledPoint] = [
             TiledPoint(15, 10),
-            TiledPoint(17, 10),
-            TiledPoint(19, 10),
+//            TiledPoint(19, 10),
             TiledPoint(36, 10),
-            TiledPoint(39, 10),
             TiledPoint(55, 10),
             TiledPoint(119, 10),
             TiledPoint(152, 17),
-            TiledPoint(162, 17),
+//            TiledPoint(162, 17),
             TiledPoint(175, 10),
             TiledPoint(275, 10),
             TiledPoint(339, 10)
@@ -56,11 +55,10 @@ class HealthComponentScene: BaseLevelScene {
         
         // Add patrolling eagle entities
         let eaglePositions: [TiledPoint] = [
-            TiledPoint(27, 11),
             TiledPoint(52, 11),
             TiledPoint(83, 17),
             TiledPoint(100, 17),
-            TiledPoint(136, 11),
+            TiledPoint(136, 20),
             TiledPoint(203, 12),
             TiledPoint(207, 12),
             TiledPoint(211, 12),
@@ -76,8 +74,37 @@ class HealthComponentScene: BaseLevelScene {
             addEntity(eagleEntity)
         }
         
-        setupTips()
+        // Add gem entities using an array of TiledPoint
+        let gemPositions: [TiledPoint] = [
+            TiledPoint(30, 10),
+            TiledPoint(34, 18),
+            TiledPoint(35, 15),
+            TiledPoint(62, 13),
+            TiledPoint(95, 15),
+            TiledPoint(106, 15),
+            TiledPoint(115, 10),
+            TiledPoint(152, 21),
+            TiledPoint(155, 21),
+            TiledPoint(213, 11),
+            TiledPoint(200, 2),
+            TiledPoint(202, 2),
+            TiledPoint(204, 2),
+            TiledPoint(206, 2),
+            TiledPoint(208, 2),
+            TiledPoint(210, 2),
+            TiledPoint(212, 2),
+            TiledPoint(261, 11),
+            TiledPoint(285, 10)
+        ]
         
+        for position in gemPositions {
+            let gemEntity = GemEntity(bottomLeftPosition: position.point(with: tileSize))
+            addEntity(gemEntity)
+        }
+        
+        addEntity(gemCounterEntity)
+        
+        setupTips()
     }
     
     // MARK: - Player Entity
@@ -129,6 +156,9 @@ class HealthComponentScene: BaseLevelScene {
                                   isPositional: true)
         audioPlayerComponent?.addClip(shootClip)
         
+        let updateGemCounterComponent = UpdateGemCounterComponent(gemCounterEntity: gemCounterEntity)
+        playerEntity.addComponent(updateGemCounterComponent)
+        
         return playerEntity
     }()
     
@@ -144,6 +174,10 @@ class HealthComponentScene: BaseLevelScene {
     lazy var healthBarEntity: HealthBarEntity = {
         return HealthBarEntity(numberOfHearts: 3)
     }()
+    
+    // MARK: - Gem Counter Entity
+    
+    var gemCounterEntity = GemCounterEntity(initialNodePosition: .zero)
     
     // MARK: - Patrolling Eagle Entity
     
@@ -181,7 +215,7 @@ class HealthComponentScene: BaseLevelScene {
         #endif
         
         let tipEntity = GameplayTipEntity(initialNodePosition: location.point(with: tileSize),
-                                          text: "Avoid spikes and shoot projectiles at eagles to eliminate them.",
+                                          text: "Avoid spikes and shoot projectiles at eagles to eliminate them. Collect gems to increase your score!",
                                           frameWidth: tipWidth)
         addEntity(tipEntity)
     }
