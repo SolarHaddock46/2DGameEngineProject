@@ -47,9 +47,18 @@
             BlueprintIdentifier = "4E908C4C217DE46800D8B29D"
             BuildableName = "Glide Demo.app"
             BlueprintName = "GlideDemo_iOS"
-            ReferencedContainer = "container:GlideDemo.xcodeproj">
+            ReferencedContainer = "container:YADemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E908C4C217DE46800D8B29D"
+            BuildableName = "Glide Demo.app"
+            BlueprintName = "GlideDemo_iOS"
+            ReferencedContainer = "container:GlideDemo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -67,6 +76,15 @@
             ReferencedContainer = "container:GlideDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E908C4C217DE46800D8B29D"
+            BuildableName = "Glide Demo.app"
+            BlueprintName = "GlideDemo_iOS"
+            ReferencedContainer = "container:GlideDemo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
