@@ -51,7 +51,7 @@ class EagleEntity: GlideEntity {
         addComponent(colliderComponent)
         
         var kinematicsBodyConfiguration = KinematicsBodyComponent.sharedConfiguration
-        kinematicsBodyConfiguration.maximumVerticalVelocity = 5.0
+        kinematicsBodyConfiguration.maximumVerticalVelocity = 2.0
         let kinematicsBodyComponent = KinematicsBodyComponent(configuration: kinematicsBodyConfiguration)
         addComponent(kinematicsBodyComponent)
         
@@ -63,6 +63,9 @@ class EagleEntity: GlideEntity {
         
         let moveComponent = SelfMoveComponent(movementAxes: .vertical)
         addComponent(moveComponent)
+        
+        let hazardComponent = HazardComponent()
+        addComponent(hazardComponent)
         
         let eagleComponent = EagleComponent()
         addComponent(eagleComponent)
@@ -118,6 +121,21 @@ class EagleComponent: GKComponent, GlideComponent {
     
     var hasDieAnimationFinished: Bool = false
     var didPlayDieAnimation: Bool = false
+    
+    func handleNewContact(_ contact: Contact) {
+        guard let otherCategoryMask = contact.otherObject.colliderComponent?.categoryMask else {
+            return
+        }
+        
+        if otherCategoryMask == DemoCategoryMask.weapon || otherCategoryMask == DemoCategoryMask.projectile {
+            
+            if otherCategoryMask == DemoCategoryMask.projectile {
+                contact.otherObject.colliderComponent?.entity?.component(ofType: HealthComponent.self)?.kill()
+            }
+            
+            entity?.component(ofType: HealthComponent.self)?.kill()
+        }
+    }
     
     let dieAction = SKAction.textureAnimation(textureFormat: "eagle_die_%d",
                                               numberOfFrames: 11,

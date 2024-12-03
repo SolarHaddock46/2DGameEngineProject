@@ -40,6 +40,7 @@ class ProjectileWeaponEntity: GlideEntity {
         
         let spriteNodeComponent = SpriteNodeComponent(nodeSize: size)
         spriteNodeComponent.zPositionContainer = DemoZPositionContainer.weapons
+        spriteNodeComponent.node.isHidden = true
         addComponent(spriteNodeComponent)
         
         let projectileWeaponComponent = ProjectileWeaponComponent()
