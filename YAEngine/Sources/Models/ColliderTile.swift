@@ -22,8 +22,6 @@ import SpriteKit
 enum ColliderTile: Equatable {
     case ground
     case oneWay
-    case jumpWallRight
-    case jumpWallLeft
     case slope(fullValue: String)
 }
 
@@ -34,8 +32,6 @@ extension ColliderTile {
         switch value {
         case "ground": self = .ground
         case "one_way": self = .oneWay
-        case "jump_wall_right": self = .jumpWallRight
-        case "jump_wall_left": self = .jumpWallLeft
         case _ where value.hasPrefix(ColliderTile.slopePrefix): self = .slope(fullValue: value)
         default: return nil
         }
@@ -47,10 +43,6 @@ extension ColliderTile {
             return "ground"
         case .oneWay:
             return "one_way"
-        case .jumpWallRight:
-            return "jump_wall_right"
-        case .jumpWallLeft:
-            return "jump_wall_left"
         case let .slope(fullValue):
             return fullValue
         }

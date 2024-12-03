@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that is used to move its entity with a simple harmonic motion.
 /// Manipulates the transform position directly rather than changing the kinematics body.
-public final class OscillatingMovementComponent: GKComponent, GlideComponent {
+public final class OscillatingMovementComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 870
     

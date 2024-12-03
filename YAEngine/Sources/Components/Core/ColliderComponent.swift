@@ -6,7 +6,7 @@
 import GameplayKit
 
 /// Component that handles the collisions and controls the collider box of an entity.
-public final class ColliderComponent: GKComponent, GlideComponent {
+public final class ColliderComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 950
     

@@ -12,7 +12,7 @@ import GameplayKit
 /// the position of the transform.
 ///
 /// Required components: `KinematicsBodyComponent`.
-public final class CircularMovementComponent: GKComponent, GlideComponent {
+public final class CircularMovementComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 880
     

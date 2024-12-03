@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that makes an entity be able to shoot projectile entities
 /// with the given entity template.
-public final class ProjectileShooterComponent: GKComponent, GlideComponent {
+public final class ProjectileShooterComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 730
     

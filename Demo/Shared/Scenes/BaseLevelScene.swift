@@ -75,16 +75,6 @@ class BaseLevelScene: GlideScene {
         inputMethodObservation = NotificationCenter.default.addObserver(forName: .InputMethodDidChange, object: nil, queue: nil) { [weak self] _ in
             self?.configureControls()
         }
-        
-        conversationDidStartObservation = NotificationCenter.default.addObserver(forName: .ConversationDidStart, object: nil, queue: nil) { [weak self] _ in
-            self?.isInConversation = true
-            self?.configureControls()
-        }
-        
-        conversationDidEndObservation = NotificationCenter.default.addObserver(forName: .ConversationDidEnd, object: nil, queue: nil) { [weak self] _ in
-            self?.isInConversation = false
-            self?.configureControls()
-        }
         #endif
     }
     

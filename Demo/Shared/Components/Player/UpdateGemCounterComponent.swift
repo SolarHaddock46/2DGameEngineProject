@@ -26,7 +26,7 @@
 import GameplayKit
 import YAEngine
 
-class UpdateGemCounterComponent: GKComponent, GlideComponent {
+class UpdateGemCounterComponent: GKComponent, YAComponent {
     
     let gemCounterEntity: GemCounterEntity
     

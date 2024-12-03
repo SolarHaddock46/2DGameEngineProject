@@ -12,7 +12,7 @@ import GameplayKit
 /// - `SelfMoveComponent` with appropriate axes depending on the given profiles
 /// - `ColliderComponent` depending on the given profiles
 /// - `KinematicsBodyComponent` depending on the given profiles
-public final class SelfChangeDirectionComponent: GKComponent, GlideComponent {
+public final class SelfChangeDirectionComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 590
     

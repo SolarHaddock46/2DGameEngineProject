@@ -23,12 +23,11 @@ extension GlideScene {
         updateCollisionTileMapNodeDebug()
         #endif
         
-        addEntity(conversationFlowControllerEntity)
         addEntity(focusableEntitiesControllerEntity)
         
         addChild(cameraEntity.transform.node)
         
-        internalEntities = [conversationFlowControllerEntity, focusableEntitiesControllerEntity, cameraEntity]
+        internalEntities = [focusableEntitiesControllerEntity, cameraEntity]
     }
     
     open override func didMove(to view: SKView) {

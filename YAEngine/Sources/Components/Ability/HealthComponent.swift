@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that gives an entity health and life properties, e.g. number of lives.
 /// This also gives ability to get damaged and die.
-public final class HealthComponent: GKComponent, GlideComponent {
+public final class HealthComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 720
     

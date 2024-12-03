@@ -11,7 +11,7 @@ import GameplayKit
 /// with the collider of this component's entity.
 /// It is required that transform of the entity of this component has
 /// `usesProposedPosition` set to `false`.
-public final class CheckpointComponent: GKComponent, GlideComponent {
+public final class CheckpointComponent: GKComponent, YAComponent {
     
     /// Checkpoint value for the component.
     public let checkpoint: Checkpoint

@@ -10,7 +10,7 @@ import GameplayKit
 /// entity after it gets a hit.
 /// An entity's `HealthComponent`, if there is any, automatically triggers blinking
 /// for this component when an entity takes damage.
-public final class BlinkerComponent: GKComponent, GlideComponent {
+public final class BlinkerComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 710
     

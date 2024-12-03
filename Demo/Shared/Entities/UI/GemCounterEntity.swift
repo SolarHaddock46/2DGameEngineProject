@@ -66,7 +66,7 @@ class GemCounterEntity: GlideEntity {
     }
 }
 
-class GemCounterComponent: GKComponent, GlideComponent, NodeLayoutableComponent {
+class GemCounterComponent: GKComponent, YAComponent, NodeLayoutableComponent {
     
     func layout(scene: GlideScene, previousSceneSize: CGSize) {
         transform?.currentPosition = CGPoint(x: -scene.size.width / 2, y: scene.size.height / 2)

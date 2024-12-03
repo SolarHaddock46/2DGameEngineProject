@@ -93,16 +93,7 @@ extension CollisionsController {
                     nonCollisionContacts.append(contact)
                 }
             }
-        case .jumpWallRight, .jumpWallLeft:
-            guard colliderMovement.collider.entity?.component(ofType: WallJumpComponent.self) != nil else {
-                return nil
-            }
-            var isJumpWallLeft = false
-            if colliderTile == .jumpWallLeft { isJumpWallLeft = true }
-            handleJumpWallTileContact(colliderMovement: colliderMovement,
-                                      isJumpWallLeft: isJumpWallLeft,
-                                      shouldCollideGround: shouldCollideGround,
-                                      tileIntersection: tileIntersection)
+            
         case .slope:
             let kinematicsBody = colliderMovement.collider.entity?.component(ofType: KinematicsBodyComponent.self)
             let verticalVelocity = kinematicsBody?.velocity.dy ?? 0

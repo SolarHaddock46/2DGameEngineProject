@@ -64,7 +64,6 @@
 		3302F41D2CFF6E7B007DF7A2 /* slope_0_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3D92CFF6E7B007DF7A2 /* slope_0_15.png */; };
 		3302F41E2CFF6E7B007DF7A2 /* GlideColliderTileSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3E62CFF6E7B007DF7A2 /* GlideColliderTileSet.json */; };
 		3302F41F2CFF6E7B007DF7A2 /* slope_15_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3E22CFF6E7B007DF7A2 /* slope_15_0.png */; };
-		331915952CF63D160090A789 /* YAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 331915942CF63D160090A789 /* YAEngine */; };
 		4E002C38226F11C100DE2357 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C37226F11C100DE2357 /* CollectibleComponent.swift */; };
 		4E002C39226F11C100DE2357 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C37226F11C100DE2357 /* CollectibleComponent.swift */; };
 		4E002C3A226F11C100DE2357 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C37226F11C100DE2357 /* CollectibleComponent.swift */; };
@@ -315,6 +314,8 @@
 		3302F3E32CFF6E7B007DF7A2 /* slope_15_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_15_8.png; sourceTree = "<group>"; };
 		3302F3E42CFF6E7B007DF7A2 /* slope_15_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_15_12.png; sourceTree = "<group>"; };
 		3302F3E62CFF6E7B007DF7A2 /* GlideColliderTileSet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GlideColliderTileSet.json; sourceTree = "<group>"; };
+		3302F4202CFF7562007DF7A2 /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glide Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3302F4212CFF7562007DF7A2 /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glide Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E002C37226F11C100DE2357 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
 		4E002C3B226F11E700DE2357 /* UpdateHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHealthBarComponent.swift; sourceTree = "<group>"; };
 		4E002C4B226F248100DE2357 /* TriggerZoneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerZoneComponent.swift; sourceTree = "<group>"; };
@@ -363,7 +364,6 @@
 		4E908C55217DE46800D8B29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E908C5A217DE46900D8B29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E908C5C217DE46900D8B29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E982A0E21F5E5DB00759A00 /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Glide Demo.app"; path = "/Users/vladimirmatsnev/2DGameEngineProject/Demo/build/Debug-appletvos/Glide Demo.app"; sourceTree = "<absolute>"; };
 		4E9ED34B21FB103B00D59A68 /* SingleLevelSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLevelSectionViewController.swift; sourceTree = "<group>"; };
 		4E9ED35B21FB18C400D59A68 /* SingleLevelSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLevelSectionViewModel.swift; sourceTree = "<group>"; };
 		4E9ED36021FB1BCD00D59A68 /* LevelSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSectionView.swift; sourceTree = "<group>"; };
@@ -378,7 +378,6 @@
 		4EBF289F226B7D5000AE954B /* DemoZPositionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoZPositionContainer.swift; sourceTree = "<group>"; };
 		4EBF28C7226E3DF100AE954B /* GameplayTipEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayTipEntity.swift; sourceTree = "<group>"; };
 		4EC45BBE223E74F700CA94F5 /* CAAnimation+BackgroundColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAAnimation+BackgroundColorAnimation.swift"; sourceTree = "<group>"; };
-		4EC50D0C217DE4F5005D66FC /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Glide Demo.app"; path = "/Users/vladimirmatsnev/2DGameEngineProject/Demo/build/Debug/Glide Demo.app"; sourceTree = "<absolute>"; };
 		4EC50D10217DE4F5005D66FC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4EC50D34217DE710005D66FC /* BaseLevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLevelScene.swift; sourceTree = "<group>"; };
 		4EC8E34F21C1AC1B00D43F45 /* GrenadeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrenadeEntity.swift; sourceTree = "<group>"; };
@@ -394,7 +393,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				331915952CF63D160090A789 /* YAEngine in Frameworks */,
 				4EE9861824B1531A00B25627 /* YAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +534,8 @@
 			isa = PBXGroup;
 			children = (
 				4E908C4D217DE46800D8B29D /* Glide Demo.app */,
+				3302F4202CFF7562007DF7A2 /* Glide Demo.app */,
+				3302F4212CFF7562007DF7A2 /* Glide Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -741,7 +741,6 @@
 			name = GlideDemo_iOS;
 			packageProductDependencies = (
 				4EE9861724B1531A00B25627 /* YAEngine */,
-				331915942CF63D160090A789 /* YAEngine */,
 			);
 			productName = DemoSideScrollerComponents;
 			productReference = 4E908C4D217DE46800D8B29D /* Glide Demo.app */;
@@ -766,7 +765,7 @@
 				4E6C771A22FC97CF0012C41E /* YAEngine */,
 			);
 			productName = "SideScrollerDemo-tvOS";
-			productReference = 4E982A0E21F5E5DB00759A00 /* Glide Demo.app */;
+			productReference = 3302F4212CFF7562007DF7A2 /* Glide Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4EC50D0B217DE4F5005D66FC /* GlideDemo_macOS */ = {
@@ -788,7 +787,7 @@
 				4E6C771822FC97CB0012C41E /* YAEngine */,
 			);
 			productName = DemoSideScrollerComponentsMac;
-			productReference = 4EC50D0C217DE4F5005D66FC /* Glide Demo.app */;
+			productReference = 3302F4202CFF7562007DF7A2 /* Glide Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1516,10 +1515,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		331915942CF63D160090A789 /* YAEngine */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = YAEngine;
-		};
 		4E6C771822FC97CB0012C41E /* YAEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = YAEngine;

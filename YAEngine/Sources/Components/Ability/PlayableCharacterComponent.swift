@@ -21,7 +21,7 @@ import GameplayKit
 /// - `CroucherComponent`
 /// - `JetpackOperatorComponent`
 /// - `SwingHolderComponent`
-public final class PlayableCharacterComponent: GKComponent, GlideComponent {
+public final class PlayableCharacterComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 640
     
@@ -65,13 +65,6 @@ public final class PlayableCharacterComponent: GKComponent, GlideComponent {
     /// Used to control early jump release for faster falling.
     private var holdingDownInitialJumpPress: Bool = false
     
-    private var shouldWallJump: Bool {
-        guard let wallJumpComponent = entity?.component(ofType: WallJumpComponent.self) else {
-            return false
-        }
-        return isButtonPressed(for: "Jump") && wallJumpComponent.canJump
-    }
-    
     private var shouldGroundJump: Bool {
         guard let jumpComponent = entity?.component(ofType: JumpComponent.self) else {
             return false
@@ -89,133 +82,18 @@ public final class PlayableCharacterComponent: GKComponent, GlideComponent {
             currentTime - lastJumpPressTime <= jumpComponent.configuration.serialJumpThreshold
     }
     
-    private func handleCrouching() {
-        let collider = entity?.component(ofType: ColliderComponent.self)
-        
-        let verticalProfile = profile(for: "Vertical")
-        
-        if verticalProfile == -1 && collider?.isOnAir == false {
-            entity?.component(ofType: CroucherComponent.self)?.crouches = true
-        }
-    }
-    
-    private func handleLookingUpwards() {
-        let collider = entity?.component(ofType: ColliderComponent.self)
-        
-        let verticalProfile = profile(for: "Vertical")
-        
-        if verticalProfile == 1 && collider?.isOnAir == false {
-            entity?.component(ofType: UpwardsLookerComponent.self)?.looksUpwards = true
-        }
-    }
-    
-    private func handleLadderClimbing() {
-        guard let ladderClimber = entity?.component(ofType: LadderClimberComponent.self) else {
-            return
-        }
-        guard ladderClimber.isContactingLadder else {
-            ladderClimber.isHolding = false
-            return
-        }
-        
-        let collider = entity?.component(ofType: ColliderComponent.self)
-        
-        let verticalProfile = profile(for: "Vertical")
-        
-        let shouldClimbLadder = verticalProfile > 0 && ladderClimber.isHolding == false
-        let isClimbingUpLadder = verticalProfile > 0 && ladderClimber.isHolding
-        let isClimbingDownLadder = verticalProfile < 0 && ladderClimber.isHolding
-        
-        if shouldClimbLadder {
-            ladderClimber.isHolding = true
-        } else if isClimbingUpLadder {
-            ladderClimber.movingDirection = .upwards
-        } else if collider?.onGround == true {
-            ladderClimber.isHolding = false
-        } else if isClimbingDownLadder {
-            if collider?.wasOnGround == true || collider?.onGround == true {
-                ladderClimber.isHolding = false
-            } else {
-                ladderClimber.movingDirection = .downwards
-            }
-        } else {
-            ladderClimber.movingDirection = .none
-        }
-    }
-    
-    private func handleJetpacking() {
-        guard let jetpackOperator = entity?.component(ofType: JetpackOperatorComponent.self) else {
-            return
-        }
-        
-        jetpackOperator.isOperatingJetpack = isButtonPressed(for: "Jetpack") || isButtonHoldDown(for: "Jetpack")
-    }
-    
-    private func handleJumpingAndParagliding() {
-        
+    private func handleJumping() {
         if isButtonPressed(for: "Jump") {
             lastJumpPressTime = currentTime ?? 0
         }
         
-        var wasHoldingDownInitialJumpPress = false
-        if isButtonReleased(for: "Jump") {
-            if holdingDownInitialJumpPress {
-                wasHoldingDownInitialJumpPress = true
-            }
-            holdingDownInitialJumpPress = false
-        }
-        
-        let collider = entity?.component(ofType: ColliderComponent.self)
-        
-        guard let kinematicsBody = entity?.component(ofType: KinematicsBodyComponent.self) else {
-            return
-        }
-        
-        let ladderClimber = entity?.component(ofType: LadderClimberComponent.self)
+        let kinematicsBody = entity?.component(ofType: KinematicsBodyComponent.self)
         let jumpComponent = entity?.component(ofType: JumpComponent.self)
-        let wallJumpComponent = entity?.component(ofType: WallJumpComponent.self)
-        
-        let shouldReleaseJumpingOnAir = isButtonReleased(for: "Jump") &&
-            wasHoldingDownInitialJumpPress &&
-            kinematicsBody.velocity.dy > 0 &&
-            collider?.isOnAir == true
         
         let shouldJump = shouldGroundJump || shouldSerialGroundJump(at: currentTime ?? 0)
         
         if shouldJump {
-            ladderClimber?.isHolding = false
             jumpComponent?.jumps = true
-            holdingDownInitialJumpPress = true
-        } else if shouldWallJump {
-            holdingDownInitialJumpPress = true
-            wallJumpComponent?.jumps = true
-        } else if shouldReleaseJumpingOnAir {
-            // Early jump break, faster falling
-            kinematicsBody.velocity.dy = fmin(2.0, kinematicsBody.velocity.dy)
-        } else {
-            handleParagliding()
-        }
-    }
-    
-    private func handleParagliding() {
-        guard let kinematicsBody = entity?.component(ofType: KinematicsBodyComponent.self) else {
-            return
-        }
-        
-        let collider = entity?.component(ofType: ColliderComponent.self)
-        let paraglider = entity?.component(ofType: ParagliderComponent.self)
-        
-        let shouldStartParagliding = isButtonPressed(for: "Paraglide") &&
-            kinematicsBody.velocity.dy < 0 &&
-            collider?.isOnAir == true &&
-            paraglider?.canParaglide == true
-        
-        let shouldContinueParagliding = paraglider?.wasParagliding == true &&
-            isButtonHoldDown(for: "Paraglide") &&
-            collider?.isOnAir == true
-        
-        if shouldStartParagliding || shouldContinueParagliding {
-            paraglider?.isParagliding = true
         }
     }
     
@@ -232,11 +110,7 @@ public final class PlayableCharacterComponent: GKComponent, GlideComponent {
             }
         }
         
-        handleCrouching()
-        handleLookingUpwards()
-        handleLadderClimbing()
-        handleJetpacking()
-        handleJumpingAndParagliding()
+        handleJumping()
     }
     
     private func handleProjectileShooting() {
@@ -258,36 +132,18 @@ public final class PlayableCharacterComponent: GKComponent, GlideComponent {
         guard let horizontalMovement = entity?.component(ofType: HorizontalMovementComponent.self) else {
             return
         }
-        guard entity?.component(ofType: LadderClimberComponent.self)?.isHolding != true else {
-            horizontalMovement.movementDirection = .stationary
-            return
-        }
         
         let horizontalProfile = profile(for: "Horizontal")
         
-        let swingHolder = entity?.component(ofType: SwingHolderComponent.self)
-        
-        let dasher = entity?.component(ofType: DasherComponent.self)
-        let shouldDash = dasher != nil && isButtonPressed(for: "Dash")
-        
-        if swingHolder?.isHolding == true {
-            if horizontalProfile < 0 {
-                swingHolder?.pushDirection = .clockwise
-            } else if horizontalProfile > 0 {
-                swingHolder?.pushDirection = .counterClockwise
-            }
-        } else if shouldDash {
-            dasher?.dashes = true
-        } else if dasher?.dashes != true {
-            if horizontalProfile < 0 {
-                horizontalMovement.movementDirection = .negative
-            } else if horizontalProfile > 0 {
-                horizontalMovement.movementDirection = .positive
-            } else {
-                horizontalMovement.movementDirection = .stationary
-            }
+        if horizontalProfile < 0 {
+            horizontalMovement.movementDirection = .negative
+        } else if horizontalProfile > 0 {
+            horizontalMovement.movementDirection = .positive
+        } else {
+            horizontalMovement.movementDirection = .stationary
         }
     }
+
     
     // MARK: - Input
     

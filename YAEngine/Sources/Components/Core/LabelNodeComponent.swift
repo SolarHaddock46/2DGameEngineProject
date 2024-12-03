@@ -7,7 +7,7 @@ import GameplayKit
 import SpriteKit
 
 /// Component that renders a label node as a child of its entity's transform node.
-public final class LabelNodeComponent: GKSKNodeComponent, GlideComponent, ZPositionContainerIndicatorComponent {
+public final class LabelNodeComponent: GKSKNodeComponent, YAComponent, ZPositionContainerIndicatorComponent {
     
     public static let componentPriority: Int = 970
     

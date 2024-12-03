@@ -83,7 +83,7 @@ public class ComponentPriorityRegistry {
             return try body(classListBuffer)
         }
         
-        let componentClasses = allClassesOfType { $0.compactMap { $0 as? GlideComponent.Type } }
+        let componentClasses = allClassesOfType { $0.compactMap { $0 as? YAComponent.Type } }
         for componentClass in componentClasses {
             if let gkComponentClass = componentClass as? GKComponent.Type {
                 setPriority(componentClass.componentPriority, for: gkComponentClass)

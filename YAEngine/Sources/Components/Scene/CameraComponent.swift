@@ -9,7 +9,7 @@ import SpriteKit
 /// Component that controls the camera node of a scene through an entity.
 /// In a `GlideScene`, you don't need to initialize this component or a camera node
 /// as this is already done by the scene.
-public final class CameraComponent: GKComponent, GlideComponent {
+public final class CameraComponent: GKComponent, YAComponent {
     
     public let cameraNode: SKCameraNode
     

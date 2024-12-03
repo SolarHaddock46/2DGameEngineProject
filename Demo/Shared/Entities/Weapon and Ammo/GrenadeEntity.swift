@@ -99,7 +99,7 @@ extension RoundedAngle {
     }
 }
 
-class GrenadeComponent: GKComponent, GlideComponent {
+class GrenadeComponent: GKComponent, YAComponent {
     
     var bouncingVelocity: CGVector?
     var postContactVelocity: CGVector?

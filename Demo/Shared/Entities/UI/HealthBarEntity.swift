@@ -56,7 +56,7 @@ class HealthBarEntity: GlideEntity {
     }
 }
 
-class HealthBarComponent: GKComponent, GlideComponent, NodeLayoutableComponent {
+class HealthBarComponent: GKComponent, YAComponent, NodeLayoutableComponent {
     
     func layout(scene: GlideScene, previousSceneSize: CGSize) {
         let offset: CGFloat = 50

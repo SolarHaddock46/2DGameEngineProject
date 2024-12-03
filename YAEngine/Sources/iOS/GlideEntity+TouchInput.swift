@@ -9,7 +9,7 @@ import UIKit
 
 extension GlideEntity {
     
-    private typealias TouchReceiver = TouchReceiverComponent & GlideComponent & GKComponent
+    private typealias TouchReceiver = TouchReceiverComponent & YAComponent & GKComponent
     
     func touchesBegan(_ touches: Set<UITouch>) {
         sortedComponents.forEach {

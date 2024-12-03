@@ -168,7 +168,7 @@ extension RoundedAngle {
     }
 }
 
-class ProjectileWeaponComponent: GKComponent, GlideComponent {
+class ProjectileWeaponComponent: GKComponent, YAComponent {
     
     var weaponPosition: RoundedAngle = .angle0 {
         didSet {

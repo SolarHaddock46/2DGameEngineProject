@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class TouchButtonComponent: GKSKNodeComponent, GlideComponent, TouchReceiverComponent, ZPositionContainerIndicatorComponent {
+class TouchButtonComponent: GKSKNodeComponent, YAComponent, TouchReceiverComponent, ZPositionContainerIndicatorComponent {
     
     var zPositionContainer: ZPositionContainer?
     

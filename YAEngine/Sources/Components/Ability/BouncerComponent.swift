@@ -10,7 +10,7 @@ import GameplayKit
 ///
 /// Required components:
 /// - `KinematicsBodyComponent`
-public final class BouncerComponent: GKComponent, GlideComponent {
+public final class BouncerComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 660
     

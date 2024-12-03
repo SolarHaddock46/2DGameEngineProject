@@ -7,7 +7,7 @@ import GameplayKit
 
 /// This component sets its entity's `canBeRemoved` to 'true' after a given period of time
 /// starting with the first time this entity.
-public class RemoveAfterTimeIntervalComponent: GKComponent, GlideComponent {
+public class RemoveAfterTimeIntervalComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 500
     

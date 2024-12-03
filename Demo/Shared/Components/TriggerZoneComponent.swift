@@ -26,7 +26,7 @@
 import GameplayKit
 import YAEngine
 
-class TriggerZoneComponent: GKComponent, GlideComponent {
+class TriggerZoneComponent: GKComponent, YAComponent {
     let callback: (_ entered: Bool) -> Void
     
     init(callback: @escaping (Bool) -> Void) {

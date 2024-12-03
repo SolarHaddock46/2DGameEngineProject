@@ -117,7 +117,7 @@ class EagleEntity: GlideEntity {
     
 }
 
-class EagleComponent: GKComponent, GlideComponent {
+class EagleComponent: GKComponent, YAComponent {
     
     var hasDieAnimationFinished: Bool = false
     var didPlayDieAnimation: Bool = false

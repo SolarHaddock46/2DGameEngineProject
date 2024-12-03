@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that makes an entity trigger its scene's camera to zoom on a specified area
 /// when contacted with other entities which have `CameraFocusAreaRecognizerComponent`.
-public final class CameraFocusAreaComponent: GKComponent, GlideComponent {
+public final class CameraFocusAreaComponent: GKComponent, YAComponent {
     
     /// Frame of the zoom area that will be zoomed when this `CameraFocusAreaComponent`
     /// is triggered.

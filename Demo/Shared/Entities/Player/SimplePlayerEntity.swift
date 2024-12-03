@@ -165,7 +165,7 @@ class SimplePlayerEntity: GlideEntity {
     
 }
 
-class SimplePlayerComponent: GKComponent, GlideComponent {
+class SimplePlayerComponent: GKComponent, YAComponent {
     
     var hasDieAnimationFinished: Bool = false
     var didPlayDieAnimation: Bool = false

@@ -26,7 +26,7 @@
 import GameplayKit
 import YAEngine
 
-class UpdateHealthBarComponent: GKComponent, GlideComponent {
+class UpdateHealthBarComponent: GKComponent, YAComponent {
     
     let updatableHealthBarComponent: UpdatableHealthBarComponent
     

@@ -9,7 +9,7 @@ import GameplayKit
 /// with the given movement style.
 ///
 /// Required components: `KinematicsBodyComponent`.
-public final class VerticalMovementComponent: GKComponent, GlideComponent {
+public final class VerticalMovementComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 890
     

@@ -14,7 +14,7 @@ import GameplayKit
 /// their layout in respect to screen dimensions.
 ///
 /// Required components: `SpriteNodeComponent`.
-public final class SceneAnchoredSpriteLayoutComponent: GKComponent, GlideComponent {
+public final class SceneAnchoredSpriteLayoutComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 400
     

@@ -8,7 +8,7 @@ import GameplayKit
 /// Component that is used to establish collisions with snappable objects
 /// like platforms and ladders. Snapping is a special behavior which helps with
 /// partially establishing collisions between moving objects.
-public final class SnapperComponent: GKComponent, GlideComponent {
+public final class SnapperComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 930
     

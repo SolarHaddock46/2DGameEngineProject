@@ -81,7 +81,7 @@ class BulletEntity: ProjectileTemplateEntity {
     
 }
 
-class BulletComponent: GKComponent, GlideComponent {
+class BulletComponent: GKComponent, YAComponent {
     
     var didPlayDieAnimation: Bool = false
     let explosionAnimationEntity = AnimationEntityFactory.explosionAnimationEntity(at: .zero)

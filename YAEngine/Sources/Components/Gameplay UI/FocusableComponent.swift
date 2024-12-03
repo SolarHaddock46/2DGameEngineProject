@@ -8,7 +8,7 @@ import GameplayKit
 /// Component that makes an entity controllable by the focusables controller
 /// of a scene.
 /// See `FocusableEntitiesControllerComponent`.
-public final class FocusableComponent: GKComponent, GlideComponent {
+public final class FocusableComponent: GKComponent, YAComponent {
     
     /// `true` if the entity of this component should become focused among
     /// its sibling focusables.

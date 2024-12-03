@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that is used to move its entity by `CGPoint.approach(destination:maximumDelta:)`.
 /// This movement component manipulates the transform position directly.
-public final class ApproachingMovementComponent: GKComponent, GlideComponent {
+public final class ApproachingMovementComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 850
     

@@ -9,7 +9,7 @@ import GameplayKit
 /// entities in a scene.
 /// This component listens for default menu input profiles to switch between focusable
 /// entities.
-final class FocusableEntitiesControllerComponent: GKComponent, GlideComponent {
+final class FocusableEntitiesControllerComponent: GKComponent, YAComponent {
     
     /// Call this function when the conversation is ready to proceed with the
     /// next speech.

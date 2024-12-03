@@ -14,7 +14,7 @@ import GameplayKit
 /// - `HorizontalMovement`
 /// - `VerticalMovement`
 /// - `CircularMovement`
-public final class SelfMoveComponent: GKComponent, GlideComponent {
+public final class SelfMoveComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 600
     

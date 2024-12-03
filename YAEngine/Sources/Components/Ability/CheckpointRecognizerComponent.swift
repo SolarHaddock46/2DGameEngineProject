@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that gives an entity the ability to recognize the checkpoints and save
 /// them in a list upon contact.
-public final class CheckpointRecognizerComponent: GKComponent, GlideComponent, RespawnableEntityComponent {
+public final class CheckpointRecognizerComponent: GKComponent, YAComponent, RespawnableEntityComponent {
     
     public static let componentPriority: Int = 650
     

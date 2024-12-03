@@ -11,7 +11,7 @@ import SpriteKit
 /// switch between playing animations.
 ///
 /// Required components: `SpriteNodeComponent`
-public final class TextureAnimatorComponent: GKComponent, GlideComponent {
+public final class TextureAnimatorComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 920
     

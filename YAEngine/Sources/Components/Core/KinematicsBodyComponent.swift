@@ -8,7 +8,7 @@ import GameplayKit
 /// Component that controls the entity's velocity and its transform's translation
 /// based on that velocity
 /// Collider component is not essential for this component to work.
-public final class KinematicsBodyComponent: GKComponent, GlideComponent {
+public final class KinematicsBodyComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 960
     

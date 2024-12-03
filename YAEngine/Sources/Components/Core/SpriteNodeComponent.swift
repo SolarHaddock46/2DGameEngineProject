@@ -6,7 +6,7 @@
 import GameplayKit
 
 /// Component that renders a sprite node as a child of its entity's transform node.
-public final class SpriteNodeComponent: GKSKNodeComponent, GlideComponent, ZPositionContainerIndicatorComponent {
+public final class SpriteNodeComponent: GKSKNodeComponent, YAComponent, ZPositionContainerIndicatorComponent {
     
     public static let componentPriority: Int = 990
     

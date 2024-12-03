@@ -12,7 +12,7 @@ import GameplayKit
 /// effects.
 ///
 /// Required components: `SpriteNodeComponent`.
-public final class InfiniteSpriteScrollerComponent: GKComponent, GlideComponent {
+public final class InfiniteSpriteScrollerComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 390
     

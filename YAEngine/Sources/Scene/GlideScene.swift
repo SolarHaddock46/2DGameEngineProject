@@ -36,20 +36,6 @@ open class GlideScene: SKScene {
         return entity
     }()
     
-    /// Entity with `ConversationFlowControllerComponent` of the scene.
-    public lazy var conversationFlowControllerEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
-        let conversationFlowController = ConversationFlowControllerComponent()
-        entity.addComponent(conversationFlowController)
-        return entity
-    }()
-    
-    /// Returns the conversation currently controlled by this scene's
-    /// `conversationFlowControllerEntity`
-    public var activeConversation: Conversation? {
-        return conversationFlowControllerEntity.component(ofType: ConversationFlowControllerComponent.self)?.conversation
-    }
-    
     /// Entity with `FocusableEntitiesControllerComponent` of the scene.
     public lazy var focusableEntitiesControllerEntity: GlideEntity = {
         let entity = GlideEntity(initialNodePosition: CGPoint.zero)

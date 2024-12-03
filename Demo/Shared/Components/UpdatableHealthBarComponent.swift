@@ -26,7 +26,7 @@
 import GameplayKit
 import YAEngine
 
-class UpdatableHealthBarComponent: GKComponent, GlideComponent {
+class UpdatableHealthBarComponent: GKComponent, YAComponent {
     let updateCallback: (_ numberOfHearts: Int) -> Void
     
     var numberOfHearts: Int {

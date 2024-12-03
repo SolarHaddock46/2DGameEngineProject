@@ -24,7 +24,7 @@ extension TransformNodeComponent {
 
 /// Component that defines the position and direction properties of an entity
 /// via rendering a container node on the scene for its entity's other nodes.
-public final class TransformNodeComponent: GKSKNodeComponent, GlideComponent {
+public final class TransformNodeComponent: GKSKNodeComponent, YAComponent {
     
     public static let componentPriority: Int = 1000
     

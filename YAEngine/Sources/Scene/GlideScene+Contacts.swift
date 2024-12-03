@@ -56,7 +56,7 @@ extension GlideScene {
         for contactContext in collisionsController.exitContacts {
             let contact = contactContext.contactForCollider
             for component in contact.collider.entity?.components ?? [] {
-                if let colliderResponder = component as? GlideComponent {
+                if let colliderResponder = component as? YAComponent {
                     if contactContext.isCollision {
                         colliderResponder.handleFinishedCollision(contact)
                     } else {
@@ -67,7 +67,7 @@ extension GlideScene {
             
             if let contactForOther = contactContext.contactForOtherObject {
                 for component in contactForOther.collider.entity?.components ?? [] {
-                    if let colliderResponder = component as? GlideComponent {
+                    if let colliderResponder = component as? YAComponent {
                         if contactContext.isCollision {
                             colliderResponder.handleFinishedCollision(contactForOther)
                         } else {
@@ -83,7 +83,7 @@ extension GlideScene {
                                                                  state: CollisionsController.ContactState) {
         let contact = contactContext.contactForCollider
         for component in contact.collider.entity?.components ?? [] {
-            if let colliderResponder = component as? GlideComponent {
+            if let colliderResponder = component as? YAComponent {
                 switch state {
                 case .entered:
                     if contactContext.isCollision {
@@ -109,7 +109,7 @@ extension GlideScene {
         }
         
         for component in contactForOther.collider.entity?.components ?? [] {
-            if let colliderResponder = component as? GlideComponent {
+            if let colliderResponder = component as? YAComponent {
                 switch state {
                 case .entered:
                     if contactContext.isCollision {

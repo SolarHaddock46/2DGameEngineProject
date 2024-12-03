@@ -8,7 +8,7 @@ import GameplayKit
 /// Component that is used to move its entity via interpolating the distance between
 /// entity's current position and a given target position.
 /// This movement component manipulates the transform position directly.
-public final class LerpingMovementComponent: GKComponent, GlideComponent {
+public final class LerpingMovementComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 860
     

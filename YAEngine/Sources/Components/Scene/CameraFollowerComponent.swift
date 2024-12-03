@@ -9,7 +9,7 @@ import GameplayKit
 /// in a scene.
 /// It is required that transform of the entity of this component has
 /// `usesProposedPosition` set to `false`.
-public final class CameraFollowerComponent: GKComponent, GlideComponent {
+public final class CameraFollowerComponent: GKComponent, YAComponent {
     
     /// Ways to snap to the camera position.
     public enum PositionUpdateMethod {

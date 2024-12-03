@@ -1,5 +1,5 @@
 //
-//  GlideComponent.swift
+//  YAComponent.swift
 //  YAEngine
 //
 
@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Basic component protocol that should be adopted by all components
 /// for full compatibility of features.
-public protocol GlideComponent {
+public protocol YAComponent {
     
     /// Priority of the component within other components of its entity.
     /// Components with priority of lower values will be updated before
@@ -120,7 +120,7 @@ public protocol GlideComponent {
     func willBeRemovedFromEntity()
 }
 
-public extension GlideComponent where Self: GKComponent {
+public extension YAComponent where Self: GKComponent {
     
     static var componentPriority: Int { return 0 }
     

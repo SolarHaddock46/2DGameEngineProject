@@ -10,7 +10,7 @@ import GameplayKit
 /// Required components:
 /// - `KinematicsBodyComponent`
 /// - `ColliderComponent`
-public final class JumpComponent: GKComponent, GlideComponent {
+public final class JumpComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 790
     

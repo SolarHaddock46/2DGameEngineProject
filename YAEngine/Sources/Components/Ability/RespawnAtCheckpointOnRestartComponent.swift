@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that gives an entity the ability to be respawned when scene restarts
 /// at its checkpoint with `checkpointId` given to this component.
-public final class RespawnAtCheckpointOnRestartComponent: GKComponent, GlideComponent {
+public final class RespawnAtCheckpointOnRestartComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 610
     

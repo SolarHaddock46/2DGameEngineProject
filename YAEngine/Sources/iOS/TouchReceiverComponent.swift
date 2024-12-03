@@ -32,7 +32,7 @@ public protocol TouchReceiverComponent: AnyObject {
     var input: TouchInputProfilesOrCallback { get }
 }
 
-extension TouchReceiverComponent where Self: GlideComponent & GKComponent {
+extension TouchReceiverComponent where Self: YAComponent & GKComponent {
     
     func touchesBegan(_ touches: Set<UITouch>) {
         guard let view = scene?.view else {

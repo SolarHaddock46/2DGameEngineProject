@@ -7,7 +7,7 @@ import GameplayKit
 import SpriteKit
 
 /// Component that renders a tile map node as a child of its entity's transform node.
-public final class TileMapNodeComponent: GKSKNodeComponent, GlideComponent, ZPositionContainerIndicatorComponent {
+public final class TileMapNodeComponent: GKSKNodeComponent, YAComponent, ZPositionContainerIndicatorComponent {
     
     public static let componentPriority: Int = 980
     

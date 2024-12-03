@@ -11,7 +11,7 @@ import SpriteKit
 /// trigger ids to play/stop associated clips.
 ///
 /// Required components: `SpriteNodeComponent`
-public final class AudioPlayerComponent: GKComponent, GlideComponent {
+public final class AudioPlayerComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 925
     

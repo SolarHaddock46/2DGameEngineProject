@@ -7,7 +7,7 @@ import GameplayKit
 
 /// Component that gives an entity the ability to observe other entities that gets
 /// into contact with specified areas in the scene, or around entity's position.
-public final class EntityObserverComponent: GKComponent, GlideComponent {
+public final class EntityObserverComponent: GKComponent, YAComponent {
     
     public static let componentPriority: Int = 630
     

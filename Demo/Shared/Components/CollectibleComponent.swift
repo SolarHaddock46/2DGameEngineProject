@@ -26,7 +26,7 @@
 import GameplayKit
 import YAEngine
 
-class CollectibleComponent: GKComponent, GlideComponent, RemovalControllingComponent {
+class CollectibleComponent: GKComponent, YAComponent, RemovalControllingComponent {
     
     var isCollected: Bool = false
     let magicAnimationEntity = AnimationEntityFactory.magicAnimationEntity(at: .zero)

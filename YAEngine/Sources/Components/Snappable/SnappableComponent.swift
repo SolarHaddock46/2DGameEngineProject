@@ -10,7 +10,7 @@ import GameplayKit
 /// collide with it or snap on it. Specific snapping behavior for your entity should be
 /// implemented in your custom components. For an example of this see `PlatformComponent`.
 /// An entity with Snappable component always gets updated before other custom entities.
-public final class SnappableComponent: GKComponent, GlideComponent {
+public final class SnappableComponent: GKComponent, YAComponent {
     
     /// `true` if the entity behaves as a one way collider on collisions with
     /// other entities, that is they only collide with their bottom side over
