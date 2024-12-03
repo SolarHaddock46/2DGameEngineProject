@@ -524,8 +524,8 @@
 		4E908C44217DE46800D8B29D = {
 			isa = PBXGroup;
 			children = (
-				4EC50D33217DE703005D66FC /* Shared */,
-				4E908C4F217DE46800D8B29D /* GlideDemo_iOS */,
+				4EC50D33217DE703005D66FC /* GameData */,
+				4E908C4F217DE46800D8B29D /* iOS */,
 				4E908C4E217DE46800D8B29D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -540,7 +540,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E908C4F217DE46800D8B29D /* GlideDemo_iOS */ = {
+		4E908C4F217DE46800D8B29D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				4E908C50217DE46800D8B29D /* AppDelegate.swift */,
@@ -548,7 +548,7 @@
 				4E908C59217DE46900D8B29D /* LaunchScreen.storyboard */,
 				4E908C5C217DE46900D8B29D /* Info.plist */,
 			);
-			path = GlideDemo_iOS;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		4E9ED35521FB142700D59A68 /* Game Menus */ = {
@@ -629,7 +629,7 @@
 			path = "Level Logic";
 			sourceTree = "<group>";
 		};
-		4EC50D33217DE703005D66FC /* Shared */ = {
+		4EC50D33217DE703005D66FC /* GameData */ = {
 			isa = PBXGroup;
 			children = (
 				4E002C50226F277F00DE2357 /* .swiftlint.yml */,
@@ -645,7 +645,7 @@
 				4EFDCB35246C94880092CF5B /* Sounds */,
 				4EBF2884226B211500AE954B /* Assets.xcassets */,
 			);
-			path = Shared;
+			path = GameData;
 			sourceTree = "<group>";
 		};
 		4EC50D37217DE73D005D66FC /* LevelData */ = {
@@ -1336,7 +1336,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NVJWV3AU7;
-				INFOPLIST_FILE = GlideDemo_iOS/Info.plist;
+				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1358,7 +1358,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NVJWV3AU7;
-				INFOPLIST_FILE = GlideDemo_iOS/Info.plist;
+				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
