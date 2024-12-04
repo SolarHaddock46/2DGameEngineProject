@@ -105,6 +105,11 @@ class HealthComponentScene: BaseLevelScene {
         addEntity(gemCounterEntity)
         
         setupTips()
+        
+        if let backgroundMusicComponent = playerEntity.component(ofType: BackgroundMusicComponent.self) {
+            backgroundMusicComponent.setBackgroundMusic(fileName: "bgm", fileExtension: "mp3")
+            backgroundMusicComponent.playBackgroundMusic()
+        }
     }
     
     // MARK: - Player Entity
@@ -158,6 +163,9 @@ class HealthComponentScene: BaseLevelScene {
         
         let updateGemCounterComponent = UpdateGemCounterComponent(gemCounterEntity: gemCounterEntity)
         playerEntity.addComponent(updateGemCounterComponent)
+        
+        let backgroundMusicComponent = BackgroundMusicComponent()
+        playerEntity.addComponent(backgroundMusicComponent)
         
         return playerEntity
     }()

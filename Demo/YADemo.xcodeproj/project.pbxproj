@@ -26,6 +26,7 @@
 		3302F40A2CFF6E7B007DF7A2 /* slope_0_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3D92CFF6E7B007DF7A2 /* slope_0_15.png */; };
 		3302F40B2CFF6E7B007DF7A2 /* GlideColliderTileSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3E62CFF6E7B007DF7A2 /* GlideColliderTileSet.json */; };
 		3302F40C2CFF6E7B007DF7A2 /* slope_15_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3E22CFF6E7B007DF7A2 /* slope_15_0.png */; };
+		3370E6F02D00897500615F7D /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3370E6EF2D00897500615F7D /* bgm.mp3 */; };
 		4E002C38226F11C100DE2357 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C37226F11C100DE2357 /* CollectibleComponent.swift */; };
 		4E002C3C226F11E700DE2357 /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C3B226F11E700DE2357 /* UpdateHealthBarComponent.swift */; };
 		4E002C4C226F248100DE2357 /* TriggerZoneComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C4B226F248100DE2357 /* TriggerZoneComponent.swift */; };
@@ -129,6 +130,7 @@
 		3302F3E32CFF6E7B007DF7A2 /* slope_15_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_15_8.png; sourceTree = "<group>"; };
 		3302F3E42CFF6E7B007DF7A2 /* slope_15_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slope_15_12.png; sourceTree = "<group>"; };
 		3302F3E62CFF6E7B007DF7A2 /* GlideColliderTileSet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GlideColliderTileSet.json; sourceTree = "<group>"; };
+		3370E6EF2D00897500615F7D /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		4E002C37226F11C100DE2357 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
 		4E002C3B226F11E700DE2357 /* UpdateHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHealthBarComponent.swift; sourceTree = "<group>"; };
 		4E002C4B226F248100DE2357 /* TriggerZoneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerZoneComponent.swift; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 		4EFDCB35246C94880092CF5B /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3370E6EF2D00897500615F7D /* bgm.mp3 */,
 				4EB7A3F8247171EA0002CEA9 /* jumping.aif */,
 				4EB7A3F7247171EA0002CEA9 /* landing.aif */,
 				4E73A74024701E0F006DF31D /* runcycle.aif */,
@@ -611,6 +614,7 @@
 				3302F4012CFF6E7B007DF7A2 /* jump_wall_right.png in Resources */,
 				3302F4022CFF6E7B007DF7A2 /* slope_0_7.png in Resources */,
 				3302F4032CFF6E7B007DF7A2 /* ground.png in Resources */,
+				3370E6F02D00897500615F7D /* bgm.mp3 in Resources */,
 				3302F4042CFF6E7B007DF7A2 /* slope_12_15.png in Resources */,
 				3302F4052CFF6E7B007DF7A2 /* slope_11_8.png in Resources */,
 				3302F4062CFF6E7B007DF7A2 /* oneway.png in Resources */,
