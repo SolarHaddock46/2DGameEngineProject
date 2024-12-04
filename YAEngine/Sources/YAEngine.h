@@ -11,10 +11,10 @@
 
 
 //! Project version number for Glide.
-FOUNDATION_EXPORT double GlideEngineVersionNumber;
+FOUNDATION_EXPORT double YAEngineVersionNumber;
 
 //! Project version string for Glide.
-FOUNDATION_EXPORT const unsigned char GlideEngineVersionString[];
+FOUNDATION_EXPORT const unsigned char YAEngineVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GlideEngine/PublicHeader.h>
 

@@ -9,7 +9,7 @@ import CoreGraphics
 /// Template entity to be used a base class for projectile entities
 /// which are initialized and added to scene by `ProjectileShooterComponent`.
 /// An example is a bullet of a pistol.
-open class ProjectileTemplateEntity: GlideEntity {
+open class ProjectileTemplateEntity: YAEntity {
     
     /// Initial shooting angle value in degrees.
     public let shootingAngle: CGFloat

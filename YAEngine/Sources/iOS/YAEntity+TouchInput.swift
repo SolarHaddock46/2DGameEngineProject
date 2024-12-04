@@ -7,7 +7,7 @@
 import GameplayKit
 import UIKit
 
-extension GlideEntity {
+extension YAEntity {
     
     private typealias TouchReceiver = TouchReceiverComponent & YAComponent & GKComponent
     

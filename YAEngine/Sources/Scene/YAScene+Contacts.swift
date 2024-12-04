@@ -5,7 +5,7 @@
 
 import Foundation
 
-extension GlideScene {
+extension YAScene {
     
     public func mapContact(between mask: CategoryMask, and otherMask: CategoryMask) {
         if let mapped = contactTestMap[mask.rawValue] {

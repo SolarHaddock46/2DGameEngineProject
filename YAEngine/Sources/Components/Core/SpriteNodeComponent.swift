@@ -63,7 +63,7 @@ public final class SpriteNodeComponent: GKSKNodeComponent, YAComponent, ZPositio
     }
     
     public override func update(deltaTime seconds: TimeInterval) {
-        let rounded = (offset + additionalOffset).glideRound
+        let rounded = (offset + additionalOffset).yaRound
         spriteNode.position = rounded
     }
     

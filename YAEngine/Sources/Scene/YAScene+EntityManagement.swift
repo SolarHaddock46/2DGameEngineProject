@@ -5,16 +5,16 @@
 
 import SpriteKit
 
-extension GlideScene {
+extension YAScene {
     
     /// Add an entity to the scene in default z position container.
     ///
     /// - Parameters:
     ///     - entity: Entity which will start getting callbacks from scene's update loop.
     /// This value's transform node will be added to the scene.
-    public func addEntity(_ entity: GlideEntity) {
+    public func addEntity(_ entity: YAEntity) {
         let zPositionContainer = entity.zPositionContainer
-        addEntity(entity, in: zPositionContainer ?? GlideZPositionContainer.default)
+        addEntity(entity, in: zPositionContainer ?? YAZPositionContainer.default)
     }
     
     /// Add an entity to the scene in a specific z position container.
@@ -24,7 +24,7 @@ extension GlideScene {
     /// This value's transform node will be added to the scene.
     ///     - zPositionContainer: Desired z position container of scene which will become
     /// the parent of the entity's transform node.
-    public func addEntity(_ entity: GlideEntity, in zPositionContainer: ZPositionContainer) {
+    public func addEntity(_ entity: YAEntity, in zPositionContainer: ZPositionContainer) {
         guard let zPositionContainerNode = zPositionContainerNode(with: zPositionContainer) else {
             return
         }
@@ -48,7 +48,7 @@ extension GlideScene {
     ///
     /// - Parameters:
     ///     - entity: Entity to remove its transform node from scene.
-    public func removeEntity(_ entity: GlideEntity) {
+    public func removeEntity(_ entity: YAEntity) {
         finishEntity(entity, killIfPossible: false, isForcedRemove: true)
     }
     
@@ -58,7 +58,7 @@ extension GlideScene {
     ///
     /// - Parameters:
     ///     - nodeName: Name of the transform node for the entity.
-    public func entitiesWithName(_ nodeName: String) -> [GlideEntity] {
+    public func entitiesWithName(_ nodeName: String) -> [YAEntity] {
         return entities.filter { $0.transform.node.name == nodeName }
     }
     
@@ -66,7 +66,7 @@ extension GlideScene {
     ///
     /// - Parameters:
     ///     - tags: Tags to use for querying entities.
-    public func entitiesWithTags(_ tags: [String]) -> [GlideEntity] {
+    public func entitiesWithTags(_ tags: [String]) -> [YAEntity] {
         return entities.filter {
             if let tag = $0.tag {
                 return tags.contains(tag)
@@ -79,7 +79,7 @@ extension GlideScene {
     ///
     /// - Parameters:
     ///     - entityTag: Tag to use for querying entities.
-    public func entityWithTag(_ entityTag: String) -> GlideEntity? {
+    public func entityWithTag(_ entityTag: String) -> YAEntity? {
         return entities.first {
             $0.tag == entityTag
         }
@@ -89,7 +89,7 @@ extension GlideScene {
     ///
     /// - Parameters:
     ///     - entityTag: Tag to use for querying entities.
-    public func entitiesWithTag(_ entityTag: String) -> [GlideEntity] {
+    public func entitiesWithTag(_ entityTag: String) -> [YAEntity] {
         return entities.filter {
             $0.tag == entityTag
         }
@@ -97,7 +97,7 @@ extension GlideScene {
     
     /// Checks whether the entity is inside camera bounds or within a reasonable distance
     /// from camera bounds.
-    func isEntityInSight(_ entity: GlideEntity) -> Bool {
+    func isEntityInSight(_ entity: YAEntity) -> Bool {
         guard let transformNodeParent = entity.transform.node.parent else {
             return true
         }
@@ -110,7 +110,7 @@ extension GlideScene {
         guard let camera = (cameraEntity.component(ofType: CameraComponent.self))?.cameraNode else {
             return true
         }
-        guard entity.transform.nestedParentNode != zPositionContainerNode(with: GlideZPositionContainer.camera) else {
+        guard entity.transform.nestedParentNode != zPositionContainerNode(with: YAZPositionContainer.camera) else {
             return true
         }
         
@@ -141,7 +141,7 @@ extension GlideScene {
         return false
     }
     
-    private func addEntity(_ entity: GlideEntity, in zPositionContainerNode: SKNode) {
+    private func addEntity(_ entity: YAEntity, in zPositionContainerNode: SKNode) {
         guard entities.contains(entity) == false else {
             return
         }
@@ -166,9 +166,9 @@ extension GlideScene {
     }
     
     @discardableResult
-    func finishEntity(_ entity: GlideEntity,
+    func finishEntity(_ entity: YAEntity,
                       killIfPossible: Bool,
-                      isForcedRemove: Bool = true) -> GlideEntity? {
+                      isForcedRemove: Bool = true) -> YAEntity? {
         guard let index = entities.firstIndex(where: { $0 === entity }) else {
             return nil
         }
@@ -181,7 +181,7 @@ extension GlideScene {
             entity.transform.node.removeFromParent()
             
             for childNode in entity.transform.node.children {
-                if let childEntity = childNode.entity as? GlideEntity, childEntity != entity {
+                if let childEntity = childNode.entity as? YAEntity, childEntity != entity {
                     childEntity.transform.node.removeFromParent()
                     entities.removeAll { $0 === childEntity }
                 }

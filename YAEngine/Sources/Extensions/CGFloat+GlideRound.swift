@@ -8,7 +8,7 @@ import CoreGraphics
 extension CGFloat {
     
     /// Common way of rounding floating numbers in the framework.
-    public var glideRound: CGFloat {
+    public var yaRound: CGFloat {
         return Darwin.round(self)
     }
 }

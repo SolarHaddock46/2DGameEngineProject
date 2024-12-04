@@ -146,7 +146,7 @@ extension CollisionsController {
     
     // MARK: - Contacts between objects
     
-    func findContactsBetween(entities: [GlideEntity], contacts: inout [ContactContext]) {
+    func findContactsBetween(entities: [YAEntity], contacts: inout [ContactContext]) {
         let allColliderEntities = entities.filter {
             $0.component(ofType: ColliderComponent.self) != nil &&
                 $0.component(ofType: SnappableComponent.self) == nil
@@ -192,7 +192,7 @@ extension CollisionsController {
     }
     
     func otherColliderContact(for colliderMovement: ColliderMovement,
-                              with otherEntities: [GlideEntity],
+                              with otherEntities: [YAEntity],
                               contacts: [ContactContext]) -> ContactContext? {
         let collider = colliderMovement.collider
         
@@ -224,7 +224,7 @@ extension CollisionsController {
     
     // swiftlint:disable:next function_body_length
     func contact(for colliderMovement: ColliderMovement,
-                 with otherEntity: GlideEntity,
+                 with otherEntity: YAEntity,
                  otherCollider: ColliderComponent) -> ContactContext? {
         let otherEntityPosition = otherEntity.transform.node.position
         let otherProposedPosition = otherEntity.transform.proposedPosition

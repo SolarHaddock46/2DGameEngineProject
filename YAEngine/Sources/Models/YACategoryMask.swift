@@ -6,7 +6,7 @@
 import Foundation
 
 /// Default categories to which objects in a `GlideScene` belongs.
-public enum GlideCategoryMask: UInt32, CategoryMask {
+public enum YACategoryMask: UInt32, CategoryMask {
     case none = 0
     case player = 1
     case colliderTile = 2

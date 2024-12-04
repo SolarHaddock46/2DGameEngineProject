@@ -20,7 +20,7 @@ public protocol YAComponent {
     var transform: TransformNodeComponent? { get }
     
     /// Convenience reference to the scene of this component's entity.
-    var scene: GlideScene? { get }
+    var scene: YAScene? { get }
     
     /// Convenience reference to the current time of the scene of this
     /// component's entity.
@@ -125,15 +125,15 @@ public extension YAComponent where Self: GKComponent {
     static var componentPriority: Int { return 0 }
     
     var transform: TransformNodeComponent? {
-        return (entity as? GlideEntity)?.transform
+        return (entity as? YAEntity)?.transform
     }
     
-    var scene: GlideScene? {
-        return transform?.node.scene as? GlideScene
+    var scene: YAScene? {
+        return transform?.node.scene as? YAScene
     }
     
     var currentTime: TimeInterval? {
-        return (entity as? GlideEntity)?.currentTime
+        return (entity as? YAEntity)?.currentTime
     }
     
     func start() {}

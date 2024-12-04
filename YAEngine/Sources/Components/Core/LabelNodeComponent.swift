@@ -40,7 +40,7 @@ public final class LabelNodeComponent: GKSKNodeComponent, YAComponent, ZPosition
     }
     
     public override func update(deltaTime seconds: TimeInterval) {
-        let rounded = (offset + additionalOffset).glideRound
+        let rounded = (offset + additionalOffset).yaRound
         labelNode.position = rounded
     }
 }

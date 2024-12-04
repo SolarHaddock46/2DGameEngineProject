@@ -14,7 +14,7 @@ extension CollisionsController {
         let collider = colliderMovement.collider
         
         let shouldCollideGround = collider.entity?.component(ofType: ColliderTileHolderComponent.self) != nil
-        let shouldContactTestGround = collider.shouldContactTest(otherCategoryMask: GlideCategoryMask.colliderTile)
+        let shouldContactTestGround = collider.shouldContactTest(otherCategoryMask: YACategoryMask.colliderTile)
         var shouldTestContactWithGround: Bool = shouldContactTestGround
         for contact in contacts {
             if case .colliderTile = contact.otherObject {

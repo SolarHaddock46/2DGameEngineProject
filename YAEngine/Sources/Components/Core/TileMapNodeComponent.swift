@@ -68,7 +68,7 @@ public final class TileMapNodeComponent: GKSKNodeComponent, YAComponent, ZPositi
     }
     
     public override func update(deltaTime seconds: TimeInterval) {
-        let rounded = (offset + additionalOffset).glideRound
+        let rounded = (offset + additionalOffset).yaRound
         node.position = rounded
     }
     

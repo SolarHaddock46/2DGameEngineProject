@@ -16,5 +16,5 @@ public protocol NodeLayoutableComponent {
     /// - Parameters:
     ///     - scene: Scene of the component's entity.
     ///     - previousSceneSize: Size of the scene before in the last frame.
-    func layout(scene: GlideScene, previousSceneSize: CGSize)
+    func layout(scene: YAScene, previousSceneSize: CGSize)
 }

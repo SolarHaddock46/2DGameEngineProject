@@ -73,7 +73,7 @@ public final class CheckpointComponent: GKComponent, YAComponent {
         transform.currentPosition = transform.initialPosition + colliderSize / 2
     }
     
-    private func updateColliderSize(for scene: GlideScene) {
+    private func updateColliderSize(for scene: YAScene) {
         guard adjustsColliderSize else {
             return
         }
@@ -106,7 +106,7 @@ extension CheckpointComponent: DebuggableComponent {
 }
 
 extension CheckpointComponent: NodeLayoutableComponent {
-    public func layout(scene: GlideScene, previousSceneSize: CGSize) {
+    public func layout(scene: YAScene, previousSceneSize: CGSize) {
         updateColliderSize(for: scene)
     }
 }

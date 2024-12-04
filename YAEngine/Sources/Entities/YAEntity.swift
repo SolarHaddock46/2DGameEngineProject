@@ -23,7 +23,7 @@ import GameplayKit
 /// and it is not possible to clean up component related properties
 /// from the entity through overriding this method.
 /// Therefore, Use `removeGlideComponent(ofType:)` method of this class instead.
-open class GlideEntity: GKEntity {
+open class YAEntity: GKEntity {
     
     /// Same as the name of the node of this entity's `TransformNodeComponent`.
     public override var name: String? {
@@ -50,8 +50,8 @@ open class GlideEntity: GKEntity {
     public let transform: TransformNodeComponent
     
     /// Scene to which this entity belongs.
-    public var scene: GlideScene? {
-        return transform.node.scene as? GlideScene
+    public var scene: YAScene? {
+        return transform.node.scene as? YAScene
     }
     
     /// Represents the first found `zPositionContainer` amound this entity's
@@ -165,10 +165,10 @@ open class GlideEntity: GKEntity {
     /// Use this method to remove components from your entity.
     /// Since `removeComponent(ofType:)` method of `GKEntity` is not implemented with an open
     /// modifier, this method is implemented as a replacement.
-    public func removeGlideComponent<ComponentType>(ofType componentClass: ComponentType.Type) where ComponentType: (YAComponent & GKComponent) {
+    public func removeYAComponent<ComponentType>(ofType componentClass: ComponentType.Type) where ComponentType: (YAComponent & GKComponent) {
         
-        if let glideComponent = component(ofType: componentClass) {
-            glideComponent.willBeRemovedFromEntity()
+        if let yaComponent = component(ofType: componentClass) {
+            yaComponent.willBeRemovedFromEntity()
         }
         
         super.removeComponent(ofType: componentClass)
@@ -187,7 +187,7 @@ open class GlideEntity: GKEntity {
     ///
     /// - Parameters:
     ///     - scene: Scene that the entity's transform node has as a parent.
-    open func didMoveToScene(_ scene: GlideScene) { }
+    open func didMoveToScene(_ scene: YAScene) { }
     
     /// Called right before updating components of the entity.
     /// Implementation of `super` does nothing.
@@ -236,7 +236,7 @@ open class GlideEntity: GKEntity {
     /// - Parameters:
     ///     - scene: Scene of the entity.
     ///     - previousSceneSize: Size of the scene before in the last frame.
-    open func layout(scene: GlideScene, previousSceneSize: CGSize) { }
+    open func layout(scene: YAScene, previousSceneSize: CGSize) { }
     
     /// Called for an entity in each frame as long as its `shouldBeUpdated` is `true`.
     /// Implementation of `super` does nothing.
@@ -270,12 +270,12 @@ open class GlideEntity: GKEntity {
         }
     }
     
-    func internal_didMoveToScene(_ scene: GlideScene) {
+    func internal_didMoveToScene(_ scene: YAScene) {
         willBeRemoved = false
         
         sortedComponents.forEach {
-            if let glideComponent = $0 as? (GKComponent & YAComponent) {
-                glideComponent.start()
+            if let yaComponent = $0 as? (GKComponent & YAComponent) {
+                yaComponent.start()
             }
         }
         
@@ -285,8 +285,8 @@ open class GlideEntity: GKEntity {
     func internal_update(currentTime: TimeInterval, deltaTime: TimeInterval) {
         willUpdateComponents(currentTime: currentTime, deltaTime: deltaTime)
         sortedComponents.forEach {
-            if let glideComponent = $0 as? (GKComponent & YAComponent) {
-                glideComponent.willUpdate(deltaTime: deltaTime)
+            if let yaComponent = $0 as? (GKComponent & YAComponent) {
+                yaComponent.willUpdate(deltaTime: deltaTime)
             }
         }
         
@@ -306,8 +306,8 @@ open class GlideEntity: GKEntity {
         
         didUpdateComponents(currentTime: currentTime, deltaTime: deltaTime)
         sortedComponents.forEach {
-            if let glideComponent = $0 as? (GKComponent & YAComponent) {
-                glideComponent.didUpdate(deltaTime: deltaTime)
+            if let yaComponent = $0 as? (GKComponent & YAComponent) {
+                yaComponent.didUpdate(deltaTime: deltaTime)
             }
         }
     }
@@ -324,15 +324,15 @@ open class GlideEntity: GKEntity {
     
     func internal_updateAfterCameraUpdate(deltaTime seconds: TimeInterval, cameraComponent: CameraComponent) {
         sortedComponents.forEach {
-            if let glideComponent = $0 as? (GKComponent & YAComponent) {
-                glideComponent.updateAfterCameraUpdate(deltaTime: seconds, cameraComponent: cameraComponent)
+            if let yaComponent = $0 as? (GKComponent & YAComponent) {
+                yaComponent.updateAfterCameraUpdate(deltaTime: seconds, cameraComponent: cameraComponent)
             }
         }
         
         updateAfterCameraUpdate(deltaTime: seconds, cameraComponent: cameraComponent)
     }
     
-    func internal_layout(scene: GlideScene, previousSceneSize: CGSize) {
+    func internal_layout(scene: YAScene, previousSceneSize: CGSize) {
         sortedComponents.forEach {
             if let layoutable = $0 as? NodeLayoutableComponent {
                 layoutable.layout(scene: scene, previousSceneSize: previousSceneSize)
@@ -344,8 +344,8 @@ open class GlideEntity: GKEntity {
     
     func internal_didSkipUpdate() {
         sortedComponents.forEach {
-            if let glideComponent = $0 as? (GKComponent & YAComponent) {
-                glideComponent.didSkipUpdate()
+            if let yaComponent = $0 as? (GKComponent & YAComponent) {
+                yaComponent.didSkipUpdate()
             }
         }
         
@@ -373,8 +373,8 @@ open class GlideEntity: GKEntity {
     func internal_prepareForRemoval() {
         willBeRemoved = true
         sortedComponents.forEach {
-            if let glideComponent = $0 as? (GKComponent & YAComponent) {
-                glideComponent.entityWillBeRemovedFromScene()
+            if let yaComponent = $0 as? (GKComponent & YAComponent) {
+                yaComponent.entityWillBeRemovedFromScene()
             }
         }
         

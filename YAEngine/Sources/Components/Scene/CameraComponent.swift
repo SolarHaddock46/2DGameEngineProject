@@ -182,7 +182,7 @@ public final class CameraComponent: GKComponent, YAComponent {
                                       isForcedToSnap: Bool) -> CGPoint {
         
         var basePosition = focusTransform.node.position
-        if let offset = (focusTransform.entity as? GlideEntity)?.cameraFocusOffset {
+        if let offset = (focusTransform.entity as? YAEntity)?.cameraFocusOffset {
             basePosition += offset
         }
         
@@ -257,7 +257,7 @@ public final class CameraComponent: GKComponent, YAComponent {
         } else {
             result = focusTransform?.node.position ?? .zero
             
-            if let offset = (focusTransform?.entity as? GlideEntity)?.cameraFocusOffset {
+            if let offset = (focusTransform?.entity as? YAEntity)?.cameraFocusOffset {
                 result += offset
             }
         }
@@ -353,7 +353,7 @@ public final class CameraComponent: GKComponent, YAComponent {
 
 extension CameraComponent: NodeLayoutableComponent {
     
-    public func layout(scene: GlideScene, previousSceneSize: CGSize) {
+    public func layout(scene: YAScene, previousSceneSize: CGSize) {
         guard previousSceneSize != scene.size || isFieldOfViewUpdated else {
             return
         }
@@ -385,14 +385,14 @@ extension CameraComponent: DebuggableComponent {
         let leftEdgeDebugNodeName = debugElementName(with: "leftEdge")
         let rightEdgeDebugNodeName = debugElementName(with: "rightEdge")
         
-        let verticalTop = (sceneSize.height * configuration.verticalTopBoundaryHeightMultiplier).glideRound
-        let verticalBottom = (sceneSize.height * configuration.verticalBottomBoundaryHeightMultiplier).glideRound
+        let verticalTop = (sceneSize.height * configuration.verticalTopBoundaryHeightMultiplier).yaRound
+        let verticalBottom = (sceneSize.height * configuration.verticalBottomBoundaryHeightMultiplier).yaRound
         
         let debugNodeHeight = sceneSize.height - verticalTop - verticalBottom
         let debugNodeYPosition = (verticalBottom - verticalTop) / 2
         
         let horizontalCenterBoundaryWidthMultiplier = configuration.horizontalCenterBoundaryWidthMultiplier
-        let horizontalCenterBoundary = (sceneSize.width * horizontalCenterBoundaryWidthMultiplier).glideRound
+        let horizontalCenterBoundary = (sceneSize.width * horizontalCenterBoundaryWidthMultiplier).yaRound
         let centerDebugNodeSize = CGSize(width: horizontalCenterBoundary * 2, height: debugNodeHeight)
         if cameraNode.childNode(withName: centerDebugNodeName)?.parent == nil {
             let centerDebugNode = SKSpriteNode(texture: nil,
@@ -405,7 +405,7 @@ extension CameraComponent: DebuggableComponent {
         (cameraNode.childNode(withName: centerDebugNodeName) as? SKSpriteNode)?.size = centerDebugNodeSize
         
         let horizontalEdgesBoundaryWidthMultiplier = configuration.horizontalEdgesBoundaryWidthMultiplier
-        let horizontalEdgeBoundary: CGFloat = (sceneSize.width * horizontalEdgesBoundaryWidthMultiplier).glideRound
+        let horizontalEdgeBoundary: CGFloat = (sceneSize.width * horizontalEdgesBoundaryWidthMultiplier).yaRound
         let edgeDebugNodeSize = CGSize(width: horizontalEdgeBoundary, height: debugNodeHeight)
         
         if cameraNode.childNode(withName: leftEdgeDebugNodeName)?.parent == nil {

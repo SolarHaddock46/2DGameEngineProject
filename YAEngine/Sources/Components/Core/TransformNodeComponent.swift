@@ -139,7 +139,7 @@ public final class TransformNodeComponent: GKSKNodeComponent, YAComponent {
     /// Actual node that this component owns.
     private var transformNode: TransformNode
     
-    private let displacementActionKey = "glide.transform.action.displacement"
+    private let displacementActionKey = "ya.transform.action.displacement"
     
     var nestedParentNode: SKNode? {
         var currentTransform = self
@@ -158,7 +158,7 @@ public final class TransformNodeComponent: GKSKNodeComponent, YAComponent {
             return
         }
         transformNode.canSetPosition = true
-        node.position = CGPoint(x: position.x.glideRound, y: position.y.glideRound)
+        node.position = CGPoint(x: position.x.yaRound, y: position.y.yaRound)
         proposedPosition = node.position
         transformNode.canSetPosition = false
     }
@@ -191,10 +191,10 @@ extension TransformNodeComponent {
     public var children: [TransformNodeComponent] {
         return node.children.compactMap {
             if
-                let glideEntity = $0.entity as? GlideEntity,
-                glideEntity.transform.parentTransform == self
+                let yaEntity = $0.entity as? YAEntity,
+                yaEntity.transform.parentTransform == self
             {
-                return glideEntity.transform
+                return yaEntity.transform
             }
             return nil
         }

@@ -45,7 +45,7 @@ public final class LightNodeComponent: GKSKNodeComponent, YAComponent, ZPosition
     }
     
     public override func update(deltaTime seconds: TimeInterval) {
-        let rounded = (offset + additionalOffset).glideRound
+        let rounded = (offset + additionalOffset).yaRound
         lightNode.position = rounded
     }
 }

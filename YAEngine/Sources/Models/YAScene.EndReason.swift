@@ -5,7 +5,7 @@
 
 import Foundation
 
-public extension GlideScene {
+public extension YAScene {
     
     /// Represents predefined values on the reason for ending a scene.
     enum EndReason {

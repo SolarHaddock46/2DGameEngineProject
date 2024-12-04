@@ -11,7 +11,7 @@ public protocol RespawnableEntityComponent {
     
     /// When provided, scene will call this closure to get an entity to be added
     /// when this entity is removed.
-    var respawnedEntity: ((_ numberOfRespawnsLeft: Int) -> GlideEntity)? { get }
+    var respawnedEntity: ((_ numberOfRespawnsLeft: Int) -> YAEntity)? { get }
     
     /// Number of times that this component's entity can respawn.
     var numberOfRespawnsLeft: Int { get }

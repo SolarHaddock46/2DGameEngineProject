@@ -5,7 +5,7 @@
 
 import SpriteKit
 
-extension GlideScene {
+extension YAScene {
     
     open override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -263,8 +263,8 @@ extension GlideScene {
         lastUpdateTime = currentTime
     }
     
-    private func cleanUpEntities() -> [GlideEntity] {
-        var removedEntities: [GlideEntity] = []
+    private func cleanUpEntities() -> [YAEntity] {
+        var removedEntities: [YAEntity] = []
         entitiesSnapshot.filter { $0.canBeRemoved && entities.contains($0) }.forEach { entityToBeRemoved in
             
             if let removedEntity = finishEntity(entityToBeRemoved,
@@ -278,7 +278,7 @@ extension GlideScene {
         return removedEntities
     }
     
-    private func respawnEntities(removedEntities: [GlideEntity]) {
+    private func respawnEntities(removedEntities: [YAEntity]) {
         
         let respawnResult = respawnRemovedEntities(removedEntities: removedEntities)
         

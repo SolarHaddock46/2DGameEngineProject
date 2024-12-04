@@ -49,7 +49,7 @@ public final class SceneAnchoredSpriteLayoutComponent: GKComponent, YAComponent 
     
     // MARK: - Private
     
-    private func layoutSprite(scene: GlideScene) {
+    private func layoutSprite(scene: YAScene) {
         guard let spriteNodeComponent = entity?.component(ofType: SpriteNodeComponent.self) else {
             return
         }
@@ -110,7 +110,7 @@ public final class SceneAnchoredSpriteLayoutComponent: GKComponent, YAComponent 
 }
 
 extension SceneAnchoredSpriteLayoutComponent: NodeLayoutableComponent {
-    public func layout(scene: GlideScene, previousSceneSize: CGSize) {
+    public func layout(scene: YAScene, previousSceneSize: CGSize) {
         guard scene.size != previousSceneSize || transform?.node.xScale != scene.camera?.xScale else {
             return
         }

@@ -17,7 +17,7 @@ public class RemoveAfterTimeIntervalComponent: GKComponent, YAComponent {
     
     /// Callback that returns an animation entity to be added to scene right before
     /// removing this entity.
-    public let removalAnimationEntity: (() -> GlideEntity?)?
+    public let removalAnimationEntity: (() -> YAEntity?)?
     
     // MARK: - Initialize
     
@@ -28,7 +28,7 @@ public class RemoveAfterTimeIntervalComponent: GKComponent, YAComponent {
     /// its scene in seconds.
     ///     - removalAnimationEntity: Callback that returns an animation entity to be added to
     /// scene right before removing this entity.
-    public init(expireTime: TimeInterval, removalAnimationEntity: (() -> GlideEntity?)? = nil) {
+    public init(expireTime: TimeInterval, removalAnimationEntity: (() -> YAEntity?)? = nil) {
         self.expireTime = expireTime
         self.removalAnimationEntity = removalAnimationEntity
         super.init()

@@ -15,7 +15,7 @@ public final class CheckpointRecognizerComponent: GKComponent, YAComponent, Resp
     
     /// Scene will ask for a new entity to be added to after this entity is removed from the scene.
     /// Provide this callback to return a new entity to be respawned.
-    public var respawnedEntity: ((_ numberOfRespawnsLeft: Int) -> GlideEntity)?
+    public var respawnedEntity: ((_ numberOfRespawnsLeft: Int) -> YAEntity)?
     
     /// Represents the number of times this entity can be respawned from any of its recognized
     /// checkpoints.

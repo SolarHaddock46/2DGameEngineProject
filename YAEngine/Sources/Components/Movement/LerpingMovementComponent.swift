@@ -42,11 +42,11 @@ public final class LerpingMovementComponent: GKComponent, YAComponent {
         var numberOfTries = 10
         var newLerped = transform.currentPosition.lerp(destination: targetPoint,
                                                        time: lerpingTime)
-        var lerped = CGPoint(x: newLerped.x.glideRound, y: newLerped.y.glideRound)
+        var lerped = CGPoint(x: newLerped.x.yaRound, y: newLerped.y.yaRound)
         while lerped == transform.currentPosition, numberOfTries >= 0 {
             newLerped = newLerped.lerp(destination: targetPoint,
                                        time: lerpingTime)
-            lerped = CGPoint(x: newLerped.x.glideRound, y: newLerped.y.glideRound)
+            lerped = CGPoint(x: newLerped.x.yaRound, y: newLerped.y.yaRound)
             numberOfTries -= 1
         }
         transform.proposedPosition = newLerped

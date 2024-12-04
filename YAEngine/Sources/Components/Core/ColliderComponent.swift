@@ -235,7 +235,7 @@ public final class ColliderComponent: GKComponent, YAComponent {
         guard let scene = nodeParent.scene else {
             return colliderFrame
         }
-        let parentTranslation = (nodeParent.entity as? GlideEntity)?.transform.currentTranslation ?? .zero
+        let parentTranslation = (nodeParent.entity as? YAEntity)?.transform.currentTranslation ?? .zero
         let convertedPosition = scene.convert(transform.node.position + parentTranslation, from: nodeParent)
         
         return colliderFrame(at: convertedPosition)

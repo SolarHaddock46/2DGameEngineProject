@@ -152,7 +152,7 @@ public final class PlayableCharacterComponent: GKComponent, YAComponent {
     }
     
     private func isButtonPressed(for baseProfileName: String) -> Bool {
-        guard (entity as? GlideEntity)?.shouldBlockInputs == false else {
+        guard (entity as? YAEntity)?.shouldBlockInputs == false else {
             return false
         }
         
@@ -160,7 +160,7 @@ public final class PlayableCharacterComponent: GKComponent, YAComponent {
     }
     
     private func isButtonHoldDown(for baseProfileName: String) -> Bool {
-        guard (entity as? GlideEntity)?.shouldBlockInputs == false else {
+        guard (entity as? YAEntity)?.shouldBlockInputs == false else {
             return false
         }
         
@@ -168,7 +168,7 @@ public final class PlayableCharacterComponent: GKComponent, YAComponent {
     }
     
     private func isButtonReleased(for baseProfileName: String) -> Bool {
-        guard (entity as? GlideEntity)?.shouldBlockInputs == false else {
+        guard (entity as? YAEntity)?.shouldBlockInputs == false else {
             return false
         }
         
@@ -176,7 +176,7 @@ public final class PlayableCharacterComponent: GKComponent, YAComponent {
     }
     
     private func profile(for baseProfileName: String) -> CGFloat {
-        guard (entity as? GlideEntity)?.shouldBlockInputs == false else {
+        guard (entity as? YAEntity)?.shouldBlockInputs == false else {
             return 0.0
         }
         

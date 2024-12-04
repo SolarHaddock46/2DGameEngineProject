@@ -18,7 +18,7 @@ public final class RespawnAtCheckpointOnRestartComponent: GKComponent, YACompone
     public let checkpointId: String
     
     /// Callback to provide the respawned entity that will be added at restart.
-    public let respawnedEntity: (() -> GlideEntity)
+    public let respawnedEntity: (() -> YAEntity)
     
     // MARK: - Initialize
     
@@ -27,7 +27,7 @@ public final class RespawnAtCheckpointOnRestartComponent: GKComponent, YACompone
     /// - Parameters:
     ///     - checkpointId: Id of the checkpoint that this component's entity belong to.
     ///     - respawnedEntity: Callback to return the respawned entity.
-    public init(checkpointId: String, respawnedEntity: @escaping () -> GlideEntity) {
+    public init(checkpointId: String, respawnedEntity: @escaping () -> YAEntity) {
         self.respawnedEntity = respawnedEntity
         self.checkpointId = checkpointId
         super.init()

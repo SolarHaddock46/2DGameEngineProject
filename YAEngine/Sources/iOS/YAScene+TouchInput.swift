@@ -6,7 +6,7 @@
 #if os(iOS)
 import UIKit
 
-extension GlideScene {
+extension YAScene {
     // MARK: - Touches
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         entities.forEach { $0.touchesBegan(touches) }

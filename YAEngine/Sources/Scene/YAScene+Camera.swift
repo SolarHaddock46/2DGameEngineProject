@@ -5,7 +5,7 @@
 
 import SpriteKit
 
-extension GlideScene {
+extension YAScene {
     
     /// Call this function to focus the camera on a specified area in the scene.
     /// Scale of the camera will be automatically arranged to fit the area in the camera.

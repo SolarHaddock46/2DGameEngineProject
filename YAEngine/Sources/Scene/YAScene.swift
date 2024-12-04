@@ -7,9 +7,9 @@ import GameplayKit
 import SpriteKit
 
 /// Base scene class
-open class GlideScene: SKScene {
+open class YAScene: SKScene {
     
-    public weak var glideSceneDelegate: GlideSceneDelegate?
+    public weak var yaSceneDelegate: YASceneDelegate?
     
     /// Tile map node that is populated with collider tiles.
     /// See `ColliderTile` for more information on recognized collider tile definitions.
@@ -25,11 +25,11 @@ open class GlideScene: SKScene {
     public let zPositionContainers: [ZPositionContainer]
     
     /// Entity controlling the camera node of the scene.
-    public lazy var cameraEntity: GlideEntity = {
+    public lazy var cameraEntity: YAEntity = {
         let cameraNode = SKCameraNode()
         camera = cameraNode
         let entity = EntityFactory.cameraEntity(cameraNode: cameraNode, boundingBoxSize: collisionTileMapNode?.mapSize ?? size)
-        entity.name = zPositionContainerNodeName(GlideZPositionContainer.camera)
+        entity.name = zPositionContainerNodeName(YAZPositionContainer.camera)
         entity.transform.node.zPosition = CGFloat.greatestFiniteMagnitude
         entity.transform.usesProposedPosition = false
         entity.transform.node.addChild(cameraNode)
@@ -37,8 +37,8 @@ open class GlideScene: SKScene {
     }()
     
     /// Entity with `FocusableEntitiesControllerComponent` of the scene.
-    public lazy var focusableEntitiesControllerEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    public lazy var focusableEntitiesControllerEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         let focusableEntitiesController = FocusableEntitiesControllerComponent()
         entity.addComponent(focusableEntitiesController)
         return entity
@@ -62,7 +62,7 @@ open class GlideScene: SKScene {
             }
             
             DispatchQueue.main.async {
-                self.glideSceneDelegate?.glideScene(self, didChangePaused: self.isPaused)
+                self.yaSceneDelegate?.yaScene(self, didChangePaused: self.isPaused)
             }
         }
     }
@@ -109,25 +109,25 @@ open class GlideScene: SKScene {
     
     var wasPaused: Bool = false
     
-    var entities: [GlideEntity] = []
-    var entitiesSnapshot: [GlideEntity] = []
-    var internalEntities: [GlideEntity] = []
+    var entities: [YAEntity] = []
+    var entitiesSnapshot: [YAEntity] = []
+    var internalEntities: [YAEntity] = []
     
     let collisionsController: CollisionsController
     var contactTestMap: [UInt32: UInt32] = [:]
     
-    var checkpointIdsAndRespawnCallbacks: [(String, () -> GlideEntity)] = []
+    var checkpointIdsAndRespawnCallbacks: [(String, () -> YAEntity)] = []
     
     lazy var defaultContainerNode: SKNode = {
         let node = SKNode()
-        node.name = zPositionContainerNodeName(GlideZPositionContainer.default)
+        node.name = zPositionContainerNodeName(YAZPositionContainer.default)
         return node
     }()
     
     #if DEBUG
     lazy var debugContainerNode: SKNode = {
         let node = SKNode()
-        node.name = zPositionContainerNodeName(GlideZPositionContainer.debug)
+        node.name = zPositionContainerNodeName(YAZPositionContainer.debug)
         return node
     }()
     
@@ -168,7 +168,7 @@ open class GlideScene: SKScene {
         }
     }
     
-    func respawnRemovedEntities(removedEntities: [GlideEntity]) -> (isAnyPlayableEntityRespawned: Bool, indexOfLastCheckpointReached: Int) {
+    func respawnRemovedEntities(removedEntities: [YAEntity]) -> (isAnyPlayableEntityRespawned: Bool, indexOfLastCheckpointReached: Int) {
         var indexOfLastCheckpointReached: Int = 0
         var isAnyPlayableEntityRespawned = false
         for removedEntity in removedEntities {
@@ -238,7 +238,7 @@ open class GlideScene: SKScene {
         
         if isDebuggingCollisionTileMapNode {
             if collisionTileMapNode.parent == nil {
-                zPositionContainerNode(with: GlideZPositionContainer.debug)?.addChild(collisionTileMapNode)
+                zPositionContainerNode(with: YAZPositionContainer.debug)?.addChild(collisionTileMapNode)
             }
         } else {
             collisionTileMapNode.removeFromParent()

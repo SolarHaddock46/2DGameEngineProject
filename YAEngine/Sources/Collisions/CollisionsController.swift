@@ -45,14 +45,14 @@ class CollisionsController {
     }
     
     // MARK: - Update
-    func update(entities: [GlideEntity]) {
+    func update(entities: [YAEntity]) {
         var contacts: [ContactContext] = []
         findContactsAndResolveCollisionsWithEnvironment(entities, contacts: &contacts)
         findContactsBetween(entities: entities, contacts: &contacts)
         self.contacts = contacts
     }
     
-    func findContactsAndResolveCollisionsWithEnvironment(_ entities: [GlideEntity], contacts: inout [ContactContext]) {
+    func findContactsAndResolveCollisionsWithEnvironment(_ entities: [YAEntity], contacts: inout [ContactContext]) {
         let nonChildColliderEntities = entities.filter {
             $0.component(ofType: ColliderComponent.self) != nil &&
             $0.component(ofType: SnappableComponent.self) == nil &&
@@ -97,7 +97,7 @@ class CollisionsController {
         }
     }
     
-    func resolvedProposedPosition(for entity: GlideEntity,
+    func resolvedProposedPosition(for entity: YAEntity,
                                   to proposedPosition: CGPoint,
                                   shouldLerp: Bool,
                                   snappables: [SnappableComponent],
@@ -157,7 +157,7 @@ class CollisionsController {
     
     // MARK: - Contact finding
     
-    func contact(of entity: GlideEntity,
+    func contact(of entity: YAEntity,
                  collider: ColliderComponent,
                  at proposedPosition: CGPoint,
                  snappables: [SnappableComponent],

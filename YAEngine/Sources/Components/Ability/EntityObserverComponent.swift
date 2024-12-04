@@ -161,7 +161,7 @@ extension EntityObserverComponent {
             return "observingArea: \(frame.description), isLocal: \(isLocal)"
         }
         
-        public func frameInScene(_ scene: GlideScene, for transform: TransformNodeComponent) -> CGRect {
+        public func frameInScene(_ scene: YAScene, for transform: TransformNodeComponent) -> CGRect {
             var observingRect = frame.rect(with: scene.tileSize)
             if isLocal {
                 observingRect.origin = transform.node.convert(observingRect.origin, to: scene)
@@ -201,7 +201,7 @@ extension EntityObserverComponent: DebuggableComponent {
             debugSprite.name = nodeName
             if observingArea.isLocal == false {
                 debugSprite.position = observingRect.origin + observingRect.size / 2
-                scene.addChild(debugSprite, in: GlideZPositionContainer.debug)
+                scene.addChild(debugSprite, in: YAZPositionContainer.debug)
             } else {
                 debugSprite.position = observingArea.frame.origin.point(with: scene.tileSize)
                 transform.node.addChild(debugSprite)

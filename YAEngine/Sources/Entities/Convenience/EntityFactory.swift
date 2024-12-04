@@ -20,8 +20,8 @@ public class EntityFactory {
     public static func checkpointEntity(checkpoint: Checkpoint,
                                         checkpointWidthInTiles: Int,
                                         tileSize: CGSize,
-                                        stretchesToTop: Bool = false) -> GlideEntity {
-        let entity = GlideEntity(initialNodePosition: checkpoint.bottomLeftPosition.point(with: tileSize))
+                                        stretchesToTop: Bool = false) -> YAEntity {
+        let entity = YAEntity(initialNodePosition: checkpoint.bottomLeftPosition.point(with: tileSize))
         entity.name = "Checkpoint-\(checkpoint.id)"
         entity.transform.usesProposedPosition = false
         
@@ -30,7 +30,7 @@ public class EntityFactory {
         
         let colliderWidth = CGFloat(checkpointWidthInTiles) * tileSize.width
         let colliderHeight = stretchesToTop ? CGFloat(checkpointWidthInTiles) * tileSize.height : 0
-        let colliderComponent = ColliderComponent(categoryMask: GlideCategoryMask.snappable,
+        let colliderComponent = ColliderComponent(categoryMask: YACategoryMask.snappable,
                                                   size: CGSize(width: colliderWidth, height: colliderHeight),
                                                   offset: .zero,
                                                   leftHitPointsOffsets: (0, 0),
@@ -48,8 +48,8 @@ public class EntityFactory {
     
     // MARK: - Internal
     
-    static func cameraEntity(cameraNode: SKCameraNode, boundingBoxSize: CGSize) -> GlideEntity {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    static func cameraEntity(cameraNode: SKCameraNode, boundingBoxSize: CGSize) -> YAEntity {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "MainCamera"
         
         let cameraComponent = CameraComponent(cameraNode: cameraNode, boundingBoxSize: boundingBoxSize)

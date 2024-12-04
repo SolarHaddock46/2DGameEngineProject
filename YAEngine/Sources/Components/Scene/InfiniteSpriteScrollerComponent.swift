@@ -62,7 +62,7 @@ public final class InfiniteSpriteScrollerComponent: GKComponent, YAComponent {
     private var leftOrTopNode: SKSpriteNode?
     private var rightOrBottomNode: SKSpriteNode?
     
-    private func populateNodes(scene: GlideScene) {
+    private func populateNodes(scene: YAScene) {
         guard let spriteNodeComponent = entity?.component(ofType: SpriteNodeComponent.self) else {
             return
         }
@@ -206,7 +206,7 @@ public final class InfiniteSpriteScrollerComponent: GKComponent, YAComponent {
 }
 
 extension InfiniteSpriteScrollerComponent: NodeLayoutableComponent {
-    public func layout(scene: GlideScene, previousSceneSize: CGSize) {
+    public func layout(scene: YAScene, previousSceneSize: CGSize) {
         guard scene.size != previousSceneSize else {
             return
         }

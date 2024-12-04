@@ -74,7 +74,7 @@ public final class HealthComponent: GKComponent, YAComponent {
     /// will have no effect.
     @discardableResult
     public func applyDamage(_ damageAmount: CGFloat) -> Bool {
-        guard (entity as? GlideEntity)?.canTakeDamage == true else {
+        guard (entity as? YAEntity)?.canTakeDamage == true else {
             return false
         }
         

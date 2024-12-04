@@ -24,8 +24,8 @@ public extension CGPoint {
         self.init(x: cos(angle), y: sin(angle))
     }
     
-    var glideRound: CGPoint {
-        return CGPoint(x: x.glideRound, y: y.glideRound)
+    var yaRound: CGPoint {
+        return CGPoint(x: x.yaRound, y: y.yaRound)
     }
     
     /// Adds (dx, dy) to the point.

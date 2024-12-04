@@ -5,7 +5,7 @@
 
 import Foundation
 
-extension GlideScene {
+extension YAScene {
     
     var startCheckpoint: Checkpoint? {
         return entities.compactMap {

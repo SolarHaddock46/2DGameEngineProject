@@ -11,8 +11,8 @@ public extension GKEntity {
     /// is a `GlideEntity`.
     /// Returns `nil` otherwise.
     @objc var name: String? {
-        if let glideEntity = self as? GlideEntity {
-            return glideEntity.transform.node.name
+        if let yaEntity = self as? YAEntity {
+            return yaEntity.transform.node.name
         }
         return nil
     }

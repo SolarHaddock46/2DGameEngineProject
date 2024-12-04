@@ -41,11 +41,11 @@ public final class ApproachingMovementComponent: GKComponent, YAComponent {
         var numberOfTries = 10
         var newTarget = transform.currentPosition.approach(destination: targetPoint,
                                                            maximumDelta: timing)
-        var target = CGPoint(x: newTarget.x.glideRound, y: newTarget.y.glideRound)
+        var target = CGPoint(x: newTarget.x.yaRound, y: newTarget.y.yaRound)
         while target == transform.currentPosition, numberOfTries >= 0 {
             newTarget = newTarget.approach(destination: targetPoint,
                                            maximumDelta: timing)
-            target = CGPoint(x: newTarget.x.glideRound, y: newTarget.y.glideRound)
+            target = CGPoint(x: newTarget.x.yaRound, y: newTarget.y.yaRound)
             numberOfTries -= 1
         }
         
