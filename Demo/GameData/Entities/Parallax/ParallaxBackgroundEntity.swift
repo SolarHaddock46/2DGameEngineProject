@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class ParallaxBackgroundEntity: GlideEntity {
+class ParallaxBackgroundEntity: YAEntity {
     
     let followCameraComponent: CameraFollowerComponent
     let infiniteSpriteScroller: InfiniteSpriteScrollerComponent

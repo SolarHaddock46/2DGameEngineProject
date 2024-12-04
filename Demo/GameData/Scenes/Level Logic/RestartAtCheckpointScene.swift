@@ -31,7 +31,7 @@ class RestartAtCheckpointScene: BaseLevelScene {
     override func setupScene() {
         super.setupScene()
         
-        mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.collectible)
+        mapContact(between: YACategoryMask.player, and: DemoCategoryMask.collectible)
         
         /// It is recommended to generate those ids with an id generator
         let startCheckpoint = Checkpoint(id: "0",
@@ -87,7 +87,7 @@ class RestartAtCheckpointScene: BaseLevelScene {
     static func playerEntity(at checkpoint: Checkpoint,
                              numberOfRespawnsLeft: Int,
                              tileSize: CGSize,
-                             gemCounterEntity: GemCounterEntity) -> GlideEntity {
+                             gemCounterEntity: GemCounterEntity) -> YAEntity {
         let playerEntity = SimplePlayerEntity(initialNodePosition: (checkpoint.bottomLeftPosition + TiledPoint(0, 2)).point(with: tileSize), playerIndex: 0)
         
         let checkpointRecognizerComponent = CheckpointRecognizerComponent(numberOfRespawnsLeft: numberOfRespawnsLeft)
@@ -117,10 +117,10 @@ class RestartAtCheckpointScene: BaseLevelScene {
     static func gemEntity(at position: TiledPoint,
                           checkpointId: String,
                           tileSize: CGSize,
-                          gemCounterEntity: GemCounterEntity) -> GlideEntity {
+                          gemCounterEntity: GemCounterEntity) -> YAEntity {
         let entity = GemEntity(bottomLeftPosition: position.point(with: tileSize))
         
-        let respawnAtCheckpointOnRestartComponent = RespawnAtCheckpointOnRestartComponent(checkpointId: checkpointId) { () -> GlideEntity in
+        let respawnAtCheckpointOnRestartComponent = RespawnAtCheckpointOnRestartComponent(checkpointId: checkpointId) { () -> YAEntity in
             
             if entity.component(ofType: CollectibleComponent.self)?.isCollected == true {
                 // Decrease current gem count by the number of respawned gems to not count unearned gems.
@@ -137,14 +137,14 @@ class RestartAtCheckpointScene: BaseLevelScene {
         return entity
     }
     
-    static func someEntity(position: TiledPoint, checkpointId: String, tileSize: CGSize) -> GlideEntity {
-        let entity = GlideEntity(initialNodePosition: position.point(with: tileSize))
+    static func someEntity(position: TiledPoint, checkpointId: String, tileSize: CGSize) -> YAEntity {
+        let entity = YAEntity(initialNodePosition: position.point(with: tileSize))
         
         let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 20, height: 20))
         spriteNodeComponent.spriteNode.color = .yellow
         entity.addComponent(spriteNodeComponent)
         
-        let respawnAtCheckpointOnRestartComponent = RespawnAtCheckpointOnRestartComponent(checkpointId: checkpointId) { () -> GlideEntity in
+        let respawnAtCheckpointOnRestartComponent = RespawnAtCheckpointOnRestartComponent(checkpointId: checkpointId) { () -> YAEntity in
             
             return RestartAtCheckpointScene.someEntity(position: position,
                                                        checkpointId: checkpointId,

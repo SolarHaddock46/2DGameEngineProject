@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E908C4C217DE46800D8B29D"
             BuildableName = "Glide Demo.app"
-            BlueprintName = "GlideDemo_iOS"
+            BlueprintName = "YADemo_iOS"
             ReferencedContainer = "container:YADemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

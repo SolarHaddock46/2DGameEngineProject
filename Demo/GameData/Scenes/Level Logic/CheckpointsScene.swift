@@ -65,7 +65,7 @@ class CheckpointsScene: BaseLevelScene {
         setupTips()
     }
     
-    static func playerEntity(at checkpoint: Checkpoint, numberOfRespawnsLeft: Int, tileSize: CGSize) -> GlideEntity {
+    static func playerEntity(at checkpoint: Checkpoint, numberOfRespawnsLeft: Int, tileSize: CGSize) -> YAEntity {
         let playerEntity = SimplePlayerEntity(initialNodePosition: (checkpoint.bottomLeftPosition + TiledPoint(0, 2)).point(with: tileSize), playerIndex: 0)
         
         let checkpointRecognizerComponent = CheckpointRecognizerComponent(numberOfRespawnsLeft: numberOfRespawnsLeft)

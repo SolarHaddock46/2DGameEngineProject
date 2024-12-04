@@ -6,10 +6,10 @@ class HealthComponentScene: BaseLevelScene {
     override func setupScene() {
         super.setupScene()
         
-        mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.hazard)
-        mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.npc)
+        mapContact(between: YACategoryMask.player, and: DemoCategoryMask.hazard)
+        mapContact(between: YACategoryMask.player, and: DemoCategoryMask.npc)
         mapContact(between: DemoCategoryMask.npc, and: DemoCategoryMask.projectile)
-        mapContact(between: GlideCategoryMask.player, and: DemoCategoryMask.collectible)
+        mapContact(between: YACategoryMask.player, and: DemoCategoryMask.collectible)
         
         #if os(iOS)
         let touchButtonComponent = additionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)
@@ -109,7 +109,7 @@ class HealthComponentScene: BaseLevelScene {
     
     // MARK: - Player Entity
     
-    lazy var playerEntity: GlideEntity = {
+    lazy var playerEntity: YAEntity = {
         let playerEntity = SimplePlayerEntity(initialNodePosition: defaultPlayerStartLocation, playerIndex: 0)
         
         let blinkerComponent = BlinkerComponent(blinkingDuration: 0.8)
@@ -164,7 +164,7 @@ class HealthComponentScene: BaseLevelScene {
     
     // MARK: - Weapon Entity
     
-    lazy var weaponEntity: GlideEntity = {
+    lazy var weaponEntity: YAEntity = {
         let weaponEntity = ProjectileWeaponEntity(initialNodePosition: .zero, positionOffset: .zero)
         return weaponEntity
     }()
@@ -181,7 +181,7 @@ class HealthComponentScene: BaseLevelScene {
     
     // MARK: - Patrolling Eagle Entity
     
-    func patrollingWithDisplacementNPC(at position: TiledPoint) -> GlideEntity {
+    func patrollingWithDisplacementNPC(at position: TiledPoint) -> YAEntity {
         let npc = EagleEntity(initialNodePosition: position.point(with: tileSize))
         
         let selfChangeDirectionComponent = SelfChangeDirectionComponent()

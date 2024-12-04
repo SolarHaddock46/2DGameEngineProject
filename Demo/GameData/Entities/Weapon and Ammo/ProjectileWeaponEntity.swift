@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class ProjectileWeaponEntity: GlideEntity {
+class ProjectileWeaponEntity: YAEntity {
     
     override init(initialNodePosition: CGPoint, positionOffset: CGPoint) {
         direction = .positive

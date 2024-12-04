@@ -519,9 +519,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E908C4C217DE46800D8B29D /* GlideDemo_iOS */ = {
+		4E908C4C217DE46800D8B29D /* YADemo_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E908C6A217DE46900D8B29D /* Build configuration list for PBXNativeTarget "GlideDemo_iOS" */;
+			buildConfigurationList = 4E908C6A217DE46900D8B29D /* Build configuration list for PBXNativeTarget "YADemo_iOS" */;
 			buildPhases = (
 				4E908C49217DE46800D8B29D /* Sources */,
 				4E908C4A217DE46800D8B29D /* Frameworks */,
@@ -533,7 +533,7 @@
 			);
 			dependencies = (
 			);
-			name = GlideDemo_iOS;
+			name = YADemo_iOS;
 			packageProductDependencies = (
 				4EE9861724B1531A00B25627 /* YAEngine */,
 			);
@@ -573,7 +573,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E908C4C217DE46800D8B29D /* GlideDemo_iOS */,
+				4E908C4C217DE46800D8B29D /* YADemo_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -901,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E908C6A217DE46900D8B29D /* Build configuration list for PBXNativeTarget "GlideDemo_iOS" */ = {
+		4E908C6A217DE46900D8B29D /* Build configuration list for PBXNativeTarget "YADemo_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E908C6B217DE46900D8B29D /* Debug */,

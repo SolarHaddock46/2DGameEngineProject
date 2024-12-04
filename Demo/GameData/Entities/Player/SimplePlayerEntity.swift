@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class SimplePlayerEntity: GlideEntity {
+class SimplePlayerEntity: YAEntity {
     
     static let colliderSize = CGSize(width: 18, height: 30)
     let playerIndex: Int
@@ -55,7 +55,7 @@ class SimplePlayerEntity: GlideEntity {
         let kinematicsBodyComponent = KinematicsBodyComponent()
         addComponent(kinematicsBodyComponent)
         
-        let colliderComponent = ColliderComponent(categoryMask: GlideCategoryMask.player,
+        let colliderComponent = ColliderComponent(categoryMask: YACategoryMask.player,
                                                   size: SimplePlayerEntity.colliderSize,
                                                   offset: .zero,
                                                   leftHitPointsOffsets: (10, 10),

@@ -26,7 +26,7 @@
 import YAEngine
 import GameplayKit
 
-class EagleEntity: GlideEntity {
+class EagleEntity: YAEntity {
     
     let colliderSize = CGSize(width: 41, height: 21)
     

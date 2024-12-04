@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class GemCounterEntity: GlideEntity {
+class GemCounterEntity: YAEntity {
     
     var numberOfGems: Int = 0 {
         didSet {
@@ -39,7 +39,7 @@ class GemCounterEntity: GlideEntity {
         transform.usesProposedPosition = false
         
         let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 42, height: 42))
-        spriteNodeComponent.zPositionContainer = GlideZPositionContainer.camera
+        spriteNodeComponent.zPositionContainer = YAZPositionContainer.camera
         spriteNodeComponent.offset = CGPoint(x: 31, y: -31)
         spriteNodeComponent.spriteNode.texture = SKTexture(nearestFilteredImageName: "gem_counter_icon")
         addComponent(spriteNodeComponent)
@@ -68,7 +68,7 @@ class GemCounterEntity: GlideEntity {
 
 class GemCounterComponent: GKComponent, YAComponent, NodeLayoutableComponent {
     
-    func layout(scene: GlideScene, previousSceneSize: CGSize) {
+    func layout(scene: YAScene, previousSceneSize: CGSize) {
         transform?.currentPosition = CGPoint(x: -scene.size.width / 2, y: scene.size.height / 2)
     }
 }

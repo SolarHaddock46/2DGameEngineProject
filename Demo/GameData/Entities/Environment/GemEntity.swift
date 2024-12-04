@@ -26,7 +26,7 @@
 import YAEngine
 import SpriteKit
 
-class GemEntity: GlideEntity {
+class GemEntity: YAEntity {
     
     let colliderSize = CGSize(width: 14, height: 14)
     

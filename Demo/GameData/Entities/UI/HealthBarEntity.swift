@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class HealthBarEntity: GlideEntity {
+class HealthBarEntity: YAEntity {
     
     let numberOfHearts: Int
     
@@ -40,7 +40,7 @@ class HealthBarEntity: GlideEntity {
         transform.usesProposedPosition = false
         
         let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 120, height: 32))
-        spriteNodeComponent.zPositionContainer = GlideZPositionContainer.camera
+        spriteNodeComponent.zPositionContainer = YAZPositionContainer.camera
         spriteNodeComponent.offset = CGPoint(x: 80, y: -36)
         addComponent(spriteNodeComponent)
         
@@ -58,7 +58,7 @@ class HealthBarEntity: GlideEntity {
 
 class HealthBarComponent: GKComponent, YAComponent, NodeLayoutableComponent {
     
-    func layout(scene: GlideScene, previousSceneSize: CGSize) {
+    func layout(scene: YAScene, previousSceneSize: CGSize) {
         let offset: CGFloat = 50
         transform?.currentPosition = CGPoint(x: -scene.size.width / 2, y: scene.size.height / 2 - offset)
     }

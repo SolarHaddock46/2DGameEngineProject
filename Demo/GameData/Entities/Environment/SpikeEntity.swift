@@ -26,7 +26,7 @@
 import YAEngine
 import SpriteKit
 
-class SpikeEntity: GlideEntity {
+class SpikeEntity: YAEntity {
     
     override func setup() {
         let spriteNodeComponent = SpriteNodeComponent(nodeSize: CGSize(width: 32, height: 32))

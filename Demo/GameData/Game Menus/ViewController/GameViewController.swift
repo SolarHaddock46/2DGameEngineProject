@@ -130,7 +130,7 @@ class GameViewController: GCEventViewController {
         // Present the scene
         view.presentScene(baseLevelScene)
         self.scene = baseLevelScene
-        baseLevelScene.glideSceneDelegate = self
+        baseLevelScene.yaSceneDelegate = self
         
         #if DEBUG
         view.showsFPS = true
@@ -142,7 +142,7 @@ class GameViewController: GCEventViewController {
         #endif
     }
     
-    private func displayPauseMenu(on scene: GlideScene, displaysResume: Bool) {
+    private func displayPauseMenu(on scene: YAScene, displaysResume: Bool) {
         guard overlayViewController == nil else {
             return
         }
@@ -174,9 +174,9 @@ class GameViewController: GCEventViewController {
     }
 }
 
-extension GameViewController: GlideSceneDelegate {
+extension GameViewController: YASceneDelegate {
     
-    func glideScene(_ scene: GlideScene, didChangePaused paused: Bool) {
+    func yaScene(_ scene: YAScene, didChangePaused paused: Bool) {
         if paused {
             displayPauseMenu(on: scene, displaysResume: true)
         } else {
@@ -184,7 +184,7 @@ extension GameViewController: GlideSceneDelegate {
         }
     }
     
-    func glideSceneDidEnd(_ scene: GlideScene, reason: GlideScene.EndReason?, context: [String: Any]?) {
+    func yaSceneDidEnd(_ scene: YAScene, reason: YAScene.EndReason?, context: [String: Any]?) {
         scene.isPaused = true
         displayPauseMenu(on: scene, displaysResume: false)
     }

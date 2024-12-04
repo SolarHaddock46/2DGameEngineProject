@@ -26,7 +26,7 @@
 import YAEngine
 import GameplayKit
 
-class GameplayTipEntity: GlideEntity {
+class GameplayTipEntity: YAEntity {
     
     let text: String
     let frameWidth: CGFloat

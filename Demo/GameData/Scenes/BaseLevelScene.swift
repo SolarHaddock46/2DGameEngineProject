@@ -27,7 +27,7 @@ import YAEngine
 import SpriteKit
 import GameplayKit
 
-class BaseLevelScene: GlideScene {
+class BaseLevelScene: YAScene {
     
     let tileMaps: SceneTileMaps
     var defaultPlayerStartLocation: CGPoint {
@@ -86,31 +86,31 @@ class BaseLevelScene: GlideScene {
     }
     
     #if os(iOS)
-    lazy var moveLeftTouchButtonEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    lazy var moveLeftTouchButtonEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Move Left"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 120, height: 100), triggersOnTouchUpInside: false, input: .profiles([(name: "Player1_Horizontal", isNegative: true)]))
-        touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
+        touchButtonComponent.zPositionContainer = YAZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_moveleft")
         touchButtonComponent.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_moveleft_hl")
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var moveRightTouchButtonEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    lazy var moveRightTouchButtonEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Move Right"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 120, height: 100), triggersOnTouchUpInside: false, input: .profiles([(name: "Player1_Horizontal", isNegative: false)]))
-        touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
+        touchButtonComponent.zPositionContainer = YAZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_moveright")
         touchButtonComponent.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_moveright_hl")
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var jumpTouchButtonEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    lazy var jumpTouchButtonEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Jump"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 120, height: 100), triggersOnTouchUpInside: false, input: .profiles([(name: "Player1_Jump", isNegative: false)]))
-        touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
+        touchButtonComponent.zPositionContainer = YAZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_jump")
         touchButtonComponent.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_jump_hl")
         entity.addComponent(touchButtonComponent)
@@ -141,35 +141,35 @@ class BaseLevelScene: GlideScene {
         }
     }
     
-    lazy var additionalTouchButtonEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    lazy var additionalTouchButtonEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Additional Button"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 70, height: 100), triggersOnTouchUpInside: false, input: .callback({}))
-        touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
+        touchButtonComponent.zPositionContainer = YAZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_empty")
         touchButtonComponent.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_empty_hl")
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var secondAdditionalTouchButtonEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    lazy var secondAdditionalTouchButtonEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Second Additional Button"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 70, height: 100), triggersOnTouchUpInside: false, input: .callback({}))
-        touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
+        touchButtonComponent.zPositionContainer = YAZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_empty")
         touchButtonComponent.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_empty_hl")
         entity.addComponent(touchButtonComponent)
         return entity
     }()
-    lazy var pauseButtonEntity: GlideEntity = {
-        let entity = GlideEntity(initialNodePosition: CGPoint.zero)
+    lazy var pauseButtonEntity: YAEntity = {
+        let entity = YAEntity(initialNodePosition: CGPoint.zero)
         entity.name = "Pause"
         let touchButtonComponent = TouchButtonComponent(size: CGSize(width: 44, height: 44),
                                                         triggersOnTouchUpInside: false,
                                                         input: .callback({ [weak self] in
                                                             self?.isPaused = true
                                                         }))
-        touchButtonComponent.zPositionContainer = GlideZPositionContainer.camera
+        touchButtonComponent.zPositionContainer = YAZPositionContainer.camera
         touchButtonComponent.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_pause")
         touchButtonComponent.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_pause_hl")
         entity.addComponent(touchButtonComponent)
