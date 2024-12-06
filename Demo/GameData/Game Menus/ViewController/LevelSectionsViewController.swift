@@ -48,7 +48,7 @@ class LevelSectionsViewController: NavigatableViewController {
     }()
     
     lazy var logoImageView: ImageView = {
-        let view = ImageView(image: Image(imageLiteralResourceName: "logo"))
+        let view = ImageView(image: Image(imageLiteralResourceName: "star"))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

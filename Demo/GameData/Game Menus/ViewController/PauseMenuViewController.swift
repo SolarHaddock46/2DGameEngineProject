@@ -17,12 +17,6 @@ class PauseMenuViewController: NavigatableViewController {
     
     weak var delegate: PauseMenuViewControllerDelegate?
     
-    lazy var logoImageView: ImageView = {
-        let view = ImageView(image: Image(imageLiteralResourceName: "logo"))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     var containerView: View = {
         let view = View()
         view.backgroundColor = Color.hudBackgroundColor
@@ -75,18 +69,11 @@ class PauseMenuViewController: NavigatableViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
         
-        view.addSubview(logoImageView)
         view.addLayoutGuide(buttonsContainerLayoutGuide)
         NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(equalToConstant: 128.0),
-            logoImageView.heightAnchor.constraint(equalToConstant: 128.0),
-            logoImageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            logoImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20.0),
-            logoImageView.bottomAnchor.constraint(equalTo: buttonsContainerLayoutGuide.topAnchor),
-            
             buttonsContainerLayoutGuide.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             buttonsContainerLayoutGuide.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            buttonsContainerLayoutGuide.topAnchor.constraint(equalTo: logoImageView.bottomAnchor),
+            buttonsContainerLayoutGuide.topAnchor.constraint(equalTo: containerView.topAnchor),
             buttonsContainerLayoutGuide.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
             ])
     }
