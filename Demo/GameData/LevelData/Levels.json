@@ -1,14 +1,14 @@
 {
     "sections": [
         {
-            "name": "Abilities",
+            "name": "World 1",
             "info": "Playable abilities.",
             "levels": [
                 {
-                    "file": "HealthComponentScene",
-                    "scene": "HealthComponentScene",
-                    "name": "Health Component",
-                    "info": "Adventurer with a health bar."
+                    "file": "Level11",
+                    "scene": "Level11",
+                    "name": "Level 1-1",
+                    "info": "The first test level."
                 }
             ]
         }

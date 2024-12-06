@@ -35,11 +35,9 @@
 		4E021C2621A2BCD6002EC280 /* BulletEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E021C2521A2BCD6002EC280 /* BulletEntity.swift */; };
 		4E03566B21F901F000837712 /* SimplePlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03566A21F901F000837712 /* SimplePlayerEntity.swift */; };
 		4E0DB366220D8F9F0041865B /* PopoverActionButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DB365220D8F9F0041865B /* PopoverActionButtonContentView.swift */; };
-		4E10540C225BC0330059CFEE /* RestartAtCheckpointScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10540B225BC0330059CFEE /* RestartAtCheckpointScene.swift */; };
-		4E105413225BC04A0059CFEE /* RestartAtCheckpointScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E105412225BC04A0059CFEE /* RestartAtCheckpointScene.json */; };
-		4E1F087B2203A38500255203 /* HealthComponentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F087A2203A38500255203 /* HealthComponentScene.swift */; };
+		4E1F087B2203A38500255203 /* Level11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F087A2203A38500255203 /* Level11.swift */; };
 		4E22D323220849290069BF95 /* DemoCategoryMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22D322220849290069BF95 /* DemoCategoryMask.swift */; };
-		4E22D33E2208B1400069BF95 /* HealthComponentScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D33D2208B1400069BF95 /* HealthComponentScene.json */; };
+		4E22D33E2208B1400069BF95 /* Level11.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E22D33D2208B1400069BF95 /* Level11.json */; };
 		4E3538EB223D1AF200A5EB15 /* Awake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E353895223D1AED00A5EB15 /* Awake.ttf */; };
 		4E3538EE223D1AF200A5EB15 /* m5x7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E353896223D1AEE00A5EB15 /* m5x7.ttf */; };
 		4E3538F7223D1AF200A5EB15 /* EquipmentPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E353899223D1AEE00A5EB15 /* EquipmentPro.ttf */; };
@@ -68,8 +66,6 @@
 		4E55A50921EDF64A0091378B /* BaseLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC50D34217DE710005D66FC /* BaseLevelScene.swift */; };
 		4E66E91821FCF6A10048E058 /* PauseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66E91721FCF6A10048E058 /* PauseMenuViewController.swift */; };
 		4E73A74124701E0F006DF31D /* runcycle.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4E73A74024701E0F006DF31D /* runcycle.aif */; };
-		4E87C6D42207771F00F56FE7 /* CheckpointsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */; };
-		4E87C6D72207771F00F56FE7 /* CheckpointsScene.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E87C6D32207771F00F56FE7 /* CheckpointsScene.json */; };
 		4E908C51217DE46800D8B29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E908C50217DE46800D8B29D /* AppDelegate.swift */; };
 		4E908C56217DE46800D8B29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E908C54217DE46800D8B29D /* Main.storyboard */; };
 		4E908C5B217DE46900D8B29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E908C59217DE46900D8B29D /* LaunchScreen.storyboard */; };
@@ -134,17 +130,14 @@
 		4E002C37226F11C100DE2357 /* CollectibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectibleComponent.swift; sourceTree = "<group>"; };
 		4E002C3B226F11E700DE2357 /* UpdateHealthBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHealthBarComponent.swift; sourceTree = "<group>"; };
 		4E002C4B226F248100DE2357 /* TriggerZoneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerZoneComponent.swift; sourceTree = "<group>"; };
-		4E002C50226F277F00DE2357 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		4E002C56226F477000DE2357 /* GemCounterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemCounterEntity.swift; sourceTree = "<group>"; };
 		4E002C5A226F55BE00DE2357 /* UpdateGemCounterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGemCounterComponent.swift; sourceTree = "<group>"; };
 		4E021C2521A2BCD6002EC280 /* BulletEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletEntity.swift; sourceTree = "<group>"; };
 		4E03566A21F901F000837712 /* SimplePlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerEntity.swift; sourceTree = "<group>"; };
 		4E0DB365220D8F9F0041865B /* PopoverActionButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverActionButtonContentView.swift; sourceTree = "<group>"; };
-		4E10540B225BC0330059CFEE /* RestartAtCheckpointScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartAtCheckpointScene.swift; sourceTree = "<group>"; };
-		4E105412225BC04A0059CFEE /* RestartAtCheckpointScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RestartAtCheckpointScene.json; sourceTree = "<group>"; };
-		4E1F087A2203A38500255203 /* HealthComponentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthComponentScene.swift; sourceTree = "<group>"; };
+		4E1F087A2203A38500255203 /* Level11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level11.swift; sourceTree = "<group>"; };
 		4E22D322220849290069BF95 /* DemoCategoryMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCategoryMask.swift; sourceTree = "<group>"; };
-		4E22D33D2208B1400069BF95 /* HealthComponentScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HealthComponentScene.json; sourceTree = "<group>"; };
+		4E22D33D2208B1400069BF95 /* Level11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level11.json; sourceTree = "<group>"; };
 		4E353895223D1AED00A5EB15 /* Awake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Awake.ttf; sourceTree = "<group>"; };
 		4E353896223D1AEE00A5EB15 /* m5x7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = m5x7.ttf; sourceTree = "<group>"; };
 		4E353899223D1AEE00A5EB15 /* EquipmentPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EquipmentPro.ttf; sourceTree = "<group>"; };
@@ -172,8 +165,6 @@
 		4E47D250223FB4EF007F4306 /* AnimationEntityFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEntityFactory.swift; sourceTree = "<group>"; };
 		4E66E91721FCF6A10048E058 /* PauseMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenuViewController.swift; sourceTree = "<group>"; };
 		4E73A74024701E0F006DF31D /* runcycle.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = runcycle.aif; sourceTree = "<group>"; };
-		4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckpointsScene.swift; sourceTree = "<group>"; };
-		4E87C6D32207771F00F56FE7 /* CheckpointsScene.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CheckpointsScene.json; sourceTree = "<group>"; };
 		4E908C4D217DE46800D8B29D /* Glide Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glide Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E908C50217DE46800D8B29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E908C55217DE46800D8B29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -262,7 +253,6 @@
 			children = (
 				4EC50D34217DE710005D66FC /* BaseLevelScene.swift */,
 				4E66E91021FCEC7D0048E058 /* Abilities */,
-				4EBF28CB226E5E9600AE954B /* Level Logic */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -314,8 +304,8 @@
 		4E66E91021FCEC7D0048E058 /* Abilities */ = {
 			isa = PBXGroup;
 			children = (
-				4E1F087A2203A38500255203 /* HealthComponentScene.swift */,
-				4E22D33D2208B1400069BF95 /* HealthComponentScene.json */,
+				4E1F087A2203A38500255203 /* Level11.swift */,
+				4E22D33D2208B1400069BF95 /* Level11.json */,
 			);
 			path = Abilities;
 			sourceTree = "<group>";
@@ -415,21 +405,9 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
-		4EBF28CB226E5E9600AE954B /* Level Logic */ = {
-			isa = PBXGroup;
-			children = (
-				4E87C6D22207771F00F56FE7 /* CheckpointsScene.swift */,
-				4E87C6D32207771F00F56FE7 /* CheckpointsScene.json */,
-				4E10540B225BC0330059CFEE /* RestartAtCheckpointScene.swift */,
-				4E105412225BC04A0059CFEE /* RestartAtCheckpointScene.json */,
-			);
-			path = "Level Logic";
-			sourceTree = "<group>";
-		};
 		4EC50D33217DE703005D66FC /* GameData */ = {
 			isa = PBXGroup;
 			children = (
-				4E002C50226F277F00DE2357 /* .swiftlint.yml */,
 				4E22D322220849290069BF95 /* DemoCategoryMask.swift */,
 				4EBF289F226B7D5000AE954B /* DemoZPositionContainer.swift */,
 				4EC50D37217DE73D005D66FC /* LevelData */,
@@ -589,18 +567,16 @@
 				4E353906223D1AF200A5EB15 /* ExpressionPro.ttf in Resources */,
 				4E353924223D1AF200A5EB15 /* MatchupPro.ttf in Resources */,
 				4E908C5B217DE46900D8B29D /* LaunchScreen.storyboard in Resources */,
-				4E105413225BC04A0059CFEE /* RestartAtCheckpointScene.json in Resources */,
 				4EE0CFB121FF5152001B1CE7 /* Decoration_RuinsTileSet.json in Resources */,
 				4E3A4A9A21F0D3AF006C5916 /* Levels.json in Resources */,
 				4EB7A3F9247171EA0002CEA9 /* landing.aif in Resources */,
 				4E908C56217DE46800D8B29D /* Main.storyboard in Resources */,
-				4E87C6D72207771F00F56FE7 /* CheckpointsScene.json in Resources */,
 				4EB7A3FC247171EA0002CEA9 /* jumping.aif in Resources */,
 				4EBF2885226B211500AE954B /* Assets.xcassets in Resources */,
 				4EB7A4AC2472F78E0002CEA9 /* shoot.wav in Resources */,
 				4EB7A4A82472F76F0002CEA9 /* explosion.wav in Resources */,
 				4E3538EB223D1AF200A5EB15 /* Awake.ttf in Resources */,
-				4E22D33E2208B1400069BF95 /* HealthComponentScene.json in Resources */,
+				4E22D33E2208B1400069BF95 /* Level11.json in Resources */,
 				4E73A74124701E0F006DF31D /* runcycle.aif in Resources */,
 				4E3538F7223D1AF200A5EB15 /* EquipmentPro.ttf in Resources */,
 				4E3538EE223D1AF200A5EB15 /* m5x7.ttf in Resources */,
@@ -663,7 +639,7 @@
 				4E47BEB6227455AE009ED639 /* EagleEntity.swift in Sources */,
 				4E47BEDE2275155D009ED639 /* UpdatableHealthBarComponent.swift in Sources */,
 				4E9ED35C21FB18C400D59A68 /* SingleLevelSectionViewModel.swift in Sources */,
-				4E1F087B2203A38500255203 /* HealthComponentScene.swift in Sources */,
+				4E1F087B2203A38500255203 /* Level11.swift in Sources */,
 				4E55A50921EDF64A0091378B /* BaseLevelScene.swift in Sources */,
 				4E002C4C226F248100DE2357 /* TriggerZoneComponent.swift in Sources */,
 				4E3A4A4E21F0A0B5006C5916 /* NavigationFocusAnimationView.swift in Sources */,
@@ -683,7 +659,6 @@
 				4E22D323220849290069BF95 /* DemoCategoryMask.swift in Sources */,
 				4E03566B21F901F000837712 /* SimplePlayerEntity.swift in Sources */,
 				4E353960223DCA1700A5EB15 /* PageIndicatorView.swift in Sources */,
-				4E10540C225BC0330059CFEE /* RestartAtCheckpointScene.swift in Sources */,
 				4E9ED34C21FB103B00D59A68 /* SingleLevelSectionViewController.swift in Sources */,
 				4E002C38226F11C100DE2357 /* CollectibleComponent.swift in Sources */,
 				4EA1AFBB220997D700A71FDF /* HazardComponent.swift in Sources */,
@@ -702,7 +677,6 @@
 				4EBF2894226B64AE00AE954B /* SpikeEntity.swift in Sources */,
 				4ED750722242BFF8004748B7 /* ParallaxBackgroundEntity.swift in Sources */,
 				4E002C57226F477000DE2357 /* GemCounterEntity.swift in Sources */,
-				4E87C6D42207771F00F56FE7 /* CheckpointsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

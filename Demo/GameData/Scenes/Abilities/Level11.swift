@@ -1,7 +1,7 @@
 import YAEngine
 import GameplayKit
 
-class HealthComponentScene: BaseLevelScene {
+class Level11: BaseLevelScene {
     
     override func setupScene() {
         super.setupScene()
@@ -11,31 +11,21 @@ class HealthComponentScene: BaseLevelScene {
         mapContact(between: DemoCategoryMask.npc, and: DemoCategoryMask.projectile)
         mapContact(between: YACategoryMask.player, and: DemoCategoryMask.collectible)
         
-        #if os(iOS)
         let touchButtonComponent = additionalTouchButtonEntity.component(ofType: TouchButtonComponent.self)
         touchButtonComponent?.input = .profiles([(name: "Player1_Shoot", isNegative: false)])
         touchButtonComponent?.normalTexture = SKTexture(nearestFilteredImageName: "touchbutton_shoot")
         touchButtonComponent?.highlightedTexture = SKTexture(nearestFilteredImageName: "touchbutton_shoot_hl")
         shouldDisplayAdditionalTouchButton = true
-        #elseif os(tvOS)
-        Input.shared.removeInputProfilesNamed("Player1_Shoot")
-        let player1ShootProfile = InputProfile(name: "Player1_Shoot") { profile in
-            profile.positiveKeys = [.e, .mouseLeft, .controller1ButtonX, .controller1ButtonY]
-        }
-        Input.shared.addInputProfile(player1ShootProfile)
-        #endif
         
         addEntity(playerEntity)
         
-        // Add an array of spike entities
+        // Spike positions
         let spikePositions: [TiledPoint] = [
             TiledPoint(15, 10),
-//            TiledPoint(19, 10),
             TiledPoint(36, 10),
             TiledPoint(55, 10),
             TiledPoint(119, 10),
             TiledPoint(152, 17),
-//            TiledPoint(162, 17),
             TiledPoint(175, 10),
             TiledPoint(275, 10),
             TiledPoint(339, 10)
@@ -48,12 +38,12 @@ class HealthComponentScene: BaseLevelScene {
         
         addEntity(healthBarEntity)
         
-        // Add projectile weapon entity to the scene
+        // Projectile weapon entity
         addEntity(weaponEntity)
         weaponEntity.transform.parentTransform = playerEntity.transform
         weaponEntity.transform.node.zPosition = 10
         
-        // Add patrolling eagle entities
+        // Patrolling eagle entities
         let eaglePositions: [TiledPoint] = [
             TiledPoint(52, 11),
             TiledPoint(83, 17),
@@ -74,7 +64,7 @@ class HealthComponentScene: BaseLevelScene {
             addEntity(eagleEntity)
         }
         
-        // Add gem entities using an array of TiledPoint
+        // Gem entities
         let gemPositions: [TiledPoint] = [
             TiledPoint(30, 10),
             TiledPoint(34, 18),
@@ -213,28 +203,13 @@ class HealthComponentScene: BaseLevelScene {
     func setupTips() {
         var tipWidth: CGFloat = 240.0
         var location = TiledPoint(5, 12)
-        #if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .phone {
             tipWidth = 200.0
         }
-        #elseif os(tvOS)
-        tipWidth = 300.0
-        location = TiledPoint(5, 13)
-        #endif
         
         let tipEntity = GameplayTipEntity(initialNodePosition: location.point(with: tileSize),
                                           text: "Avoid spikes and shoot projectiles at eagles to eliminate them. Collect gems to increase your score!",
                                           frameWidth: tipWidth)
         addEntity(tipEntity)
-    }
-    
-    deinit {
-        #if os(tvOS)
-        Input.shared.removeInputProfilesNamed("Player1_Shoot")
-        let player1ShootProfile = InputProfile(name: "Player1_Shoot") { profile in
-            profile.positiveKeys = [.e, .mouseLeft, .controller1ButtonY]
-        }
-        Input.shared.addInputProfile(player1ShootProfile)
-        #endif
     }
 }
