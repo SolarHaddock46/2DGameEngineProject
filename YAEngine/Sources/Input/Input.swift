@@ -162,35 +162,15 @@ public class Input {
         }
     }
     
-    #if os(OSX)
-    // USBController
-    let usbGameControllerObserver = USBGameControllerObserver()
-    
-    var connectedUSBGameControllers: [USBGameController] = [] {
-        didSet {
-            updateInputMethod()
-        }
-    }
-    #endif
-    
     private init() {
         var info = mach_timebase_info(numer: 0, denom: 0)
         mach_timebase_info(&info)
         numer = UInt64(info.numer)
         denom = UInt64(info.denom)
-        
-        DispatchQueue.main.async {
-            self.setupKeyboard()
-            self.setupMouse()
-            self.setupGameControllers()
-        }
     }
     
     func updateInputMethod() {
         var hasCustomControllers: Bool = false
-        #if os(OSX)
-        hasCustomControllers = connectedUSBGameControllers.isEmpty == false
-        #endif
         if connectedGCControllers.isEmpty && hasCustomControllers == false {
             inputMethod = .native
         } else {
