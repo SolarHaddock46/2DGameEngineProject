@@ -2,7 +2,7 @@
     "sections": [
         {
             "name": "World 1",
-            "info": "Playable abilities.",
+            "info": "The first test world. A world is a group of levels.",
             "levels": [
                 {
                     "file": "Level11",

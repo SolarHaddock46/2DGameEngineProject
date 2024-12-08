@@ -3,6 +3,79 @@ import GameplayKit
 
 class Level11: BaseLevelScene {
     
+    lazy var playerEntity: YAEntity = {
+        let playerEntity = SimplePlayerEntity(initialNodePosition: defaultPlayerStartLocation, playerIndex: 0)
+        
+        let blinkerComponent = BlinkerComponent(blinkingDuration: 0.8)
+        playerEntity.addComponent(blinkerComponent)
+        
+        let bouncerComponent = BouncerComponent(contactCategoryMasks: DemoCategoryMask.hazard)
+        playerEntity.addComponent(bouncerComponent)
+        
+        let healthComponent = HealthComponent(maximumHealth: 3)
+        playerEntity.addComponent(healthComponent)
+        
+        if let updatableHealthBarComponent = healthBarEntity.component(ofType: UpdatableHealthBarComponent.self) {
+            let updateHealthBarComponent = UpdateHealthBarComponent(updatableHealthBarComponent: updatableHealthBarComponent)
+            playerEntity.addComponent(updateHealthBarComponent)
+        }
+        
+        let projectileShooterComponent = ProjectileShooterComponent(projectileTemplate: GrenadeEntity.self, projectilePropertiesCallback: { [weak self, weak playerEntity] in
+                    
+            guard let playerEntity = playerEntity else { return nil }
+            guard let self = self else { return nil }
+            
+            let weaponComponent = playerEntity.transform.componentInChildren(ofType: ProjectileWeaponComponent.self)
+            if let localPosition = weaponComponent?.weaponPosition.projectileStartPosition,
+                let shootingAngle = weaponComponent?.shootingAngle {
+                
+                let kinematicsBody = playerEntity.component(ofType: KinematicsBodyComponent.self)
+                let initialVelocity = kinematicsBody?.velocity ?? .zero
+                
+                let properties = ProjectileShootingProperties(position: playerEntity.transform.node.convert(localPosition, to: self),
+                                                              sourceAngle: shootingAngle,
+                                                              velocity: initialVelocity)
+                return properties
+            }
+            return nil
+        })
+
+        playerEntity.addComponent(projectileShooterComponent)
+        
+        let audioPlayerComponent = playerEntity.component(ofType: AudioPlayerComponent.self)
+        
+        let shootClip = AudioClip(triggerName: "Shoot",
+                                  fileName: "shoot",
+                                  fileExtension: "wav",
+                                  loops: false,
+                                  isPositional: true)
+        audioPlayerComponent?.addClip(shootClip)
+        
+        let updateGemCounterComponent = UpdateGemCounterComponent(gemCounterEntity: gemCounterEntity)
+        playerEntity.addComponent(updateGemCounterComponent)
+        
+        let backgroundMusicComponent = BackgroundMusicComponent()
+        playerEntity.addComponent(backgroundMusicComponent)
+        
+        return playerEntity
+    }()
+    
+    lazy var weaponEntity: YAEntity = {
+        let weaponEntity = ProjectileWeaponEntity(initialNodePosition: .zero, positionOffset: .zero)
+        return weaponEntity
+    }()
+    
+    lazy var healthBarEntity: HealthBarEntity = {
+        return HealthBarEntity(numberOfHearts: 3)
+    }()
+    
+    var gemCounterEntity = GemCounterEntity(initialNodePosition: .zero)
+    
+    let finishCheckpoint = Checkpoint(id: "0",
+                                      location: Checkpoint.Location.finish,
+                                      bottomLeftPosition: TiledPoint(345, 19),
+                                      spawnDirection: TransformNodeComponent.HeadingDirection.right)
+    
     override func setupScene() {
         super.setupScene()
         
@@ -18,6 +91,22 @@ class Level11: BaseLevelScene {
         shouldDisplayAdditionalTouchButton = true
         
         addEntity(playerEntity)
+        
+        // Finish checkpoint entity
+        let finishCheckpointEntity = EntityFactory.checkpointEntity(checkpoint: finishCheckpoint,
+                                                                    checkpointWidthInTiles: 3,
+                                                                    tileSize: tileSize,
+                                                                    stretchesToTop: true)
+        addEntity(finishCheckpointEntity)
+        
+        let checkpointRecognizerComponent = CheckpointRecognizerComponent(numberOfRespawnsLeft: 0)
+        checkpointRecognizerComponent.checkpointPassed = { [weak self] checkpoint in
+            if checkpoint.location == .finish {
+                self?.endScene(reason: .playableCharacterReachedFinishCheckpoint)
+            }
+        }
+        playerEntity.addComponent(checkpointRecognizerComponent)
+        
         
         // Spike positions
         let spikePositions: [TiledPoint] = [
@@ -102,83 +191,6 @@ class Level11: BaseLevelScene {
         }
     }
     
-    // MARK: - Player Entity
-    
-    lazy var playerEntity: YAEntity = {
-        let playerEntity = SimplePlayerEntity(initialNodePosition: defaultPlayerStartLocation, playerIndex: 0)
-        
-        let blinkerComponent = BlinkerComponent(blinkingDuration: 0.8)
-        playerEntity.addComponent(blinkerComponent)
-        
-        let bouncerComponent = BouncerComponent(contactCategoryMasks: DemoCategoryMask.hazard)
-        playerEntity.addComponent(bouncerComponent)
-        
-        let healthComponent = HealthComponent(maximumHealth: 3)
-        playerEntity.addComponent(healthComponent)
-        
-        if let updatableHealthBarComponent = healthBarEntity.component(ofType: UpdatableHealthBarComponent.self) {
-            let updateHealthBarComponent = UpdateHealthBarComponent(updatableHealthBarComponent: updatableHealthBarComponent)
-            playerEntity.addComponent(updateHealthBarComponent)
-        }
-        
-        let projectileShooterComponent = ProjectileShooterComponent(projectileTemplate: GrenadeEntity.self, projectilePropertiesCallback: { [weak self, weak playerEntity] in
-            
-            guard let playerEntity = playerEntity else { return nil }
-            guard let self = self else { return nil }
-            
-            let weaponComponent = playerEntity.transform.componentInChildren(ofType: ProjectileWeaponComponent.self)
-            if let localPosition = weaponComponent?.weaponPosition.projectileStartPosition,
-                let shootingAngle = weaponComponent?.shootingAngle {
-                
-                let kinematicsBody = playerEntity.component(ofType: KinematicsBodyComponent.self)
-                let initialVelocity = kinematicsBody?.velocity ?? .zero
-                
-                let properties = ProjectileShootingProperties(position: playerEntity.transform.node.convert(localPosition, to: self),
-                                                              sourceAngle: shootingAngle,
-                                                              velocity: initialVelocity)
-                return properties
-            }
-            return nil
-        })
-        playerEntity.addComponent(projectileShooterComponent)
-        
-        let audioPlayerComponent = playerEntity.component(ofType: AudioPlayerComponent.self)
-        
-        let shootClip = AudioClip(triggerName: "Shoot",
-                                  fileName: "shoot",
-                                  fileExtension: "wav",
-                                  loops: false,
-                                  isPositional: true)
-        audioPlayerComponent?.addClip(shootClip)
-        
-        let updateGemCounterComponent = UpdateGemCounterComponent(gemCounterEntity: gemCounterEntity)
-        playerEntity.addComponent(updateGemCounterComponent)
-        
-        let backgroundMusicComponent = BackgroundMusicComponent()
-        playerEntity.addComponent(backgroundMusicComponent)
-        
-        return playerEntity
-    }()
-    
-    // MARK: - Weapon Entity
-    
-    lazy var weaponEntity: YAEntity = {
-        let weaponEntity = ProjectileWeaponEntity(initialNodePosition: .zero, positionOffset: .zero)
-        return weaponEntity
-    }()
-    
-    // MARK: - Health Bar Entity
-    
-    lazy var healthBarEntity: HealthBarEntity = {
-        return HealthBarEntity(numberOfHearts: 3)
-    }()
-    
-    // MARK: - Gem Counter Entity
-    
-    var gemCounterEntity = GemCounterEntity(initialNodePosition: .zero)
-    
-    // MARK: - Patrolling Eagle Entity
-    
     func patrollingWithDisplacementNPC(at position: TiledPoint) -> YAEntity {
         let npc = EagleEntity(initialNodePosition: position.point(with: tileSize))
         
@@ -207,9 +219,14 @@ class Level11: BaseLevelScene {
             tipWidth = 200.0
         }
         
-        let tipEntity = GameplayTipEntity(initialNodePosition: location.point(with: tileSize),
+        let startTipEntity = GameplayTipEntity(initialNodePosition: location.point(with: tileSize),
                                           text: "Avoid spikes and shoot projectiles at eagles to eliminate them. Collect gems to increase your score!",
                                           frameWidth: tipWidth)
-        addEntity(tipEntity)
+        addEntity(startTipEntity)
+        
+        let finishTip = GameplayTipEntity(initialNodePosition: TiledPoint(345, 19).point(with: tileSize),
+                                          text: "This is the end of the level. You have reached the finish line!",
+                                          frameWidth: tipWidth)
+        addEntity(finishTip)
     }
 }

@@ -26,6 +26,7 @@
 		3302F40A2CFF6E7B007DF7A2 /* slope_0_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3D92CFF6E7B007DF7A2 /* slope_0_15.png */; };
 		3302F40B2CFF6E7B007DF7A2 /* GlideColliderTileSet.json in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3E62CFF6E7B007DF7A2 /* GlideColliderTileSet.json */; };
 		3302F40C2CFF6E7B007DF7A2 /* slope_15_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3302F3E22CFF6E7B007DF7A2 /* slope_15_0.png */; };
+		333006B02D05D522005F06E5 /* YAEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 333006AF2D05D522005F06E5 /* YAEngine */; };
 		3370E6F02D00897500615F7D /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3370E6EF2D00897500615F7D /* bgm.mp3 */; };
 		4E002C38226F11C100DE2357 /* CollectibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C37226F11C100DE2357 /* CollectibleComponent.swift */; };
 		4E002C3C226F11E700DE2357 /* UpdateHealthBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C3B226F11E700DE2357 /* UpdateHealthBarComponent.swift */; };
@@ -199,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333006B02D05D522005F06E5 /* YAEngine in Frameworks */,
 				4EE9861824B1531A00B25627 /* YAEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +518,7 @@
 			name = YADemo_iOS;
 			packageProductDependencies = (
 				4EE9861724B1531A00B25627 /* YAEngine */,
+				333006AF2D05D522005F06E5 /* YAEngine */,
 			);
 			productName = DemoSideScrollerComponents;
 			productReference = 4E908C4D217DE46800D8B29D /* Glide Demo.app */;
@@ -547,7 +550,7 @@
 			);
 			mainGroup = 4E908C44217DE46800D8B29D;
 			packageReferences = (
-				331915932CF63D160090A789 /* XCLocalSwiftPackageReference "../YAEngine" */,
+				333006AE2D05D522005F06E5 /* XCLocalSwiftPackageReference "../YAEngine" */,
 			);
 			productRefGroup = 4E908C4E217DE46800D8B29D /* Products */;
 			projectDirPath = "";
@@ -870,13 +873,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		331915932CF63D160090A789 /* XCLocalSwiftPackageReference "../YAEngine" */ = {
+		333006AE2D05D522005F06E5 /* XCLocalSwiftPackageReference "../YAEngine" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../YAEngine;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		333006AF2D05D522005F06E5 /* YAEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = YAEngine;
+		};
 		4EE9861724B1531A00B25627 /* YAEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = YAEngine;
