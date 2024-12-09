@@ -1,6 +1,6 @@
 //
 //  UpdatableHealthBarComponent.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

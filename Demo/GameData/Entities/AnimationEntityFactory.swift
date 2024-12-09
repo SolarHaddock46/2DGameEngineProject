@@ -1,6 +1,6 @@
 //
 //  DemoEntityFactory.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

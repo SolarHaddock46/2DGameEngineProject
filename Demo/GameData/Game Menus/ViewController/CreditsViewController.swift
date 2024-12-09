@@ -1,6 +1,6 @@
 //
 //  CreditsViewController.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

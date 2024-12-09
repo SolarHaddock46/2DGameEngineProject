@@ -1,6 +1,6 @@
 //
 //  ProjectileWeaponEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

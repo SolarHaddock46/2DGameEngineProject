@@ -1,6 +1,6 @@
 //
 //  LevelThumbView.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

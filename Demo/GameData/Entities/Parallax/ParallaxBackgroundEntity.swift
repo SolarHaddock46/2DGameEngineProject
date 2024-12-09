@@ -1,6 +1,6 @@
 //
 //  ParallaxBackgroundEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

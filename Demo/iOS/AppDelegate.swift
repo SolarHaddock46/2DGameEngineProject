@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

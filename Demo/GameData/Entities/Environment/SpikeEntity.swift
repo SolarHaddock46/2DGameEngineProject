@@ -1,6 +1,6 @@
 //
 //  SpikeEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

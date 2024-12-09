@@ -1,6 +1,6 @@
 //
 //  UpdateGemCounterComponent.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

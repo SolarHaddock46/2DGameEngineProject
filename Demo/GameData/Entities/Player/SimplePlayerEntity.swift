@@ -1,6 +1,6 @@
 //
 //  SimplePlayerEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

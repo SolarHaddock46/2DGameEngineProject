@@ -1,6 +1,6 @@
 //
 //  TriggerZoneComponent.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

@@ -1,6 +1,6 @@
 //
 //  Color+DemoColors.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

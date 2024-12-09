@@ -1,6 +1,6 @@
 //
 //  HazardComponent.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

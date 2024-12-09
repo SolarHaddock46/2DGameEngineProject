@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

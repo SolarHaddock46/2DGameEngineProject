@@ -1,6 +1,6 @@
 //
 //  GemEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

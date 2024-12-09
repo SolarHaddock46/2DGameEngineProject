@@ -1,6 +1,6 @@
 //
 //  CollectibleComponent.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

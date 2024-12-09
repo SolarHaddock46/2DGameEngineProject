@@ -1,6 +1,6 @@
 //
 //  BulletEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

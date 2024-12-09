@@ -1,6 +1,6 @@
 //
 //  EagleEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

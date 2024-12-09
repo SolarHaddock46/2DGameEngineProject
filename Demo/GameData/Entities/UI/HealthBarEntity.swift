@@ -1,6 +1,6 @@
 //
 //  HealthBarEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 

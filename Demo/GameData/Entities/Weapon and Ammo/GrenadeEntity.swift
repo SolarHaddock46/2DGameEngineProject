@@ -1,6 +1,6 @@
 //
 //  GrenadeEntity.swift
-//  glide Demo
+//  YAEngine Demo
 //
 
 
