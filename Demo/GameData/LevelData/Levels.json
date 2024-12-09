@@ -1,0 +1,16 @@
+{
+    "sections": [
+        {
+            "name": "World 1",
+            "info": "The first test world. A world is a group of levels.",
+            "levels": [
+                {
+                    "file": "Level11",
+                    "scene": "Level11",
+                    "name": "Level 1-1",
+                    "info": "The first test level."
+                }
+            ]
+        }
+    ]
+}
